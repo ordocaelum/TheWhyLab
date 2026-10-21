@@ -21,6 +21,9 @@ The format, cast and sets. Works with RESEARCH.md (facts), DESIGN.md (compositio
 
 **Line ratio rule:** if a script draft has Cell in more than ~10% of lines, cut Cell lines.
 
+### PENDING CAST DECISION (2026-10-20)
+The user is leaning toward making the **lab robot** the sidekick instead of Cell: it fits every topic (not just biology), fits the brand (gears, lab, "Works"), and a synthetic voice is in character. If confirmed: give the robot a hero-tier design pass (expressions and poses, like Doc), move Cell's role and rules to the robot, and keep Cell as a guest character for body/biology episodes.
+
 ## 2. Screen placement for Doc
 
 Rotate between these so it never feels static:
