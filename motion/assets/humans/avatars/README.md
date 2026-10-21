@@ -1,4 +1,4 @@
-# Avatars: REVIEW v1 (2026-10-20)
+# Avatars: APPROVED v1 (2026-10-20)
 
 - **Component:** `sick-on-purpose/anim/src/human2.tsx → Human2` with a `Look` config. Built on Doc's approved rig, so all **7 expressions and 8 poses work on every avatar** (`expr`, `pose`, `talk`).
 - **Sheet:** `avatars_v1.png`.
@@ -19,3 +19,4 @@
 
 - **Principles:** people differ by skin tone, hair texture and style, eye shape, facial hair and everyday clothing. **No costumes or caricatured features.** Ethnicity is conveyed respectfully and never through stereotypes.
 - **Adding more:** append a `Look` to `AVATARS` (any mix of skin, hair, style, facial hair, glasses, build, top). Groups to add next: Middle Eastern / North African, Indigenous, Pacific Islander, mixed heritage; plus ages (kids, elders) and body types.
+- **Known polish items (later):** softer waist and hip shape on the women's builds, Mateo's curls, the dark wrist band on short sleeves, ages and body types.
