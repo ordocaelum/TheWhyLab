@@ -11,7 +11,8 @@ Every reusable character, prop, plant, anatomy piece and set lives in `motion/as
 | sets | Lab ×3 angles (wide, bench, screen) | ✅ APPROVED | v1 | Scene templates with documented slots |
 | sets | Landscapes ×6 (forest, desert, mountains, beach, farm, arctic) | ✅ APPROVED | v1 |
 | sets | Landscapes +5 (jungle, canyon, swamp, volcano island, savanna) | ✅ APPROVED | v2 |
-| sets | Home interiors ×4 (bedroom, living room, kitchen, home office) | 🔍 review | v1 | Room engine | One engine + presets |
+| sets | Home interiors ×4 (bedroom, living room, kitchen, home office) | ✅ APPROVED | v1 | Room engine |
+| sets | City & urban ×5 (street, alley, highway, downtown, rooftop) | 🔍 review | v1 | Building/Skyline generators | One engine + presets |
 | anatomy | blood vessel tunnel, blood cells, brain | todo | — | Replace the floating filler cells |
 | animals | sheep, cow, horse, dog | todo | — | The v1 sheep looked low-poly |
 
