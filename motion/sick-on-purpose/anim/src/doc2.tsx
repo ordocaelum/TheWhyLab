@@ -94,7 +94,7 @@ const POSE: Record<Exclude<DocPose, "walk">, { F: [number, number]; B: [number, 
   present: { F: [10, -6],    B: [-48, -86], lift: 0 },
   point:   { F: [10, -6],    B: [-98, -8],  lift: 0 },
   chin:    { F: [-34, -146], B: [-10, 8],   lift: 0 },
-  crossed: { F: [-8, -84],   B: [8, 84],    lift: 0 },
+  crossed: { F: [-6, -88],   B: [6, 80],    lift: 0 },
   hips:    { F: [38, -84],   B: [-38, 84],  lift: 0 },
   shrug:   { F: [12, 108],   B: [-12, -108], lift: 16 },
 };
@@ -135,7 +135,7 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
 
       <g transform={`translate(0,${bob})`}>
         {/* ---- back arm (his left, our right) ---- */}
-        <Arm sx={104} sy={-520 - P.lift} a1={P.B[0]} a2={P.B[1]} side={1} />
+        {pose !== "crossed" && <Arm sx={104} sy={-520 - P.lift} a1={P.B[0]} a2={P.B[1]} side={1} />}
 
         {/* ---- shirt + tie in the open front ---- */}
         <path d="M-48 -548 L 48 -548 L 8 -320 L -8 -320 Z" fill="url(#d2shirt)" />
@@ -183,6 +183,7 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
         <path d="M6 -320 L 6 -152" stroke={COAT[3]} strokeWidth={4} />
 
         {/* ---- front arm (his right, our left) ---- */}
+        {pose === "crossed" && <Arm sx={104} sy={-520 - P.lift} a1={P.B[0]} a2={P.B[1]} side={1} />}
         {pose !== "chin" && <Arm sx={-104} sy={-520 - P.lift} a1={P.F[0]} a2={P.F[1]} side={-1} watch />}
 
         {/* ---- neck ---- */}
