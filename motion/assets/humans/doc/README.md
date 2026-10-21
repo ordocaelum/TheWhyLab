@@ -7,4 +7,5 @@
 - **Optional later tweaks (not required):** rounded shoulder seams, a relaxed arm bend or hand-in-pocket pose, head about 8% smaller.
 - **Expressions: APPROVED (2026-10-20).** 7 via the `expr` prop: neutral, happy, surprised, thinking, skeptical, unamused, serious. Sheet: `doc_v2_expressions.png`. Talking (`talk`) layers on top of any expression.
   - Use: neutral = explaining · happy = reveals · surprised = twists · thinking = posing a question · skeptical = doubting a claim or side-eyeing Cell · unamused = deadpan at Cell's jokes · serious = sensitive topics.
-- **Next:** pose sheet.
+- **Poses: APPROVED (2026-10-20).** 8 via the `pose` prop: idle, present, point, chin, crossed, hips, shrug, walk (animated). Sheet: `doc_v2_poses.png`. They combine freely with `expr`.
+- **Doc is complete** and is the template for every other human (`human2.tsx`).

@@ -76,7 +76,7 @@ const Arm: React.FC<{ sx: number; sy: number; a1: number; a2: number; side: 1 | 
 
 export type DocExpr = "neutral" | "happy" | "surprised" | "skeptical" | "unamused" | "serious" | "thinking";
 // per-expression face params: brow lift/tilt per side (L = his right, our left), eye open, upper-lid cover, mouth shape
-const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" | "hmm"; up?: number; side?: number }> = {
+export const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" | "hmm"; up?: number; side?: number }> = {
   neutral:   { bl: 0,  br: 0,  tl: 0,   tr: 0,   eye: 1,    lid: 0,    mouth: "rest" },
   happy:     { bl: 6,  br: 6,  tl: -4,  tr: -4,  eye: 0.8,  lid: 0,    mouth: "smile" },
   surprised: { bl: 18, br: 18, tl: -6,  tr: -6,  eye: 1.3,  lid: 0,    mouth: "o" },
@@ -89,7 +89,7 @@ const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; ey
 export type DocPose = "idle" | "present" | "point" | "chin" | "crossed" | "hips" | "shrug" | "walk";
 // arm angles (deg): F = front arm (his right, our left; outward = +), B = back arm (his left, our right; outward = -)
 // [shoulder (0 = straight down), elbow bend relative to the upper arm]. lift = shoulder raise (px).
-const POSE: Record<Exclude<DocPose, "walk">, { F: [number, number]; B: [number, number]; lift: number }> = {
+export const POSE: Record<Exclude<DocPose, "walk">, { F: [number, number]; B: [number, number]; lift: number }> = {
   idle:    { F: [10, -6],    B: [-10, 8],   lift: 0 },
   present: { F: [10, -6],    B: [-48, -86], lift: 0 },
   point:   { F: [10, -6],    B: [-98, -8],  lift: 0 },
