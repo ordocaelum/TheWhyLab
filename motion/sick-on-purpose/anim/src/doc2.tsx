@@ -74,15 +74,16 @@ const Arm: React.FC<{ sx: number; sy: number; a1: number; a2: number; side: 1 | 
   );
 };
 
-export type DocExpr = "neutral" | "happy" | "surprised" | "skeptical" | "unamused" | "serious";
+export type DocExpr = "neutral" | "happy" | "surprised" | "skeptical" | "unamused" | "serious" | "thinking";
 // per-expression face params: brow lift/tilt per side (L = his right, our left), eye open, upper-lid cover, mouth shape
-const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" }> = {
+const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" | "hmm"; up?: number; side?: number }> = {
   neutral:   { bl: 0,  br: 0,  tl: 0,   tr: 0,   eye: 1,    lid: 0,    mouth: "rest" },
   happy:     { bl: 6,  br: 6,  tl: -4,  tr: -4,  eye: 0.8,  lid: 0,    mouth: "smile" },
   surprised: { bl: 18, br: 18, tl: -6,  tr: -6,  eye: 1.3,  lid: 0,    mouth: "o" },
   skeptical: { bl: -6, br: 16, tl: 8,   tr: -10, eye: 0.9,  lid: 0.15, mouth: "smirk" },
   unamused:  { bl: -4, br: -4, tl: 0,   tr: 0,   eye: 1,    lid: 0.55, mouth: "flat" },
   serious:   { bl: -6, br: -6, tl: 12,  tr: 12,  eye: 0.95, lid: 0.1,  mouth: "frown" },
+  thinking:  { bl: 2,  br: 12, tl: 0,   tr: -6,  eye: 0.95, lid: 0.2,  mouth: "hmm", up: 6, side: 1 },
 };
 
 export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk?: boolean; point?: number; look?: number; expr?: DocExpr }> = ({
@@ -208,6 +209,8 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
             <path d="M-26 72 Q 4 74 30 60" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
           ) : E.mouth === "flat" ? (
             <path d="M-26 70 L 26 70" stroke="#6A2A30" strokeWidth={7} strokeLinecap="round" />
+          ) : E.mouth === "hmm" ? (
+            <path d="M4 70 Q 16 64 28 68" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
           ) : (
             <path d="M-26 76 Q 0 62 26 76" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
           )}
@@ -228,9 +231,9 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
             <g key={ex} transform={`translate(${ex},-14)`}>
               <g transform={`scale(1,${blink * E.eye})`}>
                 <path d="M-20 0 Q 0 -16 20 0 Q 0 14 -20 0 Z" fill="#FFFFFF" />
-                <circle cx={look * 6} cy={0} r={9} fill="#6A4A2A" />
-                <circle cx={look * 6} cy={0} r={5} fill="#1B1240" />
-                <circle cx={look * 6 - 3} cy={-3} r={2.5} fill="#FFFFFF" />
+                <circle cx={(look + (E.side ?? 0)) * 6} cy={-(E.up ?? 0)} r={9} fill="#6A4A2A" />
+                <circle cx={(look + (E.side ?? 0)) * 6} cy={-(E.up ?? 0)} r={5} fill="#1B1240" />
+                <circle cx={(look + (E.side ?? 0)) * 6 - 3} cy={-3 - (E.up ?? 0)} r={2.5} fill="#FFFFFF" />
               </g>
               {E.lid > 0 && <path d={`M-22 -2 Q 0 -20 22 -2 L 22 ${-2 + E.lid * 16} Q 0 ${-20 + E.lid * 22} -22 ${-2 + E.lid * 16} Z`} fill={SKIN[1]} />}
               <path d={`M-22 ${-2 + E.lid * 14} Q 0 ${-20 + E.lid * 20} 22 ${-2 + E.lid * 14}`} stroke="#5A3A2A" strokeWidth={4} fill="none" strokeLinecap="round" />

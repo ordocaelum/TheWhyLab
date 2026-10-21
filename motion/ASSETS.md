@@ -4,7 +4,7 @@ Every reusable character, prop, plant, anatomy piece and set lives in `motion/as
 
 | Category | Asset | Status | Version | Notes |
 |---|---|---|---|---|
-| humans | doc (host) | ✅ APPROVED | v2 | Hero tier; keep v1's charm |
+| humans | doc (host) | ✅ APPROVED | v2 | Hero tier; keep v1's charm. Expressions ✅ (7). Poses: next |
 | humans | cell (sidekick) | draft | v1 | Needs a level-2 pass and a voice |
 | humans | sick person (supporting) | todo | — | Next: supporting tier |
 | anatomy | blood vessel tunnel, blood cells, brain | todo | — | Replace the floating filler cells |
