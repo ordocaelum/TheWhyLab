@@ -16,6 +16,7 @@
 - **Animated details:** waves and a sailboat drifting (beach), river ripples (mountains), aurora (arctic), turbine and drifting clouds (farm), heat shimmer (desert), swaying plants.
 - **Sheet:** `landscapes_v1_sheet.png` (+ `land_<Name>_v1.png`).
 - New presets = a new combination of sky, ridges, ground and objects (~25 lines each).
+- **Batch 2 (review):** `Jungle` (canopy foliage, god rays, butterfly, bird), `Canyon` (striped mesa strata), `Swamp` (fog, murky water, lily pads; **actors stand on the left mudbank**, slot x≈420), `VolcanoIsland` (smoking volcano at sunset, waves), `Savanna` (acacias, giant setting sun, birds). Sheet: `landscapes_v2_sheet.png`. Per-landscape slots: `LAND_SLOTS` in `LandscapeSheet.tsx`.
 
 - **Next set families:** inside the body (vessel tunnel, tissue), outdoors (park, forest, farm, street), home (bedroom, living room), space (orbit, surface, hangar), machine dives.
 - **Performance note (user, 2026-10-20):** the landscapes render fast. Keep generators lean: seeded, no per-frame heavy filters except a few blurred framers.

@@ -25,7 +25,7 @@ const ridgePath = (seed: number, base: number, amp: number, kind: RidgeKind) => 
   return d + ` L ${W + 200} ${H} Z`;
 };
 
-const Ridge: React.FC<{ seed: number; base: number; amp: number; kind: RidgeKind; c: string; snow?: boolean; drift?: number }> = ({ seed, base, amp, kind, c, snow, drift = 0 }) => {
+export const Ridge: React.FC<{ seed: number; base: number; amp: number; kind: RidgeKind; c: string; snow?: boolean; drift?: number }> = ({ seed, base, amp, kind, c, snow, drift = 0 }) => {
   const f = useCurrentFrame();
   const d = ridgePath(seed, base, amp, kind);
   const id = `rg${seed}`;
@@ -40,7 +40,7 @@ const Ridge: React.FC<{ seed: number; base: number; amp: number; kind: RidgeKind
   );
 };
 
-const Sky: React.FC<{ top: string; mid: string; low: string; sun?: { x: number; y: number; r: number; c: string }; moon?: boolean }> = ({ top, mid, low, sun, moon }) => (
+export const Sky: React.FC<{ top: string; mid: string; low: string; sun?: { x: number; y: number; r: number; c: string }; moon?: boolean }> = ({ top, mid, low, sun, moon }) => (
   <g>
     <defs><linearGradient id={`sky${top}${low}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={top} /><stop offset="0.6" stopColor={mid} /><stop offset="1" stopColor={low} /></linearGradient></defs>
     <rect width={W} height={H} fill={`url(#sky${top}${low})`} />
@@ -55,7 +55,7 @@ const Sky: React.FC<{ top: string; mid: string; low: string; sun?: { x: number; 
   </g>
 );
 
-const Clouds: React.FC<{ seed: number; c?: string; n?: number; y0?: number; y1?: number }> = ({ seed, c = "#FFFFFF", n = 5, y0 = 80, y1 = 360 }) => {
+export const Clouds: React.FC<{ seed: number; c?: string; n?: number; y0?: number; y1?: number }> = ({ seed, c = "#FFFFFF", n = 5, y0 = 80, y1 = 360 }) => {
   const f = useCurrentFrame();
   const r = rng(seed);
   return (
@@ -75,7 +75,7 @@ const Clouds: React.FC<{ seed: number; c?: string; n?: number; y0?: number; y1?:
   );
 };
 
-const Ground: React.FC<{ c: string; texture: "grass" | "sand" | "snow" | "rock"; seed: number }> = ({ c, texture, seed }) => {
+export const Ground: React.FC<{ c: string; texture: "grass" | "sand" | "snow" | "rock"; seed: number }> = ({ c, texture, seed }) => {
   const r = rng(seed);
   const id = `gnd${seed}`;
   return (
@@ -94,14 +94,14 @@ const Ground: React.FC<{ c: string; texture: "grass" | "sand" | "snow" | "rock";
   );
 };
 
-const Haze: React.FC<{ y: number; c: string; o?: number }> = ({ y, c, o = 0.35 }) => (
+export const Haze: React.FC<{ y: number; c: string; o?: number }> = ({ y, c, o = 0.35 }) => (
   <g>
     <defs><linearGradient id={`hz${y}${c}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={c} stopOpacity="0" /><stop offset="0.5" stopColor={c} stopOpacity={o} /><stop offset="1" stopColor={c} stopOpacity="0" /></linearGradient></defs>
     <rect x={0} y={y - 120} width={W} height={240} fill={`url(#hz${y}${c})`} />
   </g>
 );
 
-const Frame: React.FC<{ children?: React.ReactNode; tint?: string }> = ({ children, tint = "#000" }) => (
+export const Frame: React.FC<{ children?: React.ReactNode; tint?: string }> = ({ children, tint = "#000" }) => (
   <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
     <svg width={W} height={H}>
       {children}
@@ -246,4 +246,5 @@ export const Arctic: React.FC<{ children?: React.ReactNode }> = ({ children }) =
   );
 };
 
-export const LANDSCAPES = { Forest, Desert, Mountains, Beach, Farm, Arctic };
+import { Canyon, Jungle, Savanna, Swamp, VolcanoIsland } from "./landscapes2";
+export const LANDSCAPES = { Forest, Desert, Mountains, Beach, Farm, Arctic, Jungle, Canyon, Swamp, VolcanoIsland, Savanna };
