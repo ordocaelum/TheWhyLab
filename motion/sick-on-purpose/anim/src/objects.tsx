@@ -167,7 +167,7 @@ const nature: ObjDef[] = [
   </g>) },
   { name: "palm", cat: "nature", w: 160, draw: (p, f) => (<g>
     <Part id={p + "t"} d="M-16 0 Q -40 -200 10 -420 L 34 -416 Q -10 -200 18 0 Z" c="#A8723A" />
-    {[0, 1, 2, 3, 4].map((i) => <Line key={i} d={`M${-30 - i * 8} ${-60 - i * 72} H ${10 - i * 6}`} c="#7A4E22" w={5} />)}
+    {[0.1, 0.25, 0.4, 0.55, 0.7, 0.85].map((t) => { const u = 1 - t; const cx = u * u * 1 + 2 * u * t * -25 + t * t * 22; const cy = 2 * u * t * -200 + t * t * -418; const hw = 17 * u + 12 * t; return <Line key={t} d={`M${cx - hw} ${cy + 4} Q ${cx} ${cy + 10} ${cx + hw} ${cy + 4}`} c="#7A4E22" w={5} />; })}
     {[-150, -100, -40, 30, 90, 140].map((a, i) => (
       <g key={i} transform={`rotate(${a + Math.sin(f / 25 + i) * 3},20,-420)`}><Part id={p + "f" + i} d="M20 -420 Q 60 -460 150 -440 Q 90 -420 20 -410 Z" c={i % 2 ? "#2E8A5A" : "#3FAE6A"} /></g>
     ))}

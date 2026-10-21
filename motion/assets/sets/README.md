@@ -10,7 +10,7 @@
 | **LabScreen** | Graphs, charts, diagrams on the big wall monitor | doc `{x:300, y:1260, s:1.0}` · `screen` = content in a 1100×600 box (example: `DemoGraph`) |
 
 - **Previews:** `set_LabWide_v1.png`, `set_LabBench_v1.png`, `set_LabScreen_v1.png`.
-## Landscapes: REVIEW v1 (2026-10-20)
+## Landscapes: APPROVED v1 (2026-10-20)
 - **Code:** `sick-on-purpose/anim/src/landscapes.tsx`. One engine (`Sky`, seeded `Ridge` kinds: hills/peaks/dunes/pines/ice, `Haze` for atmospheric depth, textured `Ground`, drifting `Clouds`) plus presets dressed with approved objects.
 - **Presets:** `Forest`, `Desert`, `Mountains`, `Beach`, `Farm`, `Arctic` (`LANDSCAPES`). **Actor slot:** ground line, feet at y≈930–1000, Doc/avatars at s≈0.5.
 - **Animated details:** waves and a sailboat drifting (beach), river ripples (mountains), aurora (arctic), turbine and drifting clouds (farm), heat shimmer (desert), swaying plants.
@@ -18,3 +18,4 @@
 - New presets = a new combination of sky, ridges, ground and objects (~25 lines each).
 
 - **Next set families:** inside the body (vessel tunnel, tissue), outdoors (park, forest, farm, street), home (bedroom, living room), space (orbit, surface, hangar), machine dives.
+- **Performance note (user, 2026-10-20):** the landscapes render fast. Keep generators lean: seeded, no per-frame heavy filters except a few blurred framers.
