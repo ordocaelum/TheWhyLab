@@ -10,7 +10,8 @@ Every reusable character, prop, plant, anatomy piece and set lives in `motion/as
 | humans | sick person (supporting) | todo | — | Will be built from an avatar Look |
 | sets | Lab ×3 angles (wide, bench, screen) | ✅ APPROVED | v1 | Scene templates with documented slots |
 | sets | Landscapes ×6 (forest, desert, mountains, beach, farm, arctic) | ✅ APPROVED | v1 |
-| sets | Landscapes +5 (jungle, canyon, swamp, volcano island, savanna) | 🔍 review | v2 | One engine + presets |
+| sets | Landscapes +5 (jungle, canyon, swamp, volcano island, savanna) | ✅ APPROVED | v2 |
+| sets | Home interiors ×4 (bedroom, living room, kitchen, home office) | 🔍 review | v1 | Room engine | One engine + presets |
 | anatomy | blood vessel tunnel, blood cells, brain | todo | — | Replace the floating filler cells |
 | animals | sheep, cow, horse, dog | todo | — | The v1 sheep looked low-poly |
 

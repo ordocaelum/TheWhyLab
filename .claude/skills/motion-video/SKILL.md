@@ -33,6 +33,7 @@ This is the most important layer. Go through Pick (score ≥ 20/30) → Brief �
 - **Fidelity level 2** is the standard (DESIGN §8 + STYLING §8): fill the frame edge to edge, give every shape gradient shading plus micro-texture, set a warm subject against a cool world, use big cropped heroes, and build density with seeded generators. Run the DESIGN §8.5 fidelity check on every contact sheet before showing the user.
 
 ## 4. Voiceover sync
+- **ElevenLabs is connected as an MCP tool (2026-10-20).** I can generate the takes directly (`creative_generate_speech`, voice design), so the user no longer has to paste and download. **Confirm voices and credit use with the user first**, then save files to `<slug>/elevenlabs/` with the same names and run `tools/stitch.py`.
 - The user records the script in ElevenLabs and gives a file path. Copy it to `motion/<slug>/vo_full.mp3` and `public/vo.mp3`.
 - Align with Whisper through `tools/build.py` (`transcribe` + `align`, loaded via importlib from `H:/Infomercials/tools/build.py`). Each scene starts 0.15 s before its line's first word; the last scene ends at the audio end + 0.8 s. Write `src/timing.json` as `{dur:[frames…], total}`.
 - Compare what Whisper heard against the script, and tell the user about any lines they recorded differently. If the visuals no longer match, update the scene text.

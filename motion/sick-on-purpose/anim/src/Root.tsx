@@ -11,6 +11,7 @@ import { AvatarSheet } from "./AvatarSheet";
 import { ObjectSheet } from "./ObjectSheet";
 import { PrevLabBench, PrevLabScreen, PrevLabWide } from "./SetPreviews";
 import { LANDSCAPE_NAMES, LandscapePreview } from "./LandscapeSheet";
+import { INTERIOR_NAMES, InteriorPreview } from "./InteriorPreview";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -31,5 +32,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="SetLabBench" component={PrevLabBench} durationInFrames={90} fps={30} width={W} height={H} />
     <Composition id="SetLabScreen" component={PrevLabScreen} durationInFrames={90} fps={30} width={W} height={H} />
     {LANDSCAPE_NAMES.map((n) => <Composition key={n} id={`Land${n}`} component={LandscapePreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
+    {INTERIOR_NAMES.map((n) => <Composition key={n} id={`Room${n}`} component={InteriorPreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
   </>
 );
