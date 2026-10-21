@@ -89,8 +89,21 @@ const furniture: ObjDef[] = [
       {Array.from({ length: 7 }, (_, i) => <Part key={i} id={p + "b" + r + i} d={rr(-144 + i * 40, y + 140 - (90 + ((i * 37 + r * 13) % 40)), 34, 90 + ((i * 37 + r * 13) % 40), 4)} c={["#C2384A", "#2A3E7A", "#2E8A5A", "#E0A83A", "#7A4AA8", "#3FC1C9", "#E8743A"][(i + r) % 7]} rim={false} />)}</g>)}
   </g>) },
   { name: "rug", cat: "furniture", w: 230, draw: (p) => (<g>
-    <Part id={p + "r"} d={ell(0, -40, 240, 50)} c="#C2384A" /><ellipse cx={0} cy={-40} rx={190} ry={36} fill="none" stroke="#FFC23A" strokeWidth={8} /><ellipse cx={0} cy={-40} rx={120} ry={22} fill="#9A2A38" />
-    {Array.from({ length: 12 }, (_, i) => <Line key={i} d={`M${-220 + i * 40} -8 v 16`} c="#F4EEE2" w={4} />)}
+    {/* fringe attached to both short ends (seen in perspective) */}
+    {Array.from({ length: 7 }, (_, i) => { const t = (i - 3) / 3.6; const y = -40 + t * 40; const ex = 240 * Math.sqrt(1 - Math.pow((y + 40) / 52, 2)) - 4; return (
+      <g key={i}><Line d={`M${-ex} ${y} l -22 ${t * 5}`} c="#F4EEE2" w={4} /><Line d={`M${ex} ${y} l 22 ${t * 5}`} c="#F4EEE2" w={4} /></g>); })}
+    <Part id={p + "r"} d={ell(0, -40, 240, 52)} c="#B8323F" ang={80} />
+    {/* patterned border band */}
+    <ellipse cx={0} cy={-40} rx={208} ry={42} fill="none" stroke="#2A3E7A" strokeWidth={14} />
+    <ellipse cx={0} cy={-40} rx={208} ry={42} fill="none" stroke="#F4CF7A" strokeWidth={4} strokeDasharray="10 14" />
+    <ellipse cx={0} cy={-40} rx={170} ry={33} fill="none" stroke="#F4CF7A" strokeWidth={3} />
+    {/* centre medallion */}
+    <ellipse cx={0} cy={-40} rx={92} ry={19} fill="#2A3E7A" />
+    <path d="M-70 -40 L 0 -54 L 70 -40 L 0 -26 Z" fill="#F4CF7A" />
+    <ellipse cx={0} cy={-40} rx={18} ry={5} fill="#B8323F" />
+    {[-130, 130].map((x) => <path key={x} d={`M${x - 16} -40 L ${x} -47 L ${x + 16} -40 L ${x} -33 Z`} fill="#F4CF7A" />)}
+    {/* soft sheen on the near edge */}
+    <ellipse cx={-40} cy={-22} rx={140} ry={8} fill="#FFFFFF" opacity={0.08} />
   </g>) },
   { name: "picture-frame", cat: "furniture", w: 150, draw: (p) => (<g>
     <Part id={p + "f"} d={rr(-150, -300, 300, 260, 10)} c="#D9A23F" /><rect x={-126} y={-276} width={252} height={212} fill="#7FC8FF" />
