@@ -86,11 +86,31 @@ const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; ey
   thinking:  { bl: 2,  br: 12, tl: 0,   tr: -6,  eye: 0.95, lid: 0.2,  mouth: "hmm", up: 6, side: 1 },
 };
 
-export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk?: boolean; point?: number; look?: number; expr?: DocExpr }> = ({
-  x, y, s = 1, f, talk = false, point = 0, look = 0, expr = "neutral",
+export type DocPose = "idle" | "present" | "point" | "chin" | "crossed" | "hips" | "shrug" | "walk";
+// arm angles (deg): F = front arm (his right, our left; outward = +), B = back arm (his left, our right; outward = -)
+// [shoulder (0 = straight down), elbow bend relative to the upper arm]. lift = shoulder raise (px).
+const POSE: Record<Exclude<DocPose, "walk">, { F: [number, number]; B: [number, number]; lift: number }> = {
+  idle:    { F: [10, -6],    B: [-10, 8],   lift: 0 },
+  present: { F: [10, -6],    B: [-48, -86], lift: 0 },
+  point:   { F: [10, -6],    B: [-98, -8],  lift: 0 },
+  chin:    { F: [-34, -146], B: [-10, 8],   lift: 0 },
+  crossed: { F: [-8, -84],   B: [8, 84],    lift: 0 },
+  hips:    { F: [38, -84],   B: [-38, 84],  lift: 0 },
+  shrug:   { F: [12, 108],   B: [-12, -108], lift: 16 },
+};
+
+export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk?: boolean; point?: number; look?: number; expr?: DocExpr; pose?: DocPose }> = ({
+  x, y, s = 1, f, talk = false, point = 0, look = 0, expr = "neutral", pose = "idle",
 }) => {
   const E = EXPR[expr];
-  const bob = Math.sin(f / 14) * 3;
+  const walking = pose === "walk";
+  const swing = walking ? Math.sin(f / 6) : 0;
+  const P = walking
+    ? { F: [10 - swing * 18, -10] as [number, number], B: [-10 - swing * 18, 10] as [number, number], lift: 0 }
+    : pose === "idle" && point > 0
+      ? { F: POSE.idle.F, B: [-10 - point * 88, 8 - point * 16] as [number, number], lift: 0 }
+      : POSE[pose];
+  const bob = walking ? -Math.abs(Math.sin(f / 6)) * 10 : Math.sin(f / 14) * 3;
   const open = talk ? 0.25 + Math.abs(Math.sin(f / 2.5)) * 0.75 : 0;
   const blink = f % 95 > 90 ? 0.12 : 1;
   const brow = talk ? Math.sin(f / 6) * 3 : 0;
@@ -99,23 +119,23 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
       <Defs />
       <ellipse cx={6} cy={8} rx={150} ry={20} fill="#000" opacity={0.3} />
 
-      {/* ---- legs + shoes (slight contrapposto) ---- */}
-      <path d="M-62 -260 L -54 -22 L -12 -22 L -8 -260 Z" fill="url(#d2pant)" />
-      <path d="M8 -260 L 18 -22 L 62 -22 L 66 -260 Z" fill="url(#d2pant)" />
-      <path d="M-34 -250 L -32 -40" stroke={PANT[0]} strokeWidth={4} opacity={0.8} />
-      <path d="M38 -250 L 40 -40" stroke={PANT[0]} strokeWidth={4} opacity={0.8} />
-      {[[-34, -1], [42, 1]].map(([sx, d]) => (
-        <g key={sx} transform={`translate(${sx},-8)`}>
-          <path d={`M-34 -16 Q -36 8 -20 10 L ${d > 0 ? 52 : 34} 10 Q ${d > 0 ? 62 : 44} 0 ${d > 0 ? 44 : 30} -16 Z`} fill="#4A2E2A" />
-          <rect x={-36} y={4} width={d > 0 ? 98 : 80} height={10} rx={5} fill="#2A1A18" />
-          <path d="M-10 -12 l 16 0 M-6 -6 l 16 0" stroke="#E8D8C8" strokeWidth={3} strokeLinecap="round" opacity={0.7} />
-          <ellipse cx={-14} cy={-10} rx={10} ry={4} fill="#FFFFFF" opacity={0.25} />
+      {/* ---- legs + shoes (slight contrapposto; swing when walking) ---- */}
+      {([[-1, -34], [1, 38]] as const).map(([sd, lx]) => (
+        <g key={sd} transform={`translate(0,${-Math.max(0, swing * sd) * 16})`}>
+          <path d={sd < 0 ? "M-62 -260 L -54 -22 L -12 -22 L -8 -260 Z" : "M8 -260 L 18 -22 L 62 -22 L 66 -260 Z"} fill="url(#d2pant)" />
+          <path d={`M${lx} -250 L ${lx + 2} -40`} stroke={PANT[0]} strokeWidth={4} opacity={0.8} />
+          <g transform={`translate(${sd < 0 ? -34 : 42},-8)`}>
+            <path d={`M-34 -16 Q -36 8 -20 10 L ${sd > 0 ? 52 : 34} 10 Q ${sd > 0 ? 62 : 44} 0 ${sd > 0 ? 44 : 30} -16 Z`} fill="#4A2E2A" />
+            <rect x={-36} y={4} width={sd > 0 ? 98 : 80} height={10} rx={5} fill="#2A1A18" />
+            <path d="M-10 -12 l 16 0 M-6 -6 l 16 0" stroke="#E8D8C8" strokeWidth={3} strokeLinecap="round" opacity={0.7} />
+            <ellipse cx={-14} cy={-10} rx={10} ry={4} fill="#FFFFFF" opacity={0.25} />
+          </g>
         </g>
       ))}
 
       <g transform={`translate(0,${bob})`}>
         {/* ---- back arm (his left, our right) ---- */}
-        <Arm sx={104} sy={-520} a1={-10 - point * 110} a2={point ? -25 : 8} side={1} />
+        <Arm sx={104} sy={-520 - P.lift} a1={P.B[0]} a2={P.B[1]} side={1} />
 
         {/* ---- shirt + tie in the open front ---- */}
         <path d="M-48 -548 L 48 -548 L 8 -320 L -8 -320 Z" fill="url(#d2shirt)" />
@@ -163,7 +183,7 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
         <path d="M6 -320 L 6 -152" stroke={COAT[3]} strokeWidth={4} />
 
         {/* ---- front arm (his right, our left) ---- */}
-        <Arm sx={-104} sy={-520} a1={10} a2={-6} side={-1} watch />
+        {pose !== "chin" && <Arm sx={-104} sy={-520 - P.lift} a1={P.F[0]} a2={P.F[1]} side={-1} watch />}
 
         {/* ---- neck ---- */}
         <path d="M-30 -600 L -28 -536 Q 0 -526 28 -536 L 30 -600 Z" fill={SKIN[2]} />
@@ -266,6 +286,7 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
           <path d="M-58 -150 Q -30 -176 6 -170" stroke="#9A6A48" strokeWidth={4} strokeLinecap="round" fill="none" opacity={0.7} />
           <path d="M100 -100 Q 112 -70 110 -40" stroke={RIM} strokeWidth={4} fill="none" opacity={0.5} />
         </g>
+        {pose === "chin" && <Arm sx={-104} sy={-520 - P.lift} a1={P.F[0]} a2={P.F[1]} side={-1} watch />}
       </g>
     </g>
   );
