@@ -1,4 +1,4 @@
-# Objects library: REVIEW v1 (2026-10-20)
+# Objects library: APPROVED v1 (2026-10-20)
 
 - **Code:** `sick-on-purpose/anim/src/objects.tsx`. Each object is a short `draw()` in a registry (`OBJECTS`), built from the shared **Part kit** (gradient + rim light + shine + contact shadow), so every object automatically matches STYLING §3/§8.
 - **Use in a scene:** `<Thing name="beaker" x={…} y={…} s={0.8} f={frame} />` (origin = bottom centre, ~300 px tall at s=1). Animated objects use `f` (liquids bubble, clocks tick, steam rises, gears turn, plants sway, the rocket flame flickers).
@@ -15,4 +15,5 @@
 | medical (5) | pill-bottle, thermometer, stethoscope, first-aid-kit, bandage |
 
 **Adding objects:** append `{ name, cat, w, draw }` to a category array. Aim for 5–15 lines per object using `Part`, `Shine` and `Line`.
-**Known polish (later):** the sandwich is flat, the lightbulb's glow reads grey on dark backgrounds, the stethoscope earpieces are small.
+**Known polish (later):** the lightbulb's glow reads grey on dark backgrounds, the stethoscope earpieces are small.
+- **The sandwich stays exactly as it is (user decision, 2026-10-20).** Do not "fix" it.

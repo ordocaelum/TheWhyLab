@@ -11,7 +11,7 @@ Every reusable character, prop, plant, anatomy piece and set lives in `motion/as
 | anatomy | blood vessel tunnel, blood cells, brain | todo | — | Replace the floating filler cells |
 | animals | sheep, cow, horse, dog | todo | — | The v1 sheep looked low-poly |
 
-| objects | 50 objects, 7 categories (`<Thing name>`) | 🔍 review | v1 | Shared Part kit; auto catalog; target: hundreds |
+| objects | 50 objects, 7 categories (`<Thing name>`) | ✅ APPROVED | v1 | Shared Part kit; auto catalog; target: hundreds |
 
 ## Fidelity tiers (humans)
 - **Hero** (Doc): gradient skin with warm shadow edges, a full face (irises, lids, lips), hair and beard strands, clothing folds and details, rim light, 6 expressions, 3+ poses.
