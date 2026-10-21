@@ -8,6 +8,7 @@ import { Episode, EPISODE_FRAMES } from "./Episode";
 import { DocBaseline, DocCompare } from "./Baseline";
 import { DocExprSheet, DocPoseSheet } from "./DocSheet";
 import { AvatarSheet } from "./AvatarSheet";
+import { ObjectSheet } from "./ObjectSheet";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -21,5 +22,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="DocExprSheet" component={DocExprSheet} durationInFrames={1} fps={30} width={2400} height={1360} />
     <Composition id="DocPoseSheet" component={DocPoseSheet} durationInFrames={1} fps={30} width={2400} height={2000} />
     <Composition id="AvatarSheet" component={AvatarSheet} durationInFrames={1} fps={30} width={2600} height={2000} />
+    <Composition id="ObjectSheet" component={ObjectSheet} durationInFrames={1} fps={30} width={3200} height={2200} />
   </>
 );
