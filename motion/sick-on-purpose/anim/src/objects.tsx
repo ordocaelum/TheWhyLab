@@ -4,6 +4,7 @@ import React from "react";
 
 import { circ, ell, Line, Part, rr, Shine } from "./objkit";
 import { OBJECTS2 } from "./objects2";
+import { OBJECTS3 } from "./objects3";
 
 type Draw = (p: string, f: number) => React.ReactNode;
 export type ObjDef = { name: string; cat: string; w: number; draw: Draw };
@@ -321,7 +322,7 @@ const medical: ObjDef[] = [
   </g>) },
 ];
 
-export const OBJECTS: ObjDef[] = [...lab, ...home, ...nature, ...space, ...food, ...tools, ...medical, ...OBJECTS2];
+export const OBJECTS: ObjDef[] = [...lab, ...home, ...nature, ...space, ...food, ...tools, ...medical, ...OBJECTS2, ...OBJECTS3];
 const BY = Object.fromEntries(OBJECTS.map((o) => [o.name, o]));
 
 // Use in scenes: <Thing name="beaker" x={...} y={...} s={0.8} f={frame} />

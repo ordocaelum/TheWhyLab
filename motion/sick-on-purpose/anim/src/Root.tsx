@@ -24,5 +24,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="AvatarSheet" component={AvatarSheet} durationInFrames={1} fps={30} width={2600} height={2000} />
     <Composition id="ObjectSheet" component={ObjectSheet} durationInFrames={1} fps={30} width={3200} height={2200} />
     <Composition id="ObjectSheet2" component={ObjectSheet} defaultProps={{ from: 50, scale: 0.46 }} durationInFrames={1} fps={30} width={3200} height={2200} />
+    <Composition id="ObjectSheet3" component={ObjectSheet} defaultProps={{ from: 100, scale: 0.5 }} durationInFrames={1} fps={30} width={3200} height={2200} />
   </>
 );
