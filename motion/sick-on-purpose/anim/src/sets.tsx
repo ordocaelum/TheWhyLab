@@ -158,10 +158,10 @@ export const LabWide: React.FC<{ children?: React.ReactNode; lights?: number }> 
         <NightWindow x={1340} y={130} w={420} h={330} />
         <Thing name="wall-clock" x={960} y={480} s={0.45} f={f} shadow={false} />
         <Thing name="bookshelf" x={1210} y={700} s={0.95} />
-        <Thing name="filing-cabinet" x={1830} y={760} s={0.7} />
         <LampPool x={480} y={260} r={460} o={0.3 * lights} />
         <LampPool x={1500} y={300} r={380} c="#9FD8FF" o={0.18} />
         <Floor y={880} />
+        <Thing name="filing-cabinet" x={1820} y={905} s={0.72} />
         <Thing name="rug" x={960} y={1030} s={1.6} shadow={false} />
         {/* the long workbench full of gear */}
         <Bench x={120} y={690} w={980} floor={900} />
