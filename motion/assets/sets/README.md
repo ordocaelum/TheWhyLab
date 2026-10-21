@@ -1,0 +1,13 @@
+# Sets (scene templates): REVIEW v1 (2026-10-20)
+
+- **Code:** `sick-on-purpose/anim/src/sets.tsx`. Each set is a 1920×1080 component following the DESIGN §1 layer stack (wall/backdrop → light pools → midground props → **actor layer** → foreground framers → vignette), dressed with approved objects (`<Thing>`).
+- **Contract:** sets take `children` (actors and props in the actor layer). Some have named slots (`actor`, `props`, `screen`). Every set documents its **SLOTS**: where Doc/avatars stand so scale, floor contact and light match.
+
+| Set | Use for | Slots |
+|---|---|---|
+| **LabWide** | Establishing shot, chapter openers, walking in the lab | doc `{x:1290, y:1010, s:0.62}` (on the rug) · `lights` prop dims the room for serious beats |
+| **LabBench** | Doc demonstrates a prop (e.g. points at the desk thermostat) | doc `{x:760, y:960, s:1.0}` behind the bench · `props` replaces the two hero props (default: desk-thermostat, flask) |
+| **LabScreen** | Graphs, charts, diagrams on the big wall monitor | doc `{x:300, y:1260, s:1.0}` · `screen` = content in a 1100×600 box (example: `DemoGraph`) |
+
+- **Previews:** `set_LabWide_v1.png`, `set_LabBench_v1.png`, `set_LabScreen_v1.png`.
+- **Next set families:** inside the body (vessel tunnel, tissue), outdoors (park, forest, farm, street), home (bedroom, living room), space (orbit, surface, hangar), machine dives.

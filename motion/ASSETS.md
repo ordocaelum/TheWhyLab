@@ -8,12 +8,13 @@ Every reusable character, prop, plant, anatomy piece and set lives in `motion/as
 | humans | cell (sidekick) | draft | v1 | Needs a level-2 pass and a voice |
 | humans | avatars ×10 (Human2 + Look) | ✅ APPROVED | v1 | 2 per group, man + woman; Doc's rig → all expressions and poses |
 | humans | sick person (supporting) | todo | — | Will be built from an avatar Look |
+| sets | Lab ×3 angles (wide, bench, screen) | 🔍 review | v1 | Scene templates with documented slots |
 | anatomy | blood vessel tunnel, blood cells, brain | todo | — | Replace the floating filler cells |
 | animals | sheep, cow, horse, dog | todo | — | The v1 sheep looked low-poly |
 
 | objects | 50 objects, 7 categories (`<Thing name>`) | ✅ APPROVED | v1 |
 | objects | batch 2: +50, 8 categories (total 100) | ✅ APPROVED | v2 |
-| objects | batch 3: +50, 8 categories (total 150) | 🔍 review | v3 | Shared Part kit; auto catalog; target: hundreds |
+| objects | batch 3: +50, 8 categories (total 150) | ✅ APPROVED | v3 | Shared Part kit; auto catalog; target: hundreds |
 
 ## Fidelity tiers (humans)
 - **Hero** (Doc): gradient skin with warm shadow edges, a full face (irises, lids, lips), hair and beard strands, clothing folds and details, rim light, 6 expressions, 3+ poses.

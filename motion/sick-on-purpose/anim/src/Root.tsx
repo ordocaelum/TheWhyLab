@@ -9,6 +9,7 @@ import { DocBaseline, DocCompare } from "./Baseline";
 import { DocExprSheet, DocPoseSheet } from "./DocSheet";
 import { AvatarSheet } from "./AvatarSheet";
 import { ObjectSheet } from "./ObjectSheet";
+import { PrevLabBench, PrevLabScreen, PrevLabWide } from "./SetPreviews";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -25,5 +26,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="ObjectSheet" component={ObjectSheet} durationInFrames={1} fps={30} width={3200} height={2200} />
     <Composition id="ObjectSheet2" component={ObjectSheet} defaultProps={{ from: 50, scale: 0.46 }} durationInFrames={1} fps={30} width={3200} height={2200} />
     <Composition id="ObjectSheet3" component={ObjectSheet} defaultProps={{ from: 100, scale: 0.5 }} durationInFrames={1} fps={30} width={3200} height={2200} />
+    <Composition id="SetLabWide" component={PrevLabWide} durationInFrames={90} fps={30} width={W} height={H} />
+    <Composition id="SetLabBench" component={PrevLabBench} durationInFrames={90} fps={30} width={W} height={H} />
+    <Composition id="SetLabScreen" component={PrevLabScreen} durationInFrames={90} fps={30} width={W} height={H} />
   </>
 );

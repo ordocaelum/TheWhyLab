@@ -22,7 +22,7 @@
 | sports (5) | soccer-ball, basketball, dumbbell, trophy, guitar |
 | signs (5) | warning-sign, stop-sign, traffic-light, map-pin, speech-bubble |
 | science (5) | atom, dna-helix, magnet, solar-panel, wind-turbine |
-| **batch 3 (review)** | |
+| **batch 3 (approved)** | |
 | animals (8) | cat, dog, bird, fish, rabbit, owl, butterfly, snail (simple props; hero animals get their own fidelity pass) |
 | furniture (7) | sofa, bookshelf, rug, picture-frame, bed, vase, window-curtains |
 | electronics (7) | tv, game-controller, camera, headphones, radio, robot, drone |
