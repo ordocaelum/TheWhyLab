@@ -6,6 +6,7 @@ import { Duo } from "./Duo";
 import { Avatar, Banner } from "./Brand";
 import { Episode, EPISODE_FRAMES } from "./Episode";
 import { DocBaseline, DocCompare } from "./Baseline";
+import { DocExprSheet } from "./DocSheet";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -16,5 +17,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Episode" component={Episode} durationInFrames={EPISODE_FRAMES} fps={30} width={W} height={H} />
     <Composition id="DocBaseline" component={DocBaseline} durationInFrames={1} fps={30} width={1080} height={1350} />
     <Composition id="DocCompare" component={DocCompare} durationInFrames={1} fps={30} width={2160} height={1350} />
+    <Composition id="DocExprSheet" component={DocExprSheet} durationInFrames={1} fps={30} width={1800} height={1360} />
   </>
 );

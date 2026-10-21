@@ -74,9 +74,21 @@ const Arm: React.FC<{ sx: number; sy: number; a1: number; a2: number; side: 1 | 
   );
 };
 
-export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk?: boolean; point?: number; look?: number }> = ({
-  x, y, s = 1, f, talk = false, point = 0, look = 0,
+export type DocExpr = "neutral" | "happy" | "surprised" | "skeptical" | "unamused" | "serious";
+// per-expression face params: brow lift/tilt per side (L = his right, our left), eye open, upper-lid cover, mouth shape
+const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" }> = {
+  neutral:   { bl: 0,  br: 0,  tl: 0,   tr: 0,   eye: 1,    lid: 0,    mouth: "rest" },
+  happy:     { bl: 6,  br: 6,  tl: -4,  tr: -4,  eye: 0.8,  lid: 0,    mouth: "smile" },
+  surprised: { bl: 18, br: 18, tl: -6,  tr: -6,  eye: 1.3,  lid: 0,    mouth: "o" },
+  skeptical: { bl: -6, br: 16, tl: 8,   tr: -10, eye: 0.9,  lid: 0.15, mouth: "smirk" },
+  unamused:  { bl: -4, br: -4, tl: 0,   tr: 0,   eye: 1,    lid: 0.55, mouth: "flat" },
+  serious:   { bl: -6, br: -6, tl: 12,  tr: 12,  eye: 0.95, lid: 0.1,  mouth: "frown" },
+};
+
+export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk?: boolean; point?: number; look?: number; expr?: DocExpr }> = ({
+  x, y, s = 1, f, talk = false, point = 0, look = 0, expr = "neutral",
 }) => {
+  const E = EXPR[expr];
   const bob = Math.sin(f / 14) * 3;
   const open = talk ? 0.25 + Math.abs(Math.sin(f / 2.5)) * 0.75 : 0;
   const blink = f % 95 > 90 ? 0.12 : 1;
@@ -173,10 +185,32 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
           <ellipse cx={62} cy={34} rx={34} ry={22} fill="url(#d2cheek)" />
           {/* beard (frames the mouth), textured edge */}
           <path d="M-102 10 Q -104 70 -78 104 Q -70 120 -56 116 Q -46 132 -30 128 Q -16 142 0 136 Q 16 142 30 128 Q 46 132 56 116 Q 70 120 78 104 Q 104 70 102 10 Q 96 40 76 50 Q 60 92 0 96 Q -60 92 -76 50 Q -96 40 -102 10 Z" fill="url(#d2hair)" />
-          {/* mouth opening + lips */}
-          <path d={`M-30 66 Q 0 ${58 - open * 4} 30 66 Q 0 ${76 + open * 18} -30 66 Z`} fill="#6A2A30" />
-          {open > 0.2 && <path d={`M-18 ${72 + open * 6} Q 0 ${82 + open * 10} 18 ${72 + open * 6}`} fill="#E86A7A" opacity={0.8} />}
-          <path d="M-26 68 Q 0 84 26 68" stroke="#C86A64" strokeWidth={5} fill="none" opacity={0.9} />
+          {/* mouth: expression shape, plus talk flap */}
+          {talk || E.mouth === "rest" ? (
+            <>
+              <path d={`M-30 66 Q 0 ${58 - open * 4} 30 66 Q 0 ${76 + open * 18} -30 66 Z`} fill="#6A2A30" />
+              {open > 0.2 && <path d={`M-18 ${72 + open * 6} Q 0 ${82 + open * 10} 18 ${72 + open * 6}`} fill="#E86A7A" opacity={0.8} />}
+              <path d="M-26 68 Q 0 84 26 68" stroke="#C86A64" strokeWidth={5} fill="none" opacity={0.9} />
+            </>
+          ) : E.mouth === "smile" ? (
+            <>
+              <path d="M-38 60 Q 0 104 38 60 Q 0 78 -38 60 Z" fill="#6A2A30" />
+              <path d="M-28 64 Q 0 76 28 64 L 26 70 Q 0 80 -26 70 Z" fill="#FFFFFF" />
+              <path d="M-34 66 Q 0 104 34 66" stroke="#C86A64" strokeWidth={5} fill="none" />
+            </>
+          ) : E.mouth === "o" ? (
+            <>
+              <ellipse cx={0} cy={76} rx={17} ry={22} fill="#6A2A30" />
+              <ellipse cx={0} cy={86} rx={10} ry={8} fill="#E86A7A" opacity={0.8} />
+              <ellipse cx={0} cy={76} rx={19} ry={24} fill="none" stroke="#C86A64" strokeWidth={4} />
+            </>
+          ) : E.mouth === "smirk" ? (
+            <path d="M-26 72 Q 4 74 30 60" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
+          ) : E.mouth === "flat" ? (
+            <path d="M-26 70 L 26 70" stroke="#6A2A30" strokeWidth={7} strokeLinecap="round" />
+          ) : (
+            <path d="M-26 76 Q 0 62 26 76" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
+          )}
           {/* moustache */}
           <path d="M-46 58 Q -24 36 0 50 Q 24 36 46 58 Q 30 56 0 62 Q -30 56 -46 58 Z" fill={HAIR[1]} />
           <path d="M-36 50 q 14 -8 28 0 M8 50 q 14 -8 28 0" stroke={HAIR[0]} strokeWidth={3} fill="none" opacity={0.8} />
@@ -192,18 +226,24 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
           {/* eyes: sclera, iris, pupil, lid */}
           {[-44, 44].map((ex) => (
             <g key={ex} transform={`translate(${ex},-14)`}>
-              <g transform={`scale(1,${blink})`}>
+              <g transform={`scale(1,${blink * E.eye})`}>
                 <path d="M-20 0 Q 0 -16 20 0 Q 0 14 -20 0 Z" fill="#FFFFFF" />
                 <circle cx={look * 6} cy={0} r={9} fill="#6A4A2A" />
                 <circle cx={look * 6} cy={0} r={5} fill="#1B1240" />
                 <circle cx={look * 6 - 3} cy={-3} r={2.5} fill="#FFFFFF" />
               </g>
-              <path d="M-22 -2 Q 0 -20 22 -2" stroke="#5A3A2A" strokeWidth={4} fill="none" strokeLinecap="round" />
+              {E.lid > 0 && <path d={`M-22 -2 Q 0 -20 22 -2 L 22 ${-2 + E.lid * 16} Q 0 ${-20 + E.lid * 22} -22 ${-2 + E.lid * 16} Z`} fill={SKIN[1]} />}
+              <path d={`M-22 ${-2 + E.lid * 14} Q 0 ${-20 + E.lid * 20} 22 ${-2 + E.lid * 14}`} stroke="#5A3A2A" strokeWidth={4} fill="none" strokeLinecap="round" />
             </g>
           ))}
-          {/* brows: tapered */}
-          <path d={`M-70 ${-44 - brow} Q -48 ${-56 - brow} -22 ${-48 - brow} L -24 ${-40 - brow} Q -48 ${-46 - brow} -68 ${-36 - brow} Z`} fill={HAIR[2]} />
-          <path d={`M70 ${-44 - brow} Q 48 ${-56 - brow} 22 ${-48 - brow} L 24 ${-40 - brow} Q 48 ${-46 - brow} 68 ${-36 - brow} Z`} fill={HAIR[2]} />
+          {/* brows: tapered, per-side lift and tilt from the expression */}
+          <g transform={`translate(0,${-E.bl - brow}) rotate(${E.tl},-46,-46)`}>
+            <path d="M-70 -44 Q -48 -56 -22 -48 L -24 -40 Q -48 -46 -68 -36 Z" fill={HAIR[2]} />
+          </g>
+          <g transform={`translate(0,${-E.br - brow}) rotate(${-E.tr},46,-46)`}>
+            <path d="M70 -44 Q 48 -56 22 -48 L 24 -40 Q 48 -46 68 -36 Z" fill={HAIR[2]} />
+          </g>
+          {E.mouth === "smile" && <><ellipse cx={-62} cy={30} rx={30} ry={18} fill="url(#d2cheek)" /><ellipse cx={62} cy={30} rx={30} ry={18} fill="url(#d2cheek)" /></>}
           {/* glasses: thinner frames, lens tint + reflection */}
           {[-44, 44].map((gx) => (
             <g key={gx} transform={`translate(${gx},-12)`}>
