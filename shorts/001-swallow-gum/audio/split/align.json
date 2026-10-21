@@ -1,0 +1,490 @@
+{
+ "sig": "596646|1791868134525883100|This is what happens when you swallow gum. First, it slides down your esophagus in one piece. In your stomach, acid strips away the sugar and flavor. But the gum base is made of rubbery polymers your body simply can't digest. So no, it doesn't stay inside you for seven years. Your intestines just squeeze it along with everything else. And a few days later, it leaves your body. But swallow lots of gum every day, and it can build into a solid mass that blocks your gut. Doctors have actually had to remove these from kids.",
+ "words": [
+  {
+   "w": "This",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "is",
+   "start": 0.3,
+   "end": 0.44
+  },
+  {
+   "w": "what",
+   "start": 0.44,
+   "end": 0.6
+  },
+  {
+   "w": "happens",
+   "start": 0.6,
+   "end": 1.04
+  },
+  {
+   "w": "when",
+   "start": 1.04,
+   "end": 1.26
+  },
+  {
+   "w": "you",
+   "start": 1.26,
+   "end": 1.46
+  },
+  {
+   "w": "swallow",
+   "start": 1.46,
+   "end": 1.72
+  },
+  {
+   "w": "gum",
+   "start": 1.72,
+   "end": 2.1
+  },
+  {
+   "w": "First",
+   "start": 3.02,
+   "end": 3.28
+  },
+  {
+   "w": "it",
+   "start": 3.68,
+   "end": 3.76
+  },
+  {
+   "w": "slides",
+   "start": 3.76,
+   "end": 4.06
+  },
+  {
+   "w": "down",
+   "start": 4.06,
+   "end": 4.36
+  },
+  {
+   "w": "your",
+   "start": 4.36,
+   "end": 4.52
+  },
+  {
+   "w": "esophagus",
+   "start": 4.52,
+   "end": 5.08
+  },
+  {
+   "w": "in",
+   "start": 5.08,
+   "end": 5.34
+  },
+  {
+   "w": "one",
+   "start": 5.34,
+   "end": 5.58
+  },
+  {
+   "w": "piece",
+   "start": 5.58,
+   "end": 5.92
+  },
+  {
+   "w": "In",
+   "start": 9.76,
+   "end": 9.86
+  },
+  {
+   "w": "your",
+   "start": 9.86,
+   "end": 9.98
+  },
+  {
+   "w": "stomach",
+   "start": 9.98,
+   "end": 10.46
+  },
+  {
+   "w": "acid",
+   "start": 10.76,
+   "end": 11.02
+  },
+  {
+   "w": "strips",
+   "start": 11.02,
+   "end": 11.46
+  },
+  {
+   "w": "away",
+   "start": 11.46,
+   "end": 11.76
+  },
+  {
+   "w": "the",
+   "start": 11.76,
+   "end": 11.96
+  },
+  {
+   "w": "sugar",
+   "start": 11.96,
+   "end": 12.22
+  },
+  {
+   "w": "and",
+   "start": 12.22,
+   "end": 12.44
+  },
+  {
+   "w": "flavor",
+   "start": 12.44,
+   "end": 12.76
+  },
+  {
+   "w": "But",
+   "start": 13.2,
+   "end": 13.38
+  },
+  {
+   "w": "the",
+   "start": 13.38,
+   "end": 13.52
+  },
+  {
+   "w": "gum",
+   "start": 13.52,
+   "end": 13.74
+  },
+  {
+   "w": "base",
+   "start": 13.74,
+   "end": 14.02
+  },
+  {
+   "w": "is",
+   "start": 14.02,
+   "end": 14.24
+  },
+  {
+   "w": "made",
+   "start": 14.24,
+   "end": 14.4
+  },
+  {
+   "w": "of",
+   "start": 14.4,
+   "end": 14.54
+  },
+  {
+   "w": "rubbery",
+   "start": 14.54,
+   "end": 14.96
+  },
+  {
+   "w": "polymers",
+   "start": 14.96,
+   "end": 15.54
+  },
+  {
+   "w": "your",
+   "start": 15.54,
+   "end": 15.74
+  },
+  {
+   "w": "body",
+   "start": 15.74,
+   "end": 16.02
+  },
+  {
+   "w": "simply",
+   "start": 16.02,
+   "end": 16.42
+  },
+  {
+   "w": "can't",
+   "start": 16.42,
+   "end": 16.92
+  },
+  {
+   "w": "digest",
+   "start": 16.92,
+   "end": 17.3
+  },
+  {
+   "w": "So",
+   "start": 17.84,
+   "end": 18.16
+  },
+  {
+   "w": "no",
+   "start": 18.16,
+   "end": 18.56
+  },
+  {
+   "w": "it",
+   "start": 18.86,
+   "end": 19.04
+  },
+  {
+   "w": "doesn't",
+   "start": 19.04,
+   "end": 19.44
+  },
+  {
+   "w": "stay",
+   "start": 19.44,
+   "end": 19.68
+  },
+  {
+   "w": "inside",
+   "start": 19.68,
+   "end": 19.96
+  },
+  {
+   "w": "you",
+   "start": 19.96,
+   "end": 20.16
+  },
+  {
+   "w": "for",
+   "start": 20.16,
+   "end": 20.34
+  },
+  {
+   "w": "seven",
+   "start": 20.34,
+   "end": 20.6
+  },
+  {
+   "w": "years",
+   "start": 20.6,
+   "end": 20.94
+  },
+  {
+   "w": "Your",
+   "start": 21.42,
+   "end": 21.56
+  },
+  {
+   "w": "intestines",
+   "start": 21.56,
+   "end": 22.06
+  },
+  {
+   "w": "just",
+   "start": 22.06,
+   "end": 22.34
+  },
+  {
+   "w": "squeeze",
+   "start": 22.34,
+   "end": 22.76
+  },
+  {
+   "w": "it",
+   "start": 22.76,
+   "end": 22.94
+  },
+  {
+   "w": "along",
+   "start": 22.94,
+   "end": 23.16
+  },
+  {
+   "w": "with",
+   "start": 23.16,
+   "end": 23.36
+  },
+  {
+   "w": "everything",
+   "start": 23.36,
+   "end": 23.66
+  },
+  {
+   "w": "else",
+   "start": 23.66,
+   "end": 24.02
+  },
+  {
+   "w": "And",
+   "start": 24.42,
+   "end": 24.64
+  },
+  {
+   "w": "a",
+   "start": 24.64,
+   "end": 24.76
+  },
+  {
+   "w": "few",
+   "start": 24.76,
+   "end": 24.9
+  },
+  {
+   "w": "days",
+   "start": 24.9,
+   "end": 25.08
+  },
+  {
+   "w": "later",
+   "start": 25.08,
+   "end": 25.42
+  },
+  {
+   "w": "it",
+   "start": 25.66,
+   "end": 25.88
+  },
+  {
+   "w": "leaves",
+   "start": 25.88,
+   "end": 26.04
+  },
+  {
+   "w": "your",
+   "start": 26.04,
+   "end": 26.2
+  },
+  {
+   "w": "body",
+   "start": 26.2,
+   "end": 26.46
+  },
+  {
+   "w": "But",
+   "start": 26.46,
+   "end": 27.08
+  },
+  {
+   "w": "swallow",
+   "start": 27.08,
+   "end": 27.46
+  },
+  {
+   "w": "lots",
+   "start": 27.46,
+   "end": 27.84
+  },
+  {
+   "w": "of",
+   "start": 27.84,
+   "end": 28.1
+  },
+  {
+   "w": "gum",
+   "start": 28.1,
+   "end": 28.3
+  },
+  {
+   "w": "every",
+   "start": 28.3,
+   "end": 28.72
+  },
+  {
+   "w": "day",
+   "start": 28.72,
+   "end": 29.04
+  },
+  {
+   "w": "and",
+   "start": 29.04,
+   "end": 29.42
+  },
+  {
+   "w": "it",
+   "start": 29.42,
+   "end": 29.54
+  },
+  {
+   "w": "can",
+   "start": 29.54,
+   "end": 29.68
+  },
+  {
+   "w": "build",
+   "start": 29.68,
+   "end": 29.92
+  },
+  {
+   "w": "into",
+   "start": 29.92,
+   "end": 30.14
+  },
+  {
+   "w": "a",
+   "start": 30.14,
+   "end": 30.3
+  },
+  {
+   "w": "solid",
+   "start": 30.3,
+   "end": 30.68
+  },
+  {
+   "w": "mass",
+   "start": 30.68,
+   "end": 31.06
+  },
+  {
+   "w": "that",
+   "start": 31.06,
+   "end": 31.34
+  },
+  {
+   "w": "blocks",
+   "start": 31.34,
+   "end": 31.62
+  },
+  {
+   "w": "your",
+   "start": 31.62,
+   "end": 31.82
+  },
+  {
+   "w": "gut",
+   "start": 31.82,
+   "end": 32.2
+  },
+  {
+   "w": "Doctors",
+   "start": 33.52,
+   "end": 33.52
+  },
+  {
+   "w": "have",
+   "start": 33.52,
+   "end": 33.74
+  },
+  {
+   "w": "actually",
+   "start": 33.74,
+   "end": 34.08
+  },
+  {
+   "w": "had",
+   "start": 34.08,
+   "end": 34.3
+  },
+  {
+   "w": "to",
+   "start": 34.3,
+   "end": 34.46
+  },
+  {
+   "w": "remove",
+   "start": 34.46,
+   "end": 34.78
+  },
+  {
+   "w": "these",
+   "start": 34.78,
+   "end": 35.08
+  },
+  {
+   "w": "from",
+   "start": 35.08,
+   "end": 35.32
+  },
+  {
+   "w": "kids",
+   "start": 35.32,
+   "end": 35.62
+  }
+ ]
+}

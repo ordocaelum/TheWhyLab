@@ -1,0 +1,101 @@
+{
+  "title": "Nobody looks at a homeless man",
+  "tts": "sapi",
+  "sapi_voice": "Microsoft David Desktop",
+  "sapi_rate": 0,
+  "gap": 0.2,
+  "style": "3D CGI render, stylized realistic animation, smooth plastic-like skin, moody low-key lighting, cold blue and teal tones with deep shadows, sodium streetlight glow, subtle film grain, quiet empty city at night, eerie atmosphere, vertical 9:16 composition",
+  "shots": [
+    {
+      "id": "01",
+      "line": "Nobody looks at a homeless man. That's how I saw it first.",
+      "type": "video",
+      "clip": "A",
+      "start": 0,
+      "speed": 1
+    },
+    {
+      "id": "02",
+      "line": "Tuesday, a woman at the bus stop stood perfectly still. For an hour.",
+      "type": "video",
+      "clip": "A",
+      "start": 2.1,
+      "speed": 1
+    },
+    {
+      "id": "03",
+      "line": "Wednesday, a man in a suit walked into the same wall. Again. And again.",
+      "type": "video",
+      "clip": "A",
+      "start": 5.1,
+      "speed": 1
+    },
+    {
+      "id": "04",
+      "line": "By Thursday, they'd stopped blinking. I counted.",
+      "type": "video",
+      "clip": "A",
+      "start": 7.1,
+      "speed": 1
+    },
+    {
+      "id": "05",
+      "line": "Then the pigeons left. Every single one.",
+      "type": "video",
+      "clip": "A",
+      "start": 8.0,
+      "speed": 0.5,
+      "push": 0.2
+    },
+    {
+      "id": "06",
+      "line": "Friday night, a jogger stopped right under my streetlight, and sniffed the air.",
+      "type": "video",
+      "clip": "C",
+      "start": 0,
+      "speed": 1
+    },
+    {
+      "id": "07",
+      "line": "Then he looked at me. Then past me. At the man buying coffee.",
+      "type": "video",
+      "clip": "C",
+      "start": 3.5,
+      "speed": 1
+    },
+    {
+      "id": "08",
+      "line": "He didn't run. He just walked toward him. Faster. And faster.",
+      "type": "video",
+      "clip": "C",
+      "start": 7,
+      "speed": 1
+    },
+    {
+      "id": "09",
+      "line": "I heard the coffee cup hit the ground before I heard the scream.",
+      "type": "video",
+      "clip": "money",
+      "start": 0,
+      "speed": 0.8
+    },
+    {
+      "id": "10",
+      "line": "I watched him tear the man's throat out. Right there, under the streetlight.",
+      "type": "video",
+      "clip": "money",
+      "start": 2.5,
+      "speed": 0.7
+    },
+    {
+      "id": "11",
+      "line": "Then every head on the street turned. Toward me.",
+      "type": "video",
+      "clip": "money",
+      "start": 7.5,
+      "speed": 0.4,
+      "push": 0.25
+    }
+  ],
+  "higgs_project": "58b92970-10b3-4093-918e-7750395413f2"
+}

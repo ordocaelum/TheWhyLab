@@ -1,0 +1,630 @@
+{
+ "sig": "891726|1791874698506432100|Nobody looks at a homeless man. That's how I saw it first. Tuesday, a woman at the bus stop stood perfectly still. For an hour. Wednesday, a man in a suit walked into the same wall. Again. And again. By Thursday, they'd stopped blinking. I counted. Then the pigeons left. Every single one. Friday night, a jogger stopped right under my streetlight, and sniffed the air. Then he looked at me. Then past me. At the man buying coffee. He didn't run. He just walked toward him. Faster. And faster. I heard the coffee cup hit the ground before I heard the scream. I watched him tear the man's throat out. Right there, under the streetlight. Then every head on the street turned. Toward me.",
+ "words": [
+  {
+   "w": "Nobody",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "looks",
+   "start": 0.58,
+   "end": 1.0
+  },
+  {
+   "w": "at",
+   "start": 1.0,
+   "end": 1.24
+  },
+  {
+   "w": "a",
+   "start": 1.24,
+   "end": 1.4
+  },
+  {
+   "w": "homeless",
+   "start": 1.4,
+   "end": 1.72
+  },
+  {
+   "w": "man",
+   "start": 1.72,
+   "end": 2.48
+  },
+  {
+   "w": "That's",
+   "start": 3.12,
+   "end": 3.26
+  },
+  {
+   "w": "how",
+   "start": 3.26,
+   "end": 3.38
+  },
+  {
+   "w": "I",
+   "start": 3.38,
+   "end": 3.52
+  },
+  {
+   "w": "saw",
+   "start": 3.52,
+   "end": 3.7
+  },
+  {
+   "w": "it",
+   "start": 3.7,
+   "end": 3.88
+  },
+  {
+   "w": "first",
+   "start": 3.88,
+   "end": 4.22
+  },
+  {
+   "w": "Tuesday",
+   "start": 5.46,
+   "end": 5.86
+  },
+  {
+   "w": "a",
+   "start": 6.44,
+   "end": 6.5
+  },
+  {
+   "w": "woman",
+   "start": 6.5,
+   "end": 6.68
+  },
+  {
+   "w": "at",
+   "start": 6.68,
+   "end": 6.88
+  },
+  {
+   "w": "the",
+   "start": 6.88,
+   "end": 7.0
+  },
+  {
+   "w": "bus",
+   "start": 7.0,
+   "end": 7.18
+  },
+  {
+   "w": "stop",
+   "start": 7.18,
+   "end": 7.48
+  },
+  {
+   "w": "stood",
+   "start": 7.48,
+   "end": 7.74
+  },
+  {
+   "w": "perfectly",
+   "start": 7.74,
+   "end": 8.38
+  },
+  {
+   "w": "still",
+   "start": 8.38,
+   "end": 8.82
+  },
+  {
+   "w": "For",
+   "start": 8.82,
+   "end": 9.64
+  },
+  {
+   "w": "an",
+   "start": 9.64,
+   "end": 9.8
+  },
+  {
+   "w": "hour",
+   "start": 9.8,
+   "end": 10.2
+  },
+  {
+   "w": "Wednesday",
+   "start": 11.84,
+   "end": 12.34
+  },
+  {
+   "w": "a",
+   "start": 12.82,
+   "end": 12.9
+  },
+  {
+   "w": "man",
+   "start": 12.9,
+   "end": 13.08
+  },
+  {
+   "w": "in",
+   "start": 13.08,
+   "end": 13.24
+  },
+  {
+   "w": "a",
+   "start": 13.24,
+   "end": 13.36
+  },
+  {
+   "w": "suit",
+   "start": 13.36,
+   "end": 13.66
+  },
+  {
+   "w": "walked",
+   "start": 13.66,
+   "end": 14.04
+  },
+  {
+   "w": "into",
+   "start": 14.04,
+   "end": 14.3
+  },
+  {
+   "w": "the",
+   "start": 14.3,
+   "end": 14.5
+  },
+  {
+   "w": "same",
+   "start": 14.5,
+   "end": 14.78
+  },
+  {
+   "w": "wall",
+   "start": 14.78,
+   "end": 15.18
+  },
+  {
+   "w": "Again",
+   "start": 15.18,
+   "end": 16.0
+  },
+  {
+   "w": "And",
+   "start": 16.0,
+   "end": 16.7
+  },
+  {
+   "w": "again",
+   "start": 16.7,
+   "end": 17.08
+  },
+  {
+   "w": "By",
+   "start": 18.1,
+   "end": 18.78
+  },
+  {
+   "w": "Thursday",
+   "start": 18.78,
+   "end": 19.2
+  },
+  {
+   "w": "they'd",
+   "start": 19.62,
+   "end": 19.82
+  },
+  {
+   "w": "stopped",
+   "start": 19.82,
+   "end": 20.14
+  },
+  {
+   "w": "blinking",
+   "start": 20.14,
+   "end": 20.56
+  },
+  {
+   "w": "I",
+   "start": 21.14,
+   "end": 21.32
+  },
+  {
+   "w": "counted",
+   "start": 21.32,
+   "end": 21.66
+  },
+  {
+   "w": "Then",
+   "start": 23.2,
+   "end": 23.46
+  },
+  {
+   "w": "the",
+   "start": 23.46,
+   "end": 23.64
+  },
+  {
+   "w": "pigeons",
+   "start": 23.64,
+   "end": 24.0
+  },
+  {
+   "w": "left",
+   "start": 24.0,
+   "end": 24.34
+  },
+  {
+   "w": "Every",
+   "start": 24.88,
+   "end": 25.3
+  },
+  {
+   "w": "single",
+   "start": 25.3,
+   "end": 25.74
+  },
+  {
+   "w": "one",
+   "start": 25.74,
+   "end": 26.26
+  },
+  {
+   "w": "Friday",
+   "start": 26.979999999999997,
+   "end": 27.54
+  },
+  {
+   "w": "night",
+   "start": 27.54,
+   "end": 27.9
+  },
+  {
+   "w": "a",
+   "start": 28.2,
+   "end": 28.34
+  },
+  {
+   "w": "jogger",
+   "start": 28.34,
+   "end": 28.7
+  },
+  {
+   "w": "stopped",
+   "start": 28.7,
+   "end": 28.98
+  },
+  {
+   "w": "right",
+   "start": 28.98,
+   "end": 29.38
+  },
+  {
+   "w": "under",
+   "start": 29.38,
+   "end": 29.64
+  },
+  {
+   "w": "my",
+   "start": 29.64,
+   "end": 29.86
+  },
+  {
+   "w": "streetlight",
+   "start": 29.86,
+   "end": 30.36
+  },
+  {
+   "w": "and",
+   "start": 30.36,
+   "end": 30.76
+  },
+  {
+   "w": "sniffed",
+   "start": 30.76,
+   "end": 31.2
+  },
+  {
+   "w": "the",
+   "start": 31.2,
+   "end": 31.28
+  },
+  {
+   "w": "air",
+   "start": 31.28,
+   "end": 31.56
+  },
+  {
+   "w": "Then",
+   "start": 32.28,
+   "end": 32.42
+  },
+  {
+   "w": "he",
+   "start": 32.42,
+   "end": 32.54
+  },
+  {
+   "w": "looked",
+   "start": 32.54,
+   "end": 32.68
+  },
+  {
+   "w": "at",
+   "start": 32.68,
+   "end": 32.86
+  },
+  {
+   "w": "me",
+   "start": 32.86,
+   "end": 33.16
+  },
+  {
+   "w": "Then",
+   "start": 33.68,
+   "end": 33.88
+  },
+  {
+   "w": "past",
+   "start": 33.88,
+   "end": 34.2
+  },
+  {
+   "w": "me",
+   "start": 34.2,
+   "end": 34.52
+  },
+  {
+   "w": "At",
+   "start": 34.86,
+   "end": 35.0
+  },
+  {
+   "w": "the",
+   "start": 35.0,
+   "end": 35.1
+  },
+  {
+   "w": "man",
+   "start": 35.1,
+   "end": 35.3
+  },
+  {
+   "w": "buying",
+   "start": 35.3,
+   "end": 35.6
+  },
+  {
+   "w": "coffee",
+   "start": 35.6,
+   "end": 36.0
+  },
+  {
+   "w": "He",
+   "start": 36.66,
+   "end": 36.98
+  },
+  {
+   "w": "didn't",
+   "start": 36.98,
+   "end": 37.26
+  },
+  {
+   "w": "run",
+   "start": 37.26,
+   "end": 37.46
+  },
+  {
+   "w": "He",
+   "start": 37.88,
+   "end": 38.08
+  },
+  {
+   "w": "just",
+   "start": 38.08,
+   "end": 38.24
+  },
+  {
+   "w": "walked",
+   "start": 38.24,
+   "end": 38.54
+  },
+  {
+   "w": "toward",
+   "start": 38.54,
+   "end": 38.86
+  },
+  {
+   "w": "him",
+   "start": 38.86,
+   "end": 39.14
+  },
+  {
+   "w": "Faster",
+   "start": 39.4,
+   "end": 39.78
+  },
+  {
+   "w": "And",
+   "start": 39.78,
+   "end": 40.48
+  },
+  {
+   "w": "faster",
+   "start": 40.48,
+   "end": 40.86
+  },
+  {
+   "w": "I",
+   "start": 42.08,
+   "end": 42.64
+  },
+  {
+   "w": "heard",
+   "start": 42.64,
+   "end": 42.82
+  },
+  {
+   "w": "the",
+   "start": 42.82,
+   "end": 43.0
+  },
+  {
+   "w": "coffee",
+   "start": 43.0,
+   "end": 43.26
+  },
+  {
+   "w": "cup",
+   "start": 43.26,
+   "end": 43.46
+  },
+  {
+   "w": "hit",
+   "start": 43.46,
+   "end": 43.64
+  },
+  {
+   "w": "the",
+   "start": 43.64,
+   "end": 43.8
+  },
+  {
+   "w": "ground",
+   "start": 43.8,
+   "end": 44.08
+  },
+  {
+   "w": "before",
+   "start": 44.08,
+   "end": 44.46
+  },
+  {
+   "w": "I",
+   "start": 44.46,
+   "end": 44.66
+  },
+  {
+   "w": "heard",
+   "start": 44.66,
+   "end": 44.8
+  },
+  {
+   "w": "the",
+   "start": 44.8,
+   "end": 44.98
+  },
+  {
+   "w": "scream",
+   "start": 44.98,
+   "end": 45.32
+  },
+  {
+   "w": "I",
+   "start": 46.48,
+   "end": 47.04
+  },
+  {
+   "w": "watched",
+   "start": 47.04,
+   "end": 47.22
+  },
+  {
+   "w": "him",
+   "start": 47.22,
+   "end": 47.48
+  },
+  {
+   "w": "tear",
+   "start": 47.48,
+   "end": 47.78
+  },
+  {
+   "w": "the",
+   "start": 47.78,
+   "end": 47.96
+  },
+  {
+   "w": "man's",
+   "start": 47.96,
+   "end": 48.24
+  },
+  {
+   "w": "throat",
+   "start": 48.24,
+   "end": 48.5
+  },
+  {
+   "w": "out",
+   "start": 48.5,
+   "end": 48.94
+  },
+  {
+   "w": "Right",
+   "start": 49.12,
+   "end": 49.32
+  },
+  {
+   "w": "there",
+   "start": 49.32,
+   "end": 49.7
+  },
+  {
+   "w": "under",
+   "start": 49.88,
+   "end": 50.02
+  },
+  {
+   "w": "the",
+   "start": 50.02,
+   "end": 50.22
+  },
+  {
+   "w": "streetlight",
+   "start": 50.22,
+   "end": 50.72
+  },
+  {
+   "w": "Then",
+   "start": 51.46,
+   "end": 51.66
+  },
+  {
+   "w": "every",
+   "start": 51.66,
+   "end": 52.06
+  },
+  {
+   "w": "head",
+   "start": 52.06,
+   "end": 52.32
+  },
+  {
+   "w": "on",
+   "start": 52.32,
+   "end": 52.46
+  },
+  {
+   "w": "the",
+   "start": 52.46,
+   "end": 52.6
+  },
+  {
+   "w": "street",
+   "start": 52.6,
+   "end": 52.88
+  },
+  {
+   "w": "turned",
+   "start": 52.88,
+   "end": 53.34
+  },
+  {
+   "w": "Toward",
+   "start": 53.94,
+   "end": 53.98
+  },
+  {
+   "w": "me",
+   "start": 53.98,
+   "end": 54.36
+  }
+ ]
+}

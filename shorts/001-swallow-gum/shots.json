@@ -1,0 +1,83 @@
+{
+  "title": "What happens if you swallow gum",
+  "tts": "sapi",
+  "sapi_voice": "Microsoft David Desktop",
+  "sapi_rate": 1,
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+8%",
+  "gap": 0.15,
+  "shots": [
+    {
+      "id": "01",
+      "line": "This is what happens when you swallow gum.",
+      "type": "video",
+      "prompt": "bald middle-aged man in a plain grey t-shirt chewing pink bubble gum, about to swallow it, waist-up, facing camera",
+      "motion": "the man stops chewing and gulps, slow camera push-in",
+      "higgs_image_job": "6ec93a9b-0ee4-43b7-a2e6-49b6510929ab"
+    },
+    {
+      "id": "02",
+      "line": "First, it slides down your esophagus in one piece.",
+      "type": "video",
+      "prompt": "the same bald man in side profile with transparent skin, glowing blue skeleton and throat visible, a small bright pink blob of gum inside the esophagus",
+      "motion": "the pink blob slides down the throat toward the stomach",
+      "higgs_image_job": "5d1e10cc-7dac-458a-8bf0-dca0b6e8e73f"
+    },
+    {
+      "id": "03",
+      "line": "In your stomach, acid strips away the sugar and flavor.",
+      "type": "video",
+      "zoom": "in",
+      "prompt": "cross-section of a human stomach, glossy pink tissue, bubbling green-yellow stomach acid surrounding a bright pink blob of chewing gum, tiny sugar crystals dissolving off it",
+      "higgs_image_job": "4d237fc8-2cd7-4cfa-9501-02cc4c2bca45"
+    },
+    {
+      "id": "04",
+      "line": "But the gum base is made of rubbery polymers your body simply can't digest.",
+      "type": "video",
+      "zoom": "out",
+      "prompt": "extreme macro of a pink chewing gum blob, its surface revealing tangled rubbery polymer strands like glowing elastic threads, inside a dark stomach",
+      "higgs_image_job": "c7f9a3b7-8cc8-4d97-8517-6850a0a0a2c9"
+    },
+    {
+      "id": "05",
+      "line": "So no, it doesn't stay inside you for seven years.",
+      "type": "video",
+      "zoom": "in",
+      "prompt": "the same bald man wagging his finger 'no' with a smug half smile, a large wall calendar behind him with the number 7 crossed out in red",
+      "higgs_image_job": "34533bb6-2933-4110-86d8-3610e8d19545"
+    },
+    {
+      "id": "06",
+      "line": "Your intestines just squeeze it along with everything else.",
+      "type": "video",
+      "prompt": "x-ray style view of human intestines, transparent glowing tubes, a bright pink gum blob traveling through them",
+      "motion": "intestines contract in waves, pushing the pink blob along, slow camera drift",
+      "higgs_image_job": "ac90b4d0-91da-4ac2-af9e-3f7e15596e82"
+    },
+    {
+      "id": "07",
+      "line": "And a few days later, it leaves your body.",
+      "type": "video",
+      "zoom": "out",
+      "prompt": "the same bald man stepping out of a bathroom door looking relieved, giving a thumbs up",
+      "higgs_image_job": "7032ffe7-1628-44fa-b241-bbe970e84507"
+    },
+    {
+      "id": "08",
+      "line": "But swallow lots of gum every day, and it can build into a solid mass that blocks your gut.",
+      "type": "video",
+      "zoom": "in",
+      "prompt": "the same bald man seen with transparent skin, glowing blue skeleton, stomach and intestines highlighted, a large ball of tangled pink gum lodged and blocking the intestine, red warning glow around it",
+      "higgs_image_job": "42f27f2e-0f41-454b-9168-975ab649f37f"
+    },
+    {
+      "id": "09",
+      "line": "Doctors have actually had to remove these from kids.",
+      "type": "video",
+      "zoom": "out",
+      "prompt": "surgeon in blue scrubs and mask holding up a fist-sized ball of pink gum with forceps in a bright operating room",
+      "higgs_image_job": "08aaf3e9-496b-446a-a0a7-4eac03dbd33d"
+    }
+  ]
+}

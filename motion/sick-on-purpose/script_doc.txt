@@ -1,0 +1,55 @@
+001 You wake up, and something is wrong.
+002 Your head is heavy. Your whole body aches. Breakfast sounds disgusting, and answering a single text feels like climbing a mountain.
+003 You probably blame the germ. It got inside you, it's breaking things, so of course you feel awful.
+004 But here's the strange part. Much of what makes you feel sick isn't the germ at all.
+005 It's you. Your own body is doing this to you. On purpose.
+006 Let's take a closer look.
+007 A few bacteria slip into a tiny cut on your hand. Your immune cells quickly notice the intruders.
+009 The first responders don't just fight. They also send messages: tiny proteins called cytokines.
+011 Those messages spread through your bloodstream. And some take a shortcut, along the vagus nerve, a long cable that runs from your gut and organs straight up into your brain.
+012 When the message arrives, your brain does two big things.
+013 First, it resets your thermostat. A chemical messenger tells a small region deep in your brain, the hypothalamus, to aim for a higher temperature.
+014 So even though you're already warm, you suddenly feel cold. You shiver. You pull the blanket tighter. Your body is cranking up the heat to hit its new target.
+015 And second, it changes you.
+016 You get tired. You want to sleep. You lose your appetite. You stop caring how you look. You want to be left alone. You feel a bit miserable.
+017 Scientists have a name for this whole package: sickness behaviour.
+019 For a long time, people assumed it was just weakness, a body breaking down under attack. Then, in 1988, a veterinarian named Benjamin Hart looked at it differently.
+020 Sick animals, he argued, aren't failing. They're following a plan. An organised, evolved strategy, all built around one weapon.
+021 That weapon is fever.
+022 Turning up the heat makes life harder for many invaders, and it speeds up parts of your immune response.
+024 But fever is incredibly expensive. Every extra degree costs your body roughly ten percent more energy, maybe more.
+025 So where does all that energy come from? From everything else you'd normally be doing.
+026 Walking around burns energy, so you feel exhausted. Losing heat wastes energy, so you curl up into a ball.
+027 Even your sleep changes. Researchers think the extra sleep you get when you're sick is tuned to help power the fever.
+028 And this strategy is old. Really, really old.
+029 In one famous experiment, scientists infected desert iguanas with bacteria. Lizards are cold-blooded. They can't make a fever from the inside.
+030 So they made one from the outside. The infected lizards crawled toward the heat, and raised their body temperature by about two degrees.
+031 When researchers held infected lizards at cooler temperatures, more of them died. The ones kept warmer survived better.
+032 Fish do it too. A 2023 study found that infected fish deliberately swim into warmer water, and that a mild fever helped them clear the infection and repair damaged tissue.
+033 Even honeybees have tried a version of it. When a fungus attacks their young, worker bees vibrate their flight muscles and heat the nursery comb by about half a degree.
+034 Although, to be fair to the fungus, a later study found that tiny hive fever wasn't enough to stop the infection on its own. Evolution doesn't always win.
+035 Now for the weirdest symptom of all: you stop wanting to eat.
+036 That seems backwards. Surely you need fuel to fight?
+037 In 2016, a team at Yale tested this in mice. Mice with a bacterial infection naturally stopped eating. When researchers fed them anyway, far more of them died.
+038 But here's the twist. With a viral infection, the flu, it flipped. Feeding those mice actually helped them survive, and blocking their use of sugar was deadly.
+039 It wasn't mainly about starving the germ. What changed was how well the mouse's own tissues could handle the damage. Different invaders, different fuel strategy.
+041 Easy. These were mice, not people, so this is not a diet plan. But it hints that losing your appetite isn't necessarily a malfunction. It might be a setting.
+042 And then there's the loneliness.
+043 When you're sick, everyone feels far away. You don't want to see anyone, and you might feel a little low.
+044 Scientists tested this directly. They gave healthy volunteers a tiny dose of a harmless bacterial fragment, enough to trip the immune alarm without a real infection.
+045 Within hours, the volunteers reported feeling more disconnected from other people, and their mood dropped.
+046 And it works in the other direction too. In another study, people photographed two hours after getting that same immune trigger were picked out as "sick" by strangers, better than chance, though far from perfectly.
+047 Pale lips, droopy eyelids, a tired mouth. Your face may quietly broadcast a warning: maybe keep your distance.
+048 Animals do the same. Wild vampire bats given a similar immune trigger spent less time near their roost-mates. In the first six hours, each sick bat hung out with about four fewer bats than healthy ones.
+050 And ants take it even further. When some workers in a colony were exposed to a deadly fungus, the whole colony reorganised itself. Exposed ants and their healthy nestmates spread apart, keeping the danger away from the queen and the young.
+051 So wanting to be alone isn't you being antisocial. It may be your body building a wall around everyone you care about.
+052 But there's a darker side to all this.
+053 Sickness behaviour is meant to be temporary. Germ gone, signal off, and you're back to your normal self.
+054 But sometimes the immune signal doesn't switch off. In long-term illnesses, or during certain medical treatments, the alarm keeps ringing.
+055 One example is a drug called interferon-alpha, which boosts the immune system against some infections and cancers. In some studies, nearly half of the patients taking it developed symptoms of depression, which is why doctors watch for it.
+056 That doesn't mean all depression comes from inflammation. Depression has many causes. But for some people, it seems the body's sickness program can get stuck in the "on" position.
+057 So the next time you're lying in bed, aching, shivering, not hungry, ignoring every message, remember this.
+058 You're not falling apart. You're running a strategy that shows up again and again in nature: in lizards, fish, bats, ants, and you.
+060 I'm not that kind of doctor.
+061 That doesn't mean fever medicine is the enemy. Very high or long-lasting fevers can be dangerous, and so can any fever in a baby. That's when you call a doctor.
+062 But it does mean that rest isn't laziness. It's strategy. So next time you're sick: do you fight through it, or let your body do its thing?

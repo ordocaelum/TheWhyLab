@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+# renders and build output
+out/
+build/
+build_vo/
+**/anim/out/
+**/tiger/out/
+# heavy media (renders, voice takes, downloaded clips): keep local
+*.mp4
+*.wav
+*.mp3
+*.m4a
+*.mov
+# python / os junk
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
