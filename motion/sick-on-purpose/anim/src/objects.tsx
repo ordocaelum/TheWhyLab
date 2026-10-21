@@ -1,26 +1,9 @@
 // Object library v1. Every object: origin = bottom centre, ~300 px tall at s=1, drawn with the shared Part kit
 // (gradient + rim + shine + contact shadow), so the whole library shares one house style (STYLING §3, §8).
 import React from "react";
-import { Grad, shade } from "./gen";
 
-// ---------- shared kit ----------
-const Part: React.FC<{ id: string; d: string; c: string; ang?: number; rim?: boolean }> = ({ id, d, c, ang = 40, rim = true }) => (
-  <g>
-    <defs><Grad id={id} c={c} angle={ang} /></defs>
-    <path d={d} fill={`url(#${id})`} />
-    {rim && <path d={d} fill="none" stroke={shade(c, 0.5)} strokeWidth={3} opacity={0.3} />}
-  </g>
-);
-const Shine: React.FC<{ x: number; y: number; rx: number; ry: number; r?: number; o?: number }> = ({ x, y, rx, ry, r = -30, o = 0.55 }) => (
-  <ellipse cx={x} cy={y} rx={rx} ry={ry} fill="#FFFFFF" opacity={o} transform={`rotate(${r},${x},${y})`} />
-);
-const Line: React.FC<{ d: string; c: string; w?: number; o?: number }> = ({ d, c, w = 4, o = 1 }) => (
-  <path d={d} stroke={c} strokeWidth={w} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={o} />
-);
-const rr = (x: number, y: number, w: number, h: number, r: number) =>
-  `M${x + r} ${y} H${x + w - r} Q${x + w} ${y} ${x + w} ${y + r} V${y + h - r} Q${x + w} ${y + h} ${x + w - r} ${y + h} H${x + r} Q${x} ${y + h} ${x} ${y + h - r} V${y + r} Q${x} ${y} ${x + r} ${y} Z`;
-const circ = (cx: number, cy: number, r: number) => `M${cx - r} ${cy} a${r} ${r} 0 1 0 ${r * 2} 0 a${r} ${r} 0 1 0 ${-r * 2} 0 Z`;
-const ell = (cx: number, cy: number, rx: number, ry: number) => `M${cx - rx} ${cy} a${rx} ${ry} 0 1 0 ${rx * 2} 0 a${rx} ${ry} 0 1 0 ${-rx * 2} 0 Z`;
+import { circ, ell, Line, Part, rr, Shine } from "./objkit";
+import { OBJECTS2 } from "./objects2";
 
 type Draw = (p: string, f: number) => React.ReactNode;
 export type ObjDef = { name: string; cat: string; w: number; draw: Draw };
@@ -338,7 +321,7 @@ const medical: ObjDef[] = [
   </g>) },
 ];
 
-export const OBJECTS: ObjDef[] = [...lab, ...home, ...nature, ...space, ...food, ...tools, ...medical];
+export const OBJECTS: ObjDef[] = [...lab, ...home, ...nature, ...space, ...food, ...tools, ...medical, ...OBJECTS2];
 const BY = Object.fromEntries(OBJECTS.map((o) => [o.name, o]));
 
 // Use in scenes: <Thing name="beaker" x={...} y={...} s={0.8} f={frame} />
