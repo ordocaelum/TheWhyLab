@@ -13,6 +13,7 @@ import { PrevLabBench, PrevLabScreen, PrevLabWide } from "./SetPreviews";
 import { LANDSCAPE_NAMES, LandscapePreview } from "./LandscapeSheet";
 import { INTERIOR_NAMES, InteriorPreview } from "./InteriorPreview";
 import { URBAN_NAMES, UrbanPreview } from "./UrbanPreview";
+import { AnatomySheet } from "./AnatomySheet";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -35,5 +36,6 @@ export const RemotionRoot: React.FC = () => (
     {LANDSCAPE_NAMES.map((n) => <Composition key={n} id={`Land${n}`} component={LandscapePreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
     {INTERIOR_NAMES.map((n) => <Composition key={n} id={`Room${n}`} component={InteriorPreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
     {URBAN_NAMES.map((n) => <Composition key={n} id={`Urban${n}`} component={UrbanPreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
+    <Composition id="AnatomySheet" component={AnatomySheet} durationInFrames={90} fps={30} width={2800} height={1400} />
   </>
 );

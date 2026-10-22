@@ -4,6 +4,7 @@ import { AbsoluteFill, Sequence, staticFile } from "remotion";
 import { Audio } from "@remotion/media";
 import { COLD_OPEN } from "./ColdOpen";
 import { CH1 } from "./Ch1";
+import { CH2TO5 } from "./Ch2to5";
 import { Presenter } from "./lab";
 import { Grain } from "./gen";
 import { lineStart, lines, OffsetCtx, SceneDef, TOTAL } from "./timing";
@@ -16,7 +17,7 @@ const COLD: SceneDef[] = [
   { line: 5, C: COLD_OPEN[4] },
 ];
 
-export const SCENES: SceneDef[] = [...COLD, ...CH1];
+export const SCENES: SceneDef[] = [...COLD, ...CH1, ...CH2TO5];
 
 // Scene i runs from its line's start (first scene from 0) to the next scene's start; last one to its next line or the end.
 const spans = SCENES.map((s, i) => {

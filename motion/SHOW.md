@@ -21,8 +21,10 @@ The format, cast and sets. Works with RESEARCH.md (facts), DESIGN.md (compositio
 
 **Line ratio rule:** if a script draft has Cell in more than ~10% of lines, cut Cell lines.
 
-### PENDING CAST DECISION (2026-10-20)
-The user is leaning toward making the **lab robot** the sidekick instead of Cell: it fits every topic (not just biology), fits the brand (gears, lab, "Works"), and a synthetic voice is in character. If confirmed: give the robot a hero-tier design pass (expressions and poses, like Doc), move Cell's role and rules to the robot, and keep Cell as a guest character for body/biology episodes.
+### CAST DECISION: CONFIRMED (2026-10-22)
+The **lab robot is the sidekick** (confirmed by the user). v1 component: `anim/src/robot.tsx` (`Robot`: talk, mood happy/smug/alert/sad, look, wave), lip-synced to the sidekick voice track (still labelled CELL in lines.json). Cell stays as a guest character inside the body. Ep1 lines 8 and 10 are written in Cell's voice ("Hi. Immune cell.") and keep the Cell visual until rewritten/re-recorded. Still to do: hero-tier robot pass (expression + pose sheet like Doc) and a name.
+
+Original note: the user was leaning toward making the **lab robot** the sidekick instead of Cell: it fits every topic (not just biology), fits the brand (gears, lab, "Works"), and a synthetic voice is in character. If confirmed: give the robot a hero-tier design pass (expressions and poses, like Doc), move Cell's role and rules to the robot, and keep Cell as a guest character for body/biology episodes.
 
 ## 2. Screen placement for Doc
 

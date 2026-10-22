@@ -11,6 +11,7 @@ import { LabBench, LabScreen, LabWide } from "./sets";
 import { Farm } from "./landscapes";
 import { Thing } from "./objects";
 import { Human2, Look } from "./human2";
+import { Robot } from "./robot";
 
 // ---------- shared micro-world backdrop (inside the microscope) ----------
 const Micro: React.FC<{ children?: React.ReactNode; iris?: number }> = ({ children, iris = 1 }) => {
@@ -281,9 +282,10 @@ const S15: React.FC = () => <ScreenScene title="IT CHANGES YOU" expr="serious" /
 // 16. Switches flip one per beat (spread across the line)
 const S16: React.FC = () => <ScreenScene title="SWITCHING OFF" flips={[20, 70, 130, 190, 250]} />;
 
-// 17 & 18. Stamp: SICKNESS BEHAVIOUR (18 adds Cell's interruption)
+// 17 & 18. Stamp: SICKNESS BEHAVIOUR (18 adds the robot's interruption)
 const Stamp: React.FC<{ cell?: boolean }> = ({ cell }) => {
   const f = useCurrentFrame();
+  const botTalk = useTalking("CELL");
   const s = interpolate(f, [8, 16, 22], [3, 0.9, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <Stage k="verdict" lx={W / 2} ly={480}>
@@ -293,7 +295,7 @@ const Stamp: React.FC<{ cell?: boolean }> = ({ cell }) => {
         <rect x={-760} y={-130} width={1520} height={260} rx={30} fill="none" stroke="#FF4D6D" strokeWidth={20} />
         <text textAnchor="middle" y={45} fontFamily="Arial Black" fontSize={120} fill="#FF4D6D">SICKNESS BEHAVIOUR</text>
       </g>
-      {cell && <Cell x={lerp(f, 0, 16, -200, 260)} y={860} s={0.55} f={f} mood="alert" look={1} />}
+      {cell && <Robot x={lerp(f, 0, 16, -200, 300)} y={1060} s={0.6} f={f} talk={botTalk} mood="alert" look={1} />}
     </Stage>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Sequence, useCurrentFrame } from "remotion";
 import { Cell, Germ } from "./chars";
+import { Robot } from "./robot";
 import { Framer, H, Headline, lerp, Sparkle, sp, Stage, W } from "./kit";
 import { CellField, Foliage } from "./gen";
 
@@ -187,7 +188,7 @@ const C5: React.FC = () => {
     <Stage k="dusk" lx={W / 2} ly={560}>
       <Foliage seed={71} base="#4A1470" y0={-100} y1={1180} count={30} scale={[0.7, 1.4]} sway={3} light="#FFD27A" />
       <rect width={W} height={H} fill="#1A0B3D" opacity={0.5} />
-      <Cell x={W / 2} y={640 + (1 - sp(f, 0, 10)) * 600} s={1.15} f={f} wave={f > 40} />
+      <Robot x={W / 2} y={1020 + (1 - sp(f, 0, 10)) * 600} s={1.05} f={f} wave={f > 40} />
       <g transform={`translate(${W / 2},230) scale(${t})`}>
         <text textAnchor="middle" y={0} fontFamily="Arial Black" fontSize={170} fill="#2A0F5A" dy={14}>SICK ON PURPOSE</text>
         <text textAnchor="middle" y={0} fontFamily="Arial Black" fontSize={170} fill="#FFFFFF">SICK ON PURPOSE</text>
