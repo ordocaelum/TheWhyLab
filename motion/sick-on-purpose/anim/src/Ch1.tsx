@@ -6,6 +6,11 @@ import { Framer, H, Headline, INK, lerp, Sparkle, sp, Stage, W } from "./kit";
 import { Lab, Microscope } from "./lab";
 import { SceneDef, useTalking } from "./timing";
 import { CellField, Dapple, Foliage, MachineWall } from "./gen";
+import { DocV2 } from "./doc2";
+import { LabBench, LabScreen, LabWide } from "./sets";
+import { Farm } from "./landscapes";
+import { Thing } from "./objects";
+import { Human2, Look } from "./human2";
 
 // ---------- shared micro-world backdrop (inside the microscope) ----------
 const Micro: React.FC<{ children?: React.ReactNode; iris?: number }> = ({ children, iris = 1 }) => {
@@ -64,15 +69,15 @@ const Envelope: React.FC<{ x: number; y: number; s?: number }> = ({ x, y, s = 1 
   </g>
 );
 
-// 6. "Let's take a closer look." Doc walks to the microscope.
+// 6. "Let's take a closer look." Doc walks across LabWide to his slot.
 const S6: React.FC = () => {
   const f = useCurrentFrame();
   const talk = useTalking("DOC");
-  const x = lerp(f, 0, 45, 1500, 1000, Easing.inOut(Easing.cubic));
+  const x = lerp(f, 0, 40, 1700, 1290, Easing.out(Easing.cubic));
   return (
-    <Lab>
-      <Scientist x={x} y={1030} s={0.82} f={f} talk={talk} look={-1} />
-    </Lab>
+    <LabWide>
+      <DocV2 x={x} y={1010} s={0.62} f={f} talk={talk} pose={f < 40 ? "walk" : "present"} expr="happy" look={-1} />
+    </LabWide>
   );
 };
 
@@ -191,57 +196,53 @@ const S11: React.FC = () => {
   );
 };
 
-// brain control room (12, 15, 16)
+// brain control room (12, 15, 16), shown on Doc's lab screen (1100x600 box)
 const SWITCHES = ["ENERGY", "SLEEP", "HUNGER", "SOCIAL", "MOOD"];
-const ControlRoom: React.FC<{ flips?: number[]; title?: string }> = ({ flips = [], title }) => {
+const Panel: React.FC<{ flips?: number[]; title?: string }> = ({ flips = [], title }) => {
   const f = useCurrentFrame();
   return (
-    <Stage k="dusk" lx={W / 2} ly={420} rays={false} head={title ? <Headline big={title} top={50} /> : undefined}>
-      <MachineWall seed={5} base="#3B1A6B" />
-      <rect x={480} y={330} width={960} height={560} rx={50} fill="#1A0B3D" />
-      <rect x={480} y={330} width={960} height={70} rx={35} fill="#3B1A6B" />
-      {Array.from({ length: 6 }, (_, i) => (
-        <circle key={i} cx={540 + i * 50} cy={365} r={12} fill={i % 2 ? "#2FE08A" : "#FF4D6D"} opacity={0.5 + 0.5 * Math.sin(f / 6 + i)} />
-      ))}
+    <g>
+      <text x={550} y={90} textAnchor="middle" fontFamily="Arial Black" fontSize={64} fill="#F4EEE2">{title ?? "BRAIN HQ"}</text>
+      {Array.from({ length: 6 }, (_, i) => <circle key={i} cx={60 + i * 34} cy={40} r={9} fill={i % 2 ? "#2FE08A" : "#FF4D6D"} opacity={0.5 + 0.5 * Math.sin(f / 6 + i)} />)}
       {SWITCHES.map((s, i) => {
         const on = flips[i] === undefined ? 1 : lerp(f, flips[i], flips[i] + 8, 1, 0);
-        const x = 600 + i * 180;
+        const x = 230 + i * 190;
         return (
           <g key={s}>
-            <rect x={x - 55} y={480} width={110} height={240} rx={40} fill="#0B1033" />
-            <rect x={x - 45} y={490 + (1 - on) * 110} width={90} height={110} rx={30} fill={on > 0.5 ? "#2FE08A" : "#FF4D6D"} />
-            <rect x={x - 35} y={498 + (1 - on) * 110} width={70} height={20} rx={10} fill="#FFFFFF" opacity={0.3} />
-            <text x={x} y={790} textAnchor="middle" fontFamily="Arial Black" fontSize={30} fill="#FFFFFF">{s}</text>
+            <rect x={x - 60} y={150} width={120} height={300} rx={40} fill="#0B1033" stroke="#2A4A7A" strokeWidth={4} />
+            <rect x={x - 50} y={162 + (1 - on) * 150} width={100} height={130} rx={30} fill={on > 0.5 ? "#2FE08A" : "#FF4D6D"} />
+            <rect x={x - 40} y={172 + (1 - on) * 150} width={80} height={22} rx={11} fill="#FFFFFF" opacity={0.3} />
+            <text x={x} y={510} textAnchor="middle" fontFamily="Arial Black" fontSize={32} fill="#F4EEE2">{s}</text>
           </g>
         );
       })}
-    </Stage>
+    </g>
   );
 };
-const S12: React.FC = () => <ControlRoom title="BRAIN HQ" />;
+const ScreenScene: React.FC<{ flips?: number[]; title?: string; expr?: "neutral" | "happy" | "serious" }> = ({ flips, title, expr = "neutral" }) => {
+  const f = useCurrentFrame();
+  const talk = useTalking("DOC");
+  return <LabScreen screen={<Panel flips={flips} title={title} />} actor={<DocV2 x={300} y={1260} s={1.0} f={f} talk={talk} pose="point" expr={expr} />} />;
+};
+const S12: React.FC = () => <ScreenScene title="BRAIN HQ" />;
 
-// 13. Thermostat dial 37 → 39
+// 13. Doc points at the desk thermostat on his bench; temperature readout climbs 37 -> 39
 const S13: React.FC = () => {
   const f = useCurrentFrame();
+  const talk = useTalking("DOC");
   const temp = lerp(f, 60, 200, 37, 39, Easing.inOut(Easing.cubic));
-  const ang = -120 + ((temp - 35) / 6) * 240;
   return (
-    <Stage k="alarm" lx={W / 2} ly={560} head={<Headline big="HYPOTHALAMUS" small="THE BODY'S THERMOSTAT" top={40} />}>
-      <MachineWall seed={9} base="#7A0F1A" />
-      <g transform={`translate(${W / 2},640)`}>
-        <circle r={290} fill="#2A0508" />
-        <circle r={270} fill="#F4EEE2" />
-        <circle r={250} fill="#FFFFFF" />
-        {Array.from({ length: 13 }, (_, i) => (
-          <rect key={i} x={-5} y={-240} width={10} height={i % 2 ? 26 : 44} rx={5} fill={INK} transform={`rotate(${-120 + i * 20})`} />
-        ))}
-        <g transform={`rotate(${ang})`}>
-          <rect x={-10} y={-200} width={20} height={210} rx={10} fill="#FF4D3D" />
+    <AbsoluteFill>
+      <LabBench actor={<DocV2 x={760} y={960} s={1.0} f={f} talk={talk} pose="point" expr="neutral" />} />
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+        <g transform="translate(1500,260)">
+          <rect x={-250} y={-150} width={500} height={200} rx={24} fill="#0B1228" opacity={0.88} />
+          <text x={0} y={-100} textAnchor="middle" fontFamily="Arial Black" fontSize={40} fill="#F4EEE2">HYPOTHALAMUS</text>
+          <text x={0} y={-62} textAnchor="middle" fontFamily="Arial Black" fontSize={24} fill="#FF8A1F">THE BODY'S THERMOSTAT</text>
+          <text x={0} y={30} textAnchor="middle" fontFamily="Arial Black" fontSize={84} fill="#FF4D3D">{temp.toFixed(1)}°</text>
         </g>
-        <circle r={36} fill={INK} />
-        <text y={140} textAnchor="middle" fontFamily="Arial Black" fontSize={110} fill="#FF4D3D">{temp.toFixed(1)}°</text>
-      </g>
-    </Stage>
+      </svg>
+    </AbsoluteFill>
   );
 };
 
@@ -275,10 +276,10 @@ const S14: React.FC = () => {
 };
 
 // 15. "And second, it changes you." Control room, all on
-const S15: React.FC = () => <ControlRoom title="IT CHANGES YOU" />;
+const S15: React.FC = () => <ScreenScene title="IT CHANGES YOU" expr="serious" />;
 
 // 16. Switches flip one per beat (spread across the line)
-const S16: React.FC = () => <ControlRoom flips={[20, 70, 130, 190, 250]} />;
+const S16: React.FC = () => <ScreenScene title="SWITCHING OFF" flips={[20, 70, 130, 190, 250]} />;
 
 // 17 & 18. Stamp: SICKNESS BEHAVIOUR (18 adds Cell's interruption)
 const Stamp: React.FC<{ cell?: boolean }> = ({ cell }) => {
@@ -299,37 +300,26 @@ const Stamp: React.FC<{ cell?: boolean }> = ({ cell }) => {
 const S17: React.FC = () => <Stamp />;
 const S18: React.FC = () => <Stamp cell />;
 
-// 19. Benjamin Hart, 1988, the vet with sick animals
-const Animal: React.FC<{ x: number; y: number; c: string; s?: number; ears?: boolean }> = ({ x, y, c, s = 1, ears }) => (
-  <g transform={`translate(${x},${y}) scale(${s})`}>
-    <ellipse cx={0} cy={10} rx={150} ry={18} fill="#000" opacity={0.3} />
-    <rect x={-110} y={-110} width={60} height={110} rx={26} fill={c} filter="brightness(0.85)" />
-    <rect x={50} y={-110} width={60} height={110} rx={26} fill={c} filter="brightness(0.85)" />
-    <ellipse cx={0} cy={-150} rx={150} ry={80} fill={c} />
-    <circle cx={150} cy={-200} r={60} fill={c} />
-    {ears && <ellipse cx={130} cy={-262} rx={18} ry={34} fill={c} />}
-    <path d="M170 -205 q 10 8 20 0" stroke="#1B1240" strokeWidth={6} fill="none" strokeLinecap="round" />
-    <path d="M130 -140 q 18 -18 36 0" stroke="#B8FFFA" strokeWidth={0} />
-  </g>
-);
+// 19. Benjamin Hart, 1988: a vet on the farm with sick animals (library animals, avatar rig)
+const VET: Look = { id: "vet", skin: ["#F6D2B0", "#E6B48E", "#C99470", "#A87452"], hair: ["#C8C2BA", "#9A948C", "#6A645C"], hairStyle: "short", facial: "moustache", glasses: true, build: "m", top: "#F4F6FF", topStyle: "shirt", pants: "#3A4A6A", iris: "#4A6A8A" };
 const S19: React.FC = () => {
   const f = useCurrentFrame();
   const yr = sp(f, 40, 10);
   return (
-    <Stage k="jungle" lx={W / 2} ly={480}>
-      <Foliage seed={2} base="#1E6B4A" y0={120} y1={480} count={22} scale={[0.6, 1]} sway={2} />
-      <rect width={W} height={H} fill="#0B1A40" opacity={0.35} />
-      <rect x={0} y={880} width={W} height={200} fill="#0B1A40" opacity={0.6} />
-      <Human x={360} y={900} s={0.95} f={f} shirt="#F4F1FF" />
-      <Animal x={850} y={900} c="#C8956A" s={0.8} ears />
-      <Animal x={1280} y={900} c="#F4EEE2" s={1.05} />
-      <Animal x={1700} y={900} c="#7A4A2A" s={0.95} ears />
-      <g transform={`translate(${W / 2},230) scale(${yr})`}>
-        <text textAnchor="middle" fontFamily="Arial Black" fontSize={200} fill={INK} dy={12}>1988</text>
-        <text textAnchor="middle" fontFamily="Arial Black" fontSize={200} fill="#E8FF7A">1988</text>
-      </g>
-      <Foliage seed={7} base="#123B2A" y0={1020} y1={1200} count={16} scale={[0.8, 1.3]} sway={4} />
-    </Stage>
+    <AbsoluteFill>
+      <Farm>
+        <Human2 L={VET} x={520} y={990} s={0.62} f={f} pose="chin" expr="thinking" />
+        <Thing name="dog" x={820} y={1000} s={0.55} f={f} />
+        <Thing name="cat" x={1000} y={1010} s={0.5} f={f} />
+        <Thing name="rabbit" x={1160} y={1010} s={0.45} f={f} />
+      </Farm>
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+        <g transform={`translate(${W / 2},230) scale(${yr})`}>
+          <text textAnchor="middle" fontFamily="Arial Black" fontSize={200} fill={INK} dy={12}>1988</text>
+          <text textAnchor="middle" fontFamily="Arial Black" fontSize={200} fill="#FFFFFF">1988</text>
+        </g>
+      </svg>
+    </AbsoluteFill>
   );
 };
 
@@ -360,15 +350,15 @@ export const CH1: SceneDef[] = [
   { line: 7, C: S7 },
   { line: 8, C: S8 },
   { line: 9, C: S9 },
-  { line: 10, C: S10, doc: "bl" },
+  { line: 10, C: S10, doc: "bl", expr: "unamused" },
   { line: 11, C: S11 },
-  { line: 12, C: S12, doc: "bl" },
+  { line: 12, C: S12 },
   { line: 13, C: S13 },
   { line: 14, C: S14 },
-  { line: 15, C: S15, doc: "br" },
+  { line: 15, C: S15 },
   { line: 16, C: S16 },
   { line: 17, C: S17, doc: "br" },
-  { line: 18, C: S18, doc: "br" },
+  { line: 18, C: S18, doc: "br", expr: "unamused" },
   { line: 19, C: S19 },
-  { line: 20, C: S20, doc: "bl" },
+  { line: 20, C: S20, doc: "bl", expr: "happy" },
 ];

@@ -37,7 +37,7 @@ export const Episode: React.FC = () => (
       <Sequence key={i} from={spans[i].from} durationInFrames={spans[i].dur}>
         <OffsetCtx.Provider value={spans[i].from}>
           <s.C />
-          {s.doc && <Presenter side={s.doc} enter={spans[i].from} />}
+          {s.doc && <Presenter side={s.doc} enter={spans[i].from} expr={s.expr} />}
         </OffsetCtx.Provider>
       </Sequence>
     ))}

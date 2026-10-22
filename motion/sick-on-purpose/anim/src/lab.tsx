@@ -1,7 +1,7 @@
 // The Lab (home set, SHOW.md §3), its machines (§4), and Doc's presenter overlay (§2).
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { Scientist } from "./chars";
+import { DocExpr, DocV2 } from "./doc2";
 import { H, sp, W } from "./kit";
 import { useAbsFrame, useTalking } from "./timing";
 
@@ -144,7 +144,7 @@ export const Lab: React.FC<{ zoom?: number; cx?: number; cy?: number; lights?: n
 };
 
 // Doc as presenter: waist-up in a bottom corner, mouth synced to his lines.
-export const Presenter: React.FC<{ side: "bl" | "br"; enter?: number }> = ({ side, enter = 0 }) => {
+export const Presenter: React.FC<{ side: "bl" | "br"; enter?: number; expr?: DocExpr }> = ({ side, enter = 0, expr = "neutral" }) => {
   const f = useAbsFrame();
   const talking = useTalking("DOC");
   const pop = sp(f - enter, 0, 13);
@@ -153,7 +153,7 @@ export const Presenter: React.FC<{ side: "bl" | "br"; enter?: number }> = ({ sid
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       <svg width={W} height={H}>
         <g transform={`translate(0,${(1 - pop) * 400})`}>
-          <Scientist x={x} y={H + 420} s={0.95} f={f} talk={talking} look={side === "bl" ? 1 : -1} point={talking ? 0.25 + 0.1 * Math.sin(f / 15) : 0} />
+          <DocV2 x={x} y={H + 420} s={0.95} f={f} talk={talking} look={side === "bl" ? 1 : -1} expr={expr} point={talking ? 0.25 + 0.1 * Math.sin(f / 15) : 0} />
         </g>
       </svg>
     </AbsoluteFill>

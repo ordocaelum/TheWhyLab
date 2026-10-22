@@ -56,3 +56,9 @@ An independent agent checked 27 lines: 17 ✅ / 10 ⚠️ / 0 ❌. All ⚠️ fi
 - Cold open re-timed to the real voice, plus Chapter 1 (15 scenes: lab walk → microscope dive → Cell intro → cytokine envelopes → caps texts → vagus nerve → brain HQ → thermostat → shivering furnace → switches → stamp → 1988 vet → STRATEGY). Render: `anim/out/episode_ch1.mp4`.
 - Fixes found in the contact sheet: stamp text overflowed; the presenter covered end switches → narrowed the control panel. Rule: keep a ~420 px clear zone in the presenter's corner.
 - Cell's voice is a placeholder (robotic); replace later and re-stitch.
+
+## Step 7c: Chapter 1 on the asset library (2026-10-22)
+- Presenter overlay → approved **DocV2** with per-scene expressions (`SceneDef.expr`: unamused on Cell's jokes, happy on the STRATEGY reveal).
+- Lab walk → **LabWide** set (Doc walks in, then presents) · thermostat → **LabBench**, Doc points at the desk thermostat with a 37→39 °C readout · Brain HQ switches → **LabScreen** (no more filler backgrounds) · 1988 → **Farm** landscape with a vet avatar (Human2 Look) and library dog/cat/rabbit (replaces the low-poly sheep).
+- Still on the old look (fix during biological sets): microscope-world "floaty" cells → blood-vessel tunnel; brain close-up; the shivering scene.
+- Render: `anim/out/episode_ch1_v3.mp4` (cold open + Ch1, ~2:13).

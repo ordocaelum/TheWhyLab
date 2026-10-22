@@ -25,4 +25,4 @@ export const useTalking = (who: "DOC" | "CELL") => speakerAt(useAbsFrame()) === 
 
 // Scene = starts at a script line; ends where the next scene starts.
 export type Placement = "bl" | "br" | null;
-export type SceneDef = { line: number; C: React.FC; doc?: Placement };
+export type SceneDef = { line: number; C: React.FC; doc?: Placement; expr?: import("./doc2").DocExpr };
