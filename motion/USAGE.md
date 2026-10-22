@@ -22,4 +22,4 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | Date | Output | Length | Render time | Size |
 |---|---|---|---|---|
 | 2026-10-22 | out/episode_ch1_v3.mp4 | Ch1 only | — | 66 MB |
-| 2026-10-22 | out/episode_full_v1.mp4 | full episode, 7:53 (14,247 frames) | ~2 h 20 min (local CPU, concurrency 6) | 220 MB (720p copy 15 MB) |
+| 2026-10-22 | out/episode_full_v1.mp4 | full episode, 7:53 (14,247 frames) | ~21 min (local CPU, concurrency 6) | 220 MB (720p copy 15 MB) |
