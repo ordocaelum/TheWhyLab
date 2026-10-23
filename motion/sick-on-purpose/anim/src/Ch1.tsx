@@ -12,6 +12,9 @@ import { Farm } from "./landscapes";
 import { Thing } from "./objects";
 import { Human2, Look } from "./human2";
 import { Robot } from "./robot";
+import { Body, Brain } from "./anatomy";
+import { SickInBed } from "./sickbed";
+import { Bedroom } from "./interiors";
 
 // ---------- shared micro-world backdrop (inside the microscope) ----------
 const Micro: React.FC<{ children?: React.ReactNode; iris?: number }> = ({ children, iris = 1 }) => {
@@ -108,21 +111,16 @@ const S7: React.FC = () => {
   );
 };
 
-// 8. CELL: "Hi. Immune cell. We noticed."
+// 8. ROBOT: shrunk down into the micro-world with Doc's crew, points out the immune cells that noticed
 const S8: React.FC = () => {
   const f = useCurrentFrame();
   const talk = useTalking("CELL");
-  const x = lerp(f, 0, 30, W + 300, 1320, Easing.out(Easing.back(1.2)));
-  const tag = sp(f, 25, 10);
+  const x = lerp(f, 0, 30, W + 300, 1400, Easing.out(Easing.back(1.2)));
   return (
     <Micro>
       {[0, 1, 2].map((i) => <Germ key={i} x={420 + i * 220} y={620 - (i % 2) * 40} s={0.34} f={f + i * 7} />)}
-      <Cell x={x} y={560} s={0.9} f={f} mood={talk ? "alert" : "happy"} look={-1} />
-      <g transform={`translate(1320,330) scale(${tag})`}>
-        <rect x={-110} y={-40} width={220} height={80} rx={40} fill="#FF8A1F" />
-        <rect x={-110} y={30} width={220} height={10} rx={5} fill="#B5480A" />
-        <text textAnchor="middle" y={18} fontFamily="Arial Black" fontSize={50} fill={INK}>CELL</text>
-      </g>
+      {[[300, 360], [980, 300], [760, 860]].map(([cx, cy], i) => <ImmuneCell key={i} x={cx} y={cy} r={80} f={f} alert={sp(f, 20 + i * 8, 8)} />)}
+      <Robot x={x} y={900} s={0.7} f={f} talk={talk} mood="smug" look={-1} />
     </Micro>
   );
 };
@@ -133,7 +131,7 @@ const S9: React.FC = () => {
   return (
     <Micro>
       <ImmuneCell x={W / 2 - 300} y={560} r={110} f={f} />
-      <Cell x={W / 2 + 300} y={560} s={0.6} f={f} look={-1} />
+      <ImmuneCell x={W / 2 + 300} y={560} r={95} f={f + 20} />
       {Array.from({ length: 10 }, (_, i) => {
         const t = f - 20 - i * 9;
         if (t < 0) return null;
@@ -147,17 +145,19 @@ const S9: React.FC = () => {
   );
 };
 
-// 10. CELL: "Basically, we text the brain…" notifications in caps (Doc presenter, unamused)
+// 10. ROBOT: "Basically, they text the brain…" notifications in caps (Doc presenter, unamused)
 const S10: React.FC = () => {
   const f = useCurrentFrame();
+  const talk = useTalking("CELL");
   const msgs = ["INVADERS!!!", "SEND HELP", "WHY IS IT HOT", "!!!!!!"];
   return (
     <Micro>
-      <Cell x={1560} y={760} s={0.55} f={f} mood="happy" look={-1} />
+      {[[360, 380], [560, 640]].map(([cx, cy], i) => <ImmuneCell key={i} x={cx} y={cy} r={90} f={f + i * 9} alert={1} />)}
+      <Robot x={1640} y={1040} s={0.6} f={f} talk={talk} mood="smug" look={-1} />
       {msgs.map((m, i) => {
         const s = sp(f, 10 + i * 18, 9);
         return (
-          <g key={m} transform={`translate(${1060 + (i % 2) * 60},${220 + i * 140}) scale(${s})`}>
+          <g key={m} transform={`translate(${1000 + (i % 2) * 60},${220 + i * 140}) scale(${s})`}>
             <rect x={-300} y={-50} width={600} height={100} rx={50} fill="#FFFFFF" />
             <circle cx={-240} cy={0} r={30} fill="#2ED3C6" />
             <text x={-190} y={18} fontFamily="Arial Black" fontSize={50} fill={INK}>{m}</text>
@@ -168,30 +168,22 @@ const S10: React.FC = () => {
   );
 };
 
-// 11. Bloodstream + vagus nerve "cable" from gut to brain
+// 11. Bloodstream + vagus nerve: the anatomy body, organs on, vagus glowing gut -> brain
 const S11: React.FC = () => {
   const f = useCurrentFrame();
-  const draw = lerp(f, 30, 140, 1, 0, Easing.inOut(Easing.cubic));
-  const pulse = (f % 40) / 40;
+  const vis = lerp(f, 20, 50, 0, 1);
   return (
-    <Stage k="lab" lx={W / 2} ly={460} head={<Headline big="THE VAGUS NERVE" top={50} />}>
+    <Stage k="lab" lx={W / 2} ly={460} head={<Headline big="THE VAGUS NERVE" top={40} />}>
       <CellField seed={21} base="#3FA8C9" far="#0B1033" count={60} />
-      <rect width={W} height={H} fill="#0B1033" opacity={0.45} />
-      {/* body silhouette */}
-      <g transform={`translate(${W / 2},560)`}>
-        <circle cx={0} cy={-250} r={110} fill="#2A4A8A" />
-        <rect x={-150} y={-140} width={300} height={430} rx={140} fill="#2A4A8A" />
-        <rect x={-150} y={-140} width={200} height={430} rx={100} fill="#3A5CA8" />
-        {/* brain */}
-        <path d="M-60 -260 C -70 -310 -20 -330 0 -320 C 20 -330 70 -310 60 -260 C 66 -230 30 -215 0 -220 C -30 -215 -66 -230 -60 -260 Z" fill="#FF7AB8" />
-        {/* gut */}
-        <path d="M-70 120 q 30 -40 70 0 t 70 0 q -20 50 -70 40 t -70 -40 Z" fill="#FF9E7A" />
-        {/* blood vessels with travelling envelopes */}
-        <path d="M-110 -100 V 250 M110 -100 V 250" stroke="#FF4D6D" strokeWidth={10} opacity={0.7} />
-        {[0, 1].map((i) => <circle key={i} cx={i ? 110 : -110} cy={250 - ((pulse + i * 0.5) % 1) * 350} r={14} fill="#FFE066" />)}
-        {/* vagus nerve */}
-        <path d="M0 130 C -40 40 40 -60 0 -160 S 0 -210 0 -220" stroke="#FFE066" strokeWidth={12} fill="none" strokeLinecap="round"
-          strokeDasharray="420" strokeDashoffset={420 * draw} style={{ filter: "drop-shadow(0 0 12px #FFE066)" }} />
+      <rect width={W} height={H} fill="#0B1033" opacity={0.5} />
+      <Body id="s11" x={W / 2} y={1050} s={0.78} f={f} mode="organs" vessels={f > 10} nerves={f > 30} highlight={f > 30 ? "intestines" : undefined} />
+      <g opacity={vis}>
+        <path d="M1080 760 L 1340 760" stroke="#FFE066" strokeWidth={4} />
+        <text x={1360} y={774} fontFamily="Arial Black" fontSize={40} fill="#FFE066">GUT</text>
+        <path d="M1000 330 L 1340 330" stroke="#FFE066" strokeWidth={4} />
+        <text x={1360} y={344} fontFamily="Arial Black" fontSize={40} fill="#FFE066">BRAIN</text>
+        <path d="M900 560 L 560 560" stroke="#FF4D6D" strokeWidth={4} />
+        <text x={540} y={574} textAnchor="end" fontFamily="Arial Black" fontSize={40} fill="#FF8A9A">BLOODSTREAM</text>
       </g>
     </Stage>
   );
@@ -236,6 +228,10 @@ const S13: React.FC = () => {
     <AbsoluteFill>
       <LabBench actor={<DocV2 x={760} y={960} s={1.0} f={f} talk={talk} pose="point" expr="neutral" />} />
       <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+        <g opacity={lerp(f, 10, 30, 0, 1)}>
+          <circle cx={1540} cy={640} r={240} fill="#0B1228" opacity={0.6} />
+          <Brain id="s13" x={1540} y={660} s={0.6} f={f} hypo />
+        </g>
         <g transform="translate(1500,260)">
           <rect x={-250} y={-150} width={500} height={200} rx={24} fill="#0B1228" opacity={0.88} />
           <text x={0} y={-100} textAnchor="middle" fontFamily="Arial Black" fontSize={40} fill="#F4EEE2">HYPOTHALAMUS</text>
@@ -250,29 +246,23 @@ const S13: React.FC = () => {
 // 14. Shivering under the blanket while the inner furnace roars
 const S14: React.FC = () => {
   const f = useCurrentFrame();
-  const shake = Math.sin(f * 1.8) * 6;
   const fire = 0.6 + 0.4 * Math.sin(f / 3);
   return (
-    <Stage k="morning" lx={W / 2} ly={520} rays={false}>
-      <CellField seed={31} base="#7A5AA8" far="#1B1440" count={40} />
-      <rect width={W} height={H} fill="#1B1440" opacity={0.55} />
-      <Dapple seed={8} color="#FFE2A8" o={0.1} />
-      <g transform={`translate(${W / 2 + shake},800)`}>
-        <ellipse cx={0} cy={120} rx={420} ry={30} fill="#000" opacity={0.3} />
-        <path d="M-380 100 C -380 -260 380 -260 380 100 Z" fill="#E0567A" />
-        <path d="M-360 90 C -360 -240 340 -240 340 80 Z" fill="#FF7A9A" />
-        <circle cx={0} cy={-300} r={110} fill="#C9C49A" />
-        <circle cx={-10} cy={-308} r={98} fill="#E4E0B8" />
-        {[-38, 38].map((ex) => <rect key={ex} x={ex - 20} y={-312} width={40} height={10} rx={5} fill="#1B1240" />)}
-        {/* inner furnace glow */}
-        <circle cx={0} cy={-20} r={150 * fire} fill="#FFB347" opacity={0.35} />
-        <path d={`M-40 40 Q -60 -40 0 ${-120 - fire * 30} Q 60 -40 40 40 Z`} fill="#FF7A1F" opacity={0.85} />
-        <path d={`M-20 40 Q -26 -10 0 ${-60 - fire * 20} Q 26 -10 20 40 Z`} fill="#FFE066" />
-      </g>
-      {[[600, 360], [1320, 330], [700, 600]].map(([x, y], i) => (
-        <text key={i} x={x} y={y} fontFamily="Arial Black" fontSize={70} fill="#CFD8FF" opacity={0.6 + 0.4 * Math.sin(f / 5 + i)}>❄</text>
-      ))}
-    </Stage>
+    <AbsoluteFill>
+      <Bedroom night noBed>
+        <SickInBed id="s14" x={720} y={870} s={0.6} f={f} shiver blanket="#5A7AD8" />
+      </Bedroom>
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+        <g transform={`translate(800,740)`}>
+          <circle r={150 * fire} fill="#FFB347" opacity={0.3} />
+          <path d={`M-40 40 Q -60 -40 0 ${-120 - fire * 30} Q 60 -40 40 40 Z`} fill="#FF7A1F" opacity={0.85} />
+          <path d={`M-20 40 Q -26 -10 0 ${-60 - fire * 20} Q 26 -10 20 40 Z`} fill="#FFE066" />
+        </g>
+        {[[600, 300], [1320, 260], [1700, 520]].map(([x, y], i) => (
+          <text key={i} x={x} y={y} fontFamily="Arial Black" fontSize={70} fill="#CFD8FF" opacity={0.6 + 0.4 * Math.sin(f / 5 + i)}>❄</text>
+        ))}
+      </svg>
+    </AbsoluteFill>
   );
 };
 

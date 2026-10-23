@@ -17,7 +17,15 @@ export const Robot: React.FC<{ x: number; y: number; s?: number; f: number; talk
   const mouth = talk
     ? `M-50 60 ${Array.from({ length: 10 }, (_, i) => `L ${-50 + (i + 1) * 10} ${60 + Math.sin(f * 1.3 + i * 1.7) * (8 + (i % 3) * 5)}`).join(" ")}`
     : mood === "sad" ? "M-34 70 Q 0 46 34 70" : mood === "smug" ? "M-30 58 Q 10 72 38 50" : mood === "alert" ? "M-14 60 a 14 14 0 1 0 28 0 a 14 14 0 1 0 -28 0" : "M-36 52 Q 0 84 36 52";
-  const armL = wave ? -60 + Math.sin(f / 4) * 25 : 20 + Math.sin(f / 14) * 6;
+  const armL = 20 + Math.sin(f / 14) * 6;
+  const waveA = 140 + Math.sin(f / 4) * 22; // up and out, away from the body
+  const Arm = ({ a }: { a: number }) => (
+    <g transform={`translate(-112,-150) rotate(${a})`}>
+      <rect x={-16} y={0} width={32} height={110} rx={16} fill={BRASS[0]} />
+      <rect x={-8} y={8} width={8} height={90} rx={4} fill={BRASS[2]} opacity={0.5} />
+      <circle cx={0} cy={120} r={24} fill={BRASS[1]} /><path d="M-14 132 l -8 18 M14 132 l 8 18" stroke={BRASS[0]} strokeWidth={8} strokeLinecap="round" />
+    </g>
+  );
   return (
     <g transform={`translate(${x},${y}) scale(${s})`}>
       {/* hover glow + shadow (shadow stays on the floor) */}
@@ -25,10 +33,7 @@ export const Robot: React.FC<{ x: number; y: number; s?: number; f: number; talk
       <g transform={`translate(0,${-60 + bob})`}>
         <ellipse cx={0} cy={0} rx={60} ry={20} fill="#7FE8FF" opacity={0.35 + 0.15 * Math.sin(f / 3)} />
         {/* arms */}
-        <g transform={`translate(-112,-150) rotate(${armL})`}>
-          <rect x={-16} y={0} width={32} height={110} rx={16} fill={BRASS[0]} />
-          <circle cx={0} cy={120} r={24} fill={BRASS[1]} /><path d="M-14 132 l -8 18 M14 132 l 8 18" stroke={BRASS[0]} strokeWidth={8} strokeLinecap="round" />
-        </g>
+        {!wave && <Arm a={armL} />}
         <g transform={`translate(112,-150) rotate(${-20 - Math.sin(f / 14) * 6})`}>
           <rect x={-16} y={0} width={32} height={110} rx={16} fill={BRASS[0]} />
           <circle cx={0} cy={120} r={24} fill={BRASS[1]} /><path d="M-14 132 l -8 18 M14 132 l 8 18" stroke={BRASS[0]} strokeWidth={8} strokeLinecap="round" />
@@ -40,6 +45,7 @@ export const Robot: React.FC<{ x: number; y: number; s?: number; f: number; talk
         <circle cx={0} cy={-110} r={34} fill={shade(NAVY, -0.3)} stroke={BRASS[1]} strokeWidth={6} />
         <circle cx={0} cy={-110} r={18} fill={talk ? "#FFD23F" : "#3FE0B0"} opacity={0.7 + 0.3 * Math.sin(f / 4)} />
         {[-70, 70].map((bx) => <circle key={bx} cx={bx} cy={-150} r={7} fill={BRASS[2]} />)}
+        {wave && <Arm a={waveA} />}
         {/* neck + head */}
         <rect x={-24} y={-240} width={48} height={36} rx={10} fill={BRASS[0]} />
         <g transform={`rotate(${look * 4},0,-330)`}>

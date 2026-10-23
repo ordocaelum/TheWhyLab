@@ -1,6 +1,6 @@
 # Script v2: Why Your Body Makes You Feel Sick on Purpose
 
-The Why Works format (motion/SHOW.md). DOC hosts; CELL = sidekick (8 lines, ~7% of lines). Facts unchanged from the fact-checked v1 (kept in script_v1.md); `[Cn]` = claim in research.md, `[op]` = opinion/joke.
+The Why Works format (motion/SHOW.md). DOC hosts; CELL = sidekick line label, now voiced and drawn as the lab ROBOT (LabBot voice) (8 lines, ~7% of lines). Facts unchanged from the fact-checked v1 (kept in script_v1.md); `[Cn]` = claim in research.md, `[op]` = opinion/joke.
 Machines used: **Mega-Microscope** (Ch1, Ch3), **Thermo-Chamber** (Ch2), **Time Portal** (Ch2 evolution beat).
 
 ---
@@ -24,11 +24,11 @@ DOC: Let's take a closer look. [op]
   > SCENE: In the lab, wide establishing shot → Doc walks to the **Mega-Microscope**
 DOC: A few bacteria slip into a tiny cut on your hand. Your immune cells quickly notice the intruders. [C3]
   > SCENE: Doc looks into the eyepiece → camera dives through the lens → skin, bacteria rods
-CELL: Hi. Immune cell. We noticed. [op]
+CELL: Hi. Lab bot. Your immune cells just noticed. [op]
   > SCENE: Cell rolls into frame among the bacteria; first appearance, small name tag "CELL"
 DOC: The first responders don't just fight. They also send messages: tiny proteins called cytokines. [C3]
   > SCENE: Off screen | immune cells release glowing envelope cytokines (Cell among them)
-CELL: Basically, we text the brain. A lot. Mostly in all caps. [op]
+CELL: Basically, they text the brain. A lot. Mostly in all caps. [op]
   > SCENE: Envelopes become phone notifications in caps: "INVADERS!!!"; Doc presenter, unamused
 DOC: Those messages spread through your bloodstream. And some take a shortcut, along the vagus nerve, a long cable that runs from your gut and organs straight up into your brain. [C3]
   > SCENE: Off screen | top-down body-as-city map, vagus nerve draws on as a glowing cable

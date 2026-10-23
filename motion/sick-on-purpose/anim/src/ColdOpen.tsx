@@ -2,6 +2,8 @@ import React from "react";
 import { AbsoluteFill, Sequence, useCurrentFrame } from "remotion";
 import { Cell, Germ } from "./chars";
 import { Robot } from "./robot";
+import { SickInBed } from "./sickbed";
+import { Brain } from "./anatomy";
 import { Framer, H, Headline, lerp, Sparkle, sp, Stage, W } from "./kit";
 import { CellField, Foliage } from "./gen";
 
@@ -81,7 +83,7 @@ const C1: React.FC = () => {
   return (
     <Stage k="morning" lx={480} ly={330} rays={false}>
       <Window f={f} />
-      <Bed f={f} open={lerp(f, 20, 45, 0, 0.7)} />
+      <SickInBed id="c1" x={900} y={790} s={0.95} f={f} expr={f < 30 ? "serious" : "unamused"} />
       <Nightstand />
       <Framer d={`M-60 ${H} Q 100 820 40 700 Q 160 760 220 ${H} Z`} />
     </Stage>
@@ -96,7 +98,7 @@ const C2: React.FC = () => {
   return (
     <Stage k="morning" lx={1660} ly={600} rays={false} head={<Headline big="EVERYTHING HURTS" top={60} />}>
       <Window f={f} />
-      <Bed f={f} open={0.6} />
+      <SickInBed id="c2" x={900} y={790} s={0.95} f={f} expr="unamused" />
       <Nightstand>
         <g transform={`translate(-40,-20) rotate(${buzz})`}>
           <rect x={-55} y={-110} width={110} height={190} rx={20} fill="#1B1240" />
@@ -165,11 +167,9 @@ const C4: React.FC = () => {
           <circle r={380} fill="#E8C9A8" />
           <circle cx={-30} cy={-30} r={340} fill="#FFE4C9" />
           <ellipse cx={-120} cy={-200} rx={70} ry={40} fill="#FFFFFF" opacity={0.5} />
-          <g transform={`translate(0,-60) scale(${0.6 + brain * 0.4})`} opacity={0.3 + brain * 0.7}>
-            <circle r={260} fill="url(#bloom)" />
-            <path d="M-170 0 C -200 -120 -100 -190 0 -170 C 100 -190 200 -120 170 0 C 190 90 100 150 0 130 C -100 150 -190 90 -170 0 Z" fill="#FF7AB8" />
-            <path d="M-150 -10 C -170 -110 -90 -170 0 -150 C 90 -170 170 -110 150 -10" fill="#FFA8D0" />
-            <path d="M0 -150 L0 120 M-110 -80 q 50 30 0 80 M100 -90 q -50 40 0 90" stroke="#C23E86" strokeWidth={12} fill="none" strokeLinecap="round" />
+          <g transform={`translate(0,-40) scale(${0.6 + brain * 0.4})`} opacity={0.3 + brain * 0.7}>
+            <circle r={300} fill="url(#bloom)" />
+            <Brain id="c4" x={0} y={0} s={0.85} f={f} hypo={brain > 0.5} />
           </g>
         </g>
       </g>

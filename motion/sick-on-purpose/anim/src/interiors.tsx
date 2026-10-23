@@ -85,7 +85,7 @@ const Stove: React.FC<{ x: number }> = ({ x }) => (
 );
 
 // =================== PRESETS ===================
-export const Bedroom: React.FC<{ children?: React.ReactNode; night?: boolean }> = ({ children, night }) => {
+export const Bedroom: React.FC<{ children?: React.ReactNode; night?: boolean; noBed?: boolean }> = ({ children, night, noBed }) => {
   const f = useCurrentFrame();
   return (
     <Room wall="#7A6AB8" pattern="dots" floor="#9A6A4A" floorKind="wood" light={night ? "#9FB8FF" : "#FFE2A8"} lightX={1500}>
@@ -93,7 +93,7 @@ export const Bedroom: React.FC<{ children?: React.ReactNode; night?: boolean }> 
       <Thing name="picture-frame" x={560} y={360} s={0.7} shadow={false} />
       <Thing name="wall-clock" x={960} y={330} s={0.4} f={f} shadow={false} />
       <Thing name="rug" x={900} y={1010} s={1.7} shadow={false} />
-      <Thing name="bed" x={640} y={930} s={1.55} />
+      {!noBed && <Thing name="bed" x={640} y={930} s={1.55} />}
       <Thing name="side-table" x={1230} y={900} s={0.95} />
       <Thing name="alarm-clock" x={1180} y={710} s={0.38} f={f} />
       <Thing name="vase" x={1280} y={712} s={0.42} />

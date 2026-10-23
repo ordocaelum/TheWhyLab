@@ -51,386 +51,386 @@
  {
   "n": 8,
   "who": "CELL",
-  "text": "Hi. Immune cell. We noticed.",
+  "text": "Hi. Lab bot. Your immune cells just noticed.",
   "start": 40.27,
-  "end": 42.93
+  "end": 43.49
  },
  {
   "n": 9,
   "who": "DOC",
   "text": "The first responders don't just fight. They also send messages: tiny proteins called cytokines.",
-  "start": 43.63,
-  "end": 50.39
+  "start": 44.19,
+  "end": 50.95
  },
  {
   "n": 10,
   "who": "CELL",
-  "text": "Basically, we text the brain. A lot. Mostly in all caps.",
-  "start": 50.74,
-  "end": 55.08
+  "text": "Basically, they text the brain. A lot. Mostly in all caps.",
+  "start": 51.3,
+  "end": 55.4
  },
  {
   "n": 11,
   "who": "DOC",
   "text": "Those messages spread through your bloodstream. And some take a shortcut, along the vagus nerve, a long cable that runs from your gut and organs straight up into your brain.",
-  "start": 55.78,
-  "end": 66.18
+  "start": 56.1,
+  "end": 66.5
  },
  {
   "n": 12,
   "who": "DOC",
   "text": "When the message arrives, your brain does two big things.",
-  "start": 66.48,
-  "end": 70.64
+  "start": 66.8,
+  "end": 70.96
  },
  {
   "n": 13,
   "who": "DOC",
   "text": "First, it resets your thermostat. A chemical messenger tells a small region deep in your brain, the hypothalamus, to aim for a higher temperature.",
-  "start": 70.94,
-  "end": 80.18
+  "start": 71.26,
+  "end": 80.5
  },
  {
   "n": 14,
   "who": "DOC",
   "text": "So even though you're already warm, you suddenly feel cold. You shiver. You pull the blanket tighter. Your body is cranking up the heat to hit its new target.",
-  "start": 80.48,
-  "end": 91.46
+  "start": 80.8,
+  "end": 91.78
  },
  {
   "n": 15,
   "who": "DOC",
   "text": "And second, it changes you.",
-  "start": 91.76,
-  "end": 93.98
+  "start": 92.08,
+  "end": 94.3
  },
  {
   "n": 16,
   "who": "DOC",
   "text": "You get tired. You want to sleep. You lose your appetite. You stop caring how you look. You want to be left alone. You feel a bit miserable.",
-  "start": 94.28,
-  "end": 104.04
+  "start": 94.6,
+  "end": 104.36
  },
  {
   "n": 17,
   "who": "DOC",
   "text": "Scientists have a name for this whole package: sickness behaviour.",
-  "start": 104.34,
-  "end": 108.82
+  "start": 104.66,
+  "end": 109.14
  },
  {
   "n": 18,
   "who": "CELL",
   "text": "So being miserable is a feature?",
-  "start": 109.17,
-  "end": 111.55
+  "start": 109.49,
+  "end": 111.67
  },
  {
   "n": 19,
   "who": "DOC",
   "text": "For a long time, people assumed it was just weakness, a body breaking down under attack. Then, in 1988, a veterinarian named Benjamin Hart looked at it differently.",
-  "start": 112.25,
-  "end": 122.99
+  "start": 112.37,
+  "end": 123.11
  },
  {
   "n": 20,
   "who": "DOC",
   "text": "Sick animals, he argued, aren't failing. They're following a plan. An organised, evolved strategy, all built around one weapon.",
-  "start": 123.29,
-  "end": 131.83
+  "start": 123.41,
+  "end": 131.95
  },
  {
   "n": 21,
   "who": "DOC",
   "text": "That weapon is fever.",
-  "start": 132.73,
-  "end": 134.91
+  "start": 132.85,
+  "end": 135.03
  },
  {
   "n": 22,
   "who": "DOC",
   "text": "Turning up the heat makes life harder for many invaders, and it speeds up parts of your immune response.",
-  "start": 135.21,
-  "end": 141.05
+  "start": 135.33,
+  "end": 141.17
  },
  {
   "n": 23,
   "who": "CELL",
   "text": "Why did the germ leave the party? It couldn't stand the heat.",
-  "start": 141.4,
-  "end": 145.46
+  "start": 141.52,
+  "end": 145.06
  },
  {
   "n": 24,
   "who": "DOC",
   "text": "But fever is incredibly expensive. Every extra degree costs your body roughly ten percent more energy, maybe more.",
-  "start": 146.16,
-  "end": 154.44
+  "start": 145.76,
+  "end": 154.04
  },
  {
   "n": 25,
   "who": "DOC",
   "text": "So where does all that energy come from? From everything else you'd normally be doing.",
-  "start": 154.74,
-  "end": 159.82
+  "start": 154.34,
+  "end": 159.42
  },
  {
   "n": 26,
   "who": "DOC",
   "text": "Walking around burns energy, so you feel exhausted. Losing heat wastes energy, so you curl up into a ball.",
-  "start": 160.12,
-  "end": 168.02
+  "start": 159.72,
+  "end": 167.62
  },
  {
   "n": 27,
   "who": "DOC",
   "text": "Even your sleep changes. Researchers think the extra sleep you get when you're sick is tuned to help power the fever.",
-  "start": 168.32,
-  "end": 175.4
+  "start": 167.92,
+  "end": 175.0
  },
  {
   "n": 28,
   "who": "DOC",
   "text": "And this strategy is old. Really, really old.",
-  "start": 175.7,
-  "end": 179.48
+  "start": 175.3,
+  "end": 179.08
  },
  {
   "n": 29,
   "who": "DOC",
   "text": "In one famous experiment, scientists infected desert iguanas with bacteria. Lizards are cold-blooded. They can't make a fever from the inside.",
-  "start": 179.78,
-  "end": 188.7
+  "start": 179.38,
+  "end": 188.3
  },
  {
   "n": 30,
   "who": "DOC",
   "text": "So they made one from the outside. The infected lizards crawled toward the heat, and raised their body temperature by about two degrees.",
-  "start": 189.0,
-  "end": 197.04
+  "start": 188.6,
+  "end": 196.64
  },
  {
   "n": 31,
   "who": "DOC",
   "text": "When researchers held infected lizards at cooler temperatures, more of them died. The ones kept warmer survived better.",
-  "start": 197.34,
-  "end": 204.38
+  "start": 196.94,
+  "end": 203.98
  },
  {
   "n": 32,
   "who": "DOC",
   "text": "Fish do it too. A 2023 study found that infected fish deliberately swim into warmer water, and that a mild fever helped them clear the infection and repair damaged tissue.",
-  "start": 204.68,
-  "end": 216.34
+  "start": 204.28,
+  "end": 215.94
  },
  {
   "n": 33,
   "who": "DOC",
   "text": "Even honeybees have tried a version of it. When a fungus attacks their young, worker bees vibrate their flight muscles and heat the nursery comb by about half a degree.",
-  "start": 216.64,
-  "end": 226.64
+  "start": 216.24,
+  "end": 226.24
  },
  {
   "n": 34,
   "who": "DOC",
   "text": "Although, to be fair to the fungus, a later study found that tiny hive fever wasn't enough to stop the infection on its own. Evolution doesn't always win.",
-  "start": 226.94,
-  "end": 237.02
+  "start": 226.54,
+  "end": 236.62
  },
  {
   "n": 35,
   "who": "DOC",
   "text": "Now for the weirdest symptom of all: you stop wanting to eat.",
-  "start": 237.92,
-  "end": 242.5
+  "start": 237.52,
+  "end": 242.1
  },
  {
   "n": 36,
   "who": "DOC",
   "text": "That seems backwards. Surely you need fuel to fight?",
-  "start": 242.8,
-  "end": 246.22
+  "start": 242.4,
+  "end": 245.82
  },
  {
   "n": 37,
   "who": "DOC",
   "text": "In 2016, a team at Yale tested this in mice. Mice with a bacterial infection naturally stopped eating. When researchers fed them anyway, far more of them died.",
-  "start": 246.52,
-  "end": 257.92
+  "start": 246.12,
+  "end": 257.52
  },
  {
   "n": 38,
   "who": "DOC",
   "text": "But here's the twist. With a viral infection, the flu, it flipped. Feeding those mice actually helped them survive, and blocking their use of sugar was deadly.",
-  "start": 258.22,
-  "end": 268.8
+  "start": 257.82,
+  "end": 268.4
  },
  {
   "n": 39,
   "who": "DOC",
   "text": "It wasn't mainly about starving the germ. What changed was how well the mouse's own tissues could handle the damage. Different invaders, different fuel strategy.",
-  "start": 269.1,
-  "end": 279.06
+  "start": 268.7,
+  "end": 278.66
  },
  {
   "n": 40,
   "who": "CELL",
   "text": "So \"feed a cold, starve a fever\" was right all along?",
-  "start": 279.41,
-  "end": 282.83
+  "start": 279.01,
+  "end": 282.35
  },
  {
   "n": 41,
   "who": "DOC",
   "text": "Easy. These were mice, not people, so this is not a diet plan. But it hints that losing your appetite isn't necessarily a malfunction. It might be a setting.",
-  "start": 283.53,
-  "end": 294.31
+  "start": 283.05,
+  "end": 293.83
  },
  {
   "n": 42,
   "who": "DOC",
   "text": "And then there's the loneliness.",
-  "start": 295.21,
-  "end": 297.21
+  "start": 294.73,
+  "end": 296.73
  },
  {
   "n": 43,
   "who": "DOC",
   "text": "When you're sick, everyone feels far away. You don't want to see anyone, and you might feel a little low.",
-  "start": 297.51,
-  "end": 304.03
+  "start": 297.03,
+  "end": 303.55
  },
  {
   "n": 44,
   "who": "DOC",
   "text": "Scientists tested this directly. They gave healthy volunteers a tiny dose of a harmless bacterial fragment, enough to trip the immune alarm without a real infection.",
-  "start": 304.33,
-  "end": 314.03
+  "start": 303.85,
+  "end": 313.55
  },
  {
   "n": 45,
   "who": "DOC",
   "text": "Within hours, the volunteers reported feeling more disconnected from other people, and their mood dropped.",
-  "start": 314.33,
-  "end": 320.47
+  "start": 313.85,
+  "end": 319.99
  },
  {
   "n": 46,
   "who": "DOC",
   "text": "And it works in the other direction too. In another study, people photographed two hours after getting that same immune trigger were picked out as \"sick\" by strangers, better than chance, though far from perfectly.",
-  "start": 320.77,
-  "end": 333.19
+  "start": 320.29,
+  "end": 332.71
  },
  {
   "n": 47,
   "who": "DOC",
   "text": "Pale lips, droopy eyelids, a tired mouth. Your face may quietly broadcast a warning: maybe keep your distance.",
-  "start": 333.49,
-  "end": 341.81
+  "start": 333.01,
+  "end": 341.33
  },
  {
   "n": 48,
   "who": "DOC",
   "text": "Animals do the same. Wild vampire bats given a similar immune trigger spent less time near their roost-mates. In the first six hours, each sick bat hung out with about four fewer bats than healthy ones.",
-  "start": 342.11,
-  "end": 354.87
+  "start": 341.63,
+  "end": 354.39
  },
  {
   "n": 49,
   "who": "CELL",
   "text": "Bats social distancing. Fang-tastic.",
-  "start": 355.22,
-  "end": 360.3
+  "start": 354.74,
+  "end": 358.78
  },
  {
   "n": 50,
   "who": "DOC",
   "text": "And ants take it even further. When some workers in a colony were exposed to a deadly fungus, the whole colony reorganised itself. Exposed ants and their healthy nestmates spread apart, keeping the danger away from the queen and the young.",
-  "start": 361.0,
-  "end": 375.36
+  "start": 359.48,
+  "end": 373.84
  },
  {
   "n": 51,
   "who": "DOC",
   "text": "So wanting to be alone isn't you being antisocial. It may be your body building a wall around everyone you care about.",
-  "start": 375.66,
-  "end": 383.08
+  "start": 374.14,
+  "end": 381.56
  },
  {
   "n": 52,
   "who": "DOC",
   "text": "But there's a darker side to all this.",
-  "start": 383.98,
-  "end": 386.32
+  "start": 382.46,
+  "end": 384.8
  },
  {
   "n": 53,
   "who": "DOC",
   "text": "Sickness behaviour is meant to be temporary. Germ gone, signal off, and you're back to your normal self.",
-  "start": 386.62,
-  "end": 392.84
+  "start": 385.1,
+  "end": 391.32
  },
  {
   "n": 54,
   "who": "DOC",
   "text": "But sometimes the immune signal doesn't switch off. In long-term illnesses, or during certain medical treatments, the alarm keeps ringing.",
-  "start": 393.14,
-  "end": 402.2
+  "start": 391.62,
+  "end": 400.68
  },
  {
   "n": 55,
   "who": "DOC",
   "text": "One example is a drug called interferon-alpha, which boosts the immune system against some infections and cancers. In some studies, nearly half of the patients taking it developed symptoms of depression, which is why doctors watch for it.",
-  "start": 402.5,
-  "end": 416.88
+  "start": 400.98,
+  "end": 415.36
  },
  {
   "n": 56,
   "who": "DOC",
   "text": "That doesn't mean all depression comes from inflammation. Depression has many causes. But for some people, it seems the body's sickness program can get stuck in the \"on\" position.",
-  "start": 417.18,
-  "end": 428.38
+  "start": 415.66,
+  "end": 426.86
  },
  {
   "n": 57,
   "who": "DOC",
   "text": "So the next time you're lying in bed, aching, shivering, not hungry, ignoring every message, remember this.",
-  "start": 429.28,
-  "end": 437.44
+  "start": 427.76,
+  "end": 435.92
  },
  {
   "n": 58,
   "who": "DOC",
   "text": "You're not falling apart. You're running a strategy that shows up again and again in nature: in lizards, fish, bats, ants, and you.",
-  "start": 437.74,
-  "end": 447.78
+  "start": 436.22,
+  "end": 446.26
  },
  {
   "n": 59,
   "who": "CELL",
   "text": "Or just call in sick. Doctor's orders.",
-  "start": 448.13,
-  "end": 451.21
+  "start": 446.61,
+  "end": 449.25
  },
  {
   "n": 60,
   "who": "DOC",
   "text": "I'm not that kind of doctor.",
-  "start": 451.91,
-  "end": 453.37
+  "start": 449.95,
+  "end": 451.41
  },
  {
   "n": 61,
   "who": "DOC",
   "text": "That doesn't mean fever medicine is the enemy. Very high or long-lasting fevers can be dangerous, and so can any fever in a baby. That's when you call a doctor.",
-  "start": 453.67,
-  "end": 463.91
+  "start": 451.71,
+  "end": 461.95
  },
  {
   "n": 62,
   "who": "DOC",
   "text": "But it does mean that rest isn't laziness. It's strategy. So next time you're sick: do you fight through it, or let your body do its thing?",
-  "start": 464.21,
-  "end": 473.39
+  "start": 462.25,
+  "end": 471.43
  }
 ]

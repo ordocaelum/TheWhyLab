@@ -14,6 +14,7 @@ import { Thing } from "./objects";
 import { AVATARS, Human2 } from "./human2";
 import { Ant, Bat, Bee, Lizard, Mouse } from "./critters";
 import { Robot } from "./robot";
+import { SickInBed } from "./sickbed";
 
 // sidekick robot, mouth synced to the sidekick voice track (CELL lines in lines.json)
 const Bot: React.FC<{ x: number; y: number; s?: number; look?: number; mood?: "happy" | "smug" | "alert" | "sad" }> = ({ x, y, s = 0.8, look = 0, mood = "smug" }) => {
@@ -88,24 +89,6 @@ const Wide: React.FC<{ expr?: DocExpr; pose?: DocPose; x?: number; children?: Re
   const talk = useTalking("DOC");
   return <LabWide lights={lights}><DocV2 x={x} y={1010} s={0.62} f={f} talk={talk} pose={pose} expr={expr} look={-1} />{children}</LabWide>;
 };
-// someone sick in bed: blanket lump + head on the pillow
-const SickBed: React.FC<{ x: number; y: number; f: number; shiver?: boolean; c?: string }> = ({ x, y, f, shiver, c = "#5A7AD8" }) => {
-  const sh = shiver ? Math.sin(f * 1.8) * 4 : 0;
-  return (
-    <g transform={`translate(${x + sh},${y})`}>
-      <rect x={-420} y={-60} width={840} height={120} rx={20} fill="#6A4A3A" />
-      <rect x={-400} y={-120} width={800} height={90} rx={30} fill="#F4F0E8" />
-      <ellipse cx={-280} cy={-150} rx={110} ry={50} fill="#FFFFFF" />
-      <circle cx={-270} cy={-196} r={62} fill="#C99470" />
-      <path d="M-330 -220 Q -270 -280 -210 -220 Q -250 -246 -330 -220 Z" fill="#3A2A20" />
-      {[-292, -246].map((ex) => <path key={ex} d={`M${ex - 10} -196 q 10 6 20 0`} stroke="#3A2414" strokeWidth={4} fill="none" />)}
-      <path d="M-280 -168 q 10 -4 20 0" stroke="#8A4A3A" strokeWidth={4} fill="none" />
-      <path d="M-220 -40 C -220 -200 380 -200 400 -40 Z" fill={c} />
-      <path d="M-200 -50 C -190 -170 360 -170 380 -50" stroke={shade2(c)} strokeWidth={10} fill="none" opacity={0.5} />
-    </g>
-  );
-};
-const shade2 = (c: string) => (c === "#5A7AD8" ? "#8AA4FF" : "#FFFFFF");
 // heat shimmer lines
 const Heat: React.FC<{ x: number; y: number; f: number; n?: number; c?: string }> = ({ x, y, f, n = 4, c = "#FFB347" }) => (
   <g stroke={c} strokeWidth={6} fill="none" strokeLinecap="round" opacity={0.7}>
@@ -216,7 +199,7 @@ const S26: React.FC = () => {
       {!second ? (
         <LivingRoom><Human2 L={AV("Mateo")} x={lerp(f, 0, 120, 600, 900)} y={1000} s={0.66} f={f / 2} pose="walk" expr="unamused" /></LivingRoom>
       ) : (
-        <Bedroom night><SickBed x={W / 2} y={940} f={f} shiver /></Bedroom>
+        <Bedroom night noBed><SickInBed id="b26" x={720} y={870} s={0.6} f={f} shiver /></Bedroom>
       )}
       <Over>
         {!second ? <Big t="EXHAUSTED" y={200} size={120} c="#FFD23F" at={20} /> : <Big t="CURL UP. KEEP HEAT." y={200} size={110} c="#7FE8FF" at={126} />}
@@ -229,13 +212,13 @@ const S27: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill>
-      <Bedroom night><SickBed x={W / 2} y={940} f={f} /></Bedroom>
+      <Bedroom night noBed><SickInBed id="b27" x={720} y={870} s={0.6} f={f} blanket="#5A7AD8" /></Bedroom>
       <Over>
         {[0, 1, 2].map((i) => {
           const t = ((f + i * 25) % 75) / 75;
           return <text key={i} x={W / 2 - 220 + t * 160} y={620 - t * 220} fontFamily="Arial Black" fontSize={60 + i * 20} fill="#CFD8FF" opacity={1 - t}>Z</text>;
         })}
-        <path d={`M${W / 2 + 40} 560 L ${W / 2 + 400} 380`} stroke="#FFD23F" strokeWidth={8} strokeDasharray="18 12" opacity={lerp(f, 60, 80, 0, 1)} />
+        <path d={`M900 640 L ${W / 2 + 400} 380`} stroke="#FFD23F" strokeWidth={8} strokeDasharray="18 12" opacity={lerp(f, 60, 80, 0, 1)} />
         <g transform={`translate(${W / 2 + 480},330)`} opacity={lerp(f, 70, 90, 0, 1)}>
           <circle r={90} fill="#FF7A1F" opacity={0.35 + 0.15 * Math.sin(f / 4)} />
           <path d={`M-40 40 Q -60 -40 0 ${-110 - 10 * Math.sin(f / 3)} Q 60 -40 40 40 Z`} fill="#FF7A1F" />
@@ -499,7 +482,7 @@ const S43: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill>
-      <Bedroom night><SickBed x={W / 2 - 200} y={940} f={f} c="#8A5AA8" /></Bedroom>
+      <Bedroom night noBed><SickInBed id="b43" x={720} y={870} s={0.6} f={f} blanket="#8A5AA8" /></Bedroom>
       <Over>
         {["hey you ok?", "party tonight!!", "call me?", "hello??"].map((m, i) => {
           const s = sp(f, 10 + i * 25, 10);
@@ -744,7 +727,7 @@ const S57: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill>
-      <Bedroom night><SickBed x={W / 2} y={940} f={f} shiver={f > 60 && f < 120} /></Bedroom>
+      <Bedroom night noBed><SickInBed id="b57" x={720} y={870} s={0.6} f={f} shiver={f > 60 && f < 120} /></Bedroom>
       <Over>
         {["ACHING", "SHIVERING", "NOT HUNGRY", "IGNORING MESSAGES"].map((t, i) => <Tag key={t} t={t} x={i % 2 ? 1460 : 460} y={220 + Math.floor(i / 2) * 140} at={20 + i * 30} c="#FFFFFF" size={40} />)}
       </Over>
