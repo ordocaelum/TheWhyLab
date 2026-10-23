@@ -24,5 +24,6 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | Date | Output | Length | Render time | Size |
 |---|---|---|---|---|
 | 2026-10-22 | out/episode_ch1_v3.mp4 | Ch1 only | — | 66 MB |
+| 2026-10-22 | out/episode_full_v3.mp4 | LabBot voice + v2 visuals, 7:51 (14,188 frames) | ~22 min | 221 MB (720p copy 15 MB) |
 | 2026-10-22 | out/episode_full_v2.mp4 | visual pass (robot arm, hi-fi sick bed, new anatomy/brain), old sidekick voice | ~21 min | 222 MB |
 | 2026-10-22 | out/episode_full_v1.mp4 | full episode, 7:53 (14,247 frames) | ~21 min (local CPU, concurrency 6) | 220 MB (720p copy 15 MB) |
