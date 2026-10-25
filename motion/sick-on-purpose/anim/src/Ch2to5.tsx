@@ -23,15 +23,15 @@ const Bot: React.FC<{ x: number; y: number; s?: number; look?: number; mood?: "h
   return <Robot x={x} y={y} s={s} f={f} talk={talk} mood={mood} look={look} />;
 };
 
-const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
-const AV = (n: string) => AVATARS.find((a) => a.name === n)!.L;
+export const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
+export const AV = (n: string) => AVATARS.find((a) => a.name === n)!.L;
 
 // ---------- shared pieces ----------
-const Over: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
+export const Over: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
   <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>{children}</svg>
 );
 // stamped title with ink drop-shadow
-const Big: React.FC<{ t: string; x?: number; y: number; size?: number; c?: string; at?: number; rot?: number }> = ({ t, x = W / 2, y, size = 130, c = "#FFFFFF", at = 0, rot = 0 }) => {
+export const Big: React.FC<{ t: string; x?: number; y: number; size?: number; c?: string; at?: number; rot?: number }> = ({ t, x = W / 2, y, size = 130, c = "#FFFFFF", at = 0, rot = 0 }) => {
   const f = useCurrentFrame();
   const s = interpolate(f, [at, at + 7, at + 12], [2.4, 0.92, 1], clamp);
   if (f < at) return null;
@@ -42,7 +42,7 @@ const Big: React.FC<{ t: string; x?: number; y: number; size?: number; c?: strin
     </g>
   );
 };
-const Tag: React.FC<{ t: string; x: number; y: number; at?: number; c?: string; size?: number }> = ({ t, x, y, at = 0, c = "#FFD23F", size = 46 }) => {
+export const Tag: React.FC<{ t: string; x: number; y: number; at?: number; c?: string; size?: number }> = ({ t, x, y, at = 0, c = "#FFD23F", size = 46 }) => {
   const f = useCurrentFrame();
   const s = sp(f, at, 10);
   const w = t.length * size * 0.72 + 60;
@@ -54,16 +54,16 @@ const Tag: React.FC<{ t: string; x: number; y: number; at?: number; c?: string; 
   );
 };
 // Doc on the lab screen set, pointing at whatever the screen shows (1100x600 local coords)
-const Screen: React.FC<{ children: React.ReactNode; expr?: DocExpr; pose?: DocPose }> = ({ children, expr = "neutral", pose = "point" }) => {
+export const Screen: React.FC<{ children: React.ReactNode; expr?: DocExpr; pose?: DocPose }> = ({ children, expr = "neutral", pose = "point" }) => {
   const f = useCurrentFrame();
   const talk = useTalking("DOC");
   return <LabScreen screen={children} actor={<DocV2 x={300} y={1260} s={1.0} f={f} talk={talk} pose={pose} expr={expr} />} />;
 };
-const ScrTitle: React.FC<{ t: string; y?: number; size?: number; c?: string }> = ({ t, y = 80, size = 56, c = "#F4EEE2" }) => (
+export const ScrTitle: React.FC<{ t: string; y?: number; size?: number; c?: string }> = ({ t, y = 80, size = 56, c = "#F4EEE2" }) => (
   <text x={550} y={y} textAnchor="middle" fontFamily="Arial Black" fontSize={size} fill={c}>{t}</text>
 );
 // survival-style bar pair on the screen
-const Bars: React.FC<{ items: { l: string; v: number; c: string }[]; at?: number; y0?: number }> = ({ items, at = 0, y0 = 500 }) => {
+export const Bars: React.FC<{ items: { l: string; v: number; c: string }[]; at?: number; y0?: number }> = ({ items, at = 0, y0 = 500 }) => {
   const f = useCurrentFrame();
   const n = items.length, gap = 1100 / (n + 1);
   return (
@@ -84,13 +84,13 @@ const Bars: React.FC<{ items: { l: string; v: number; c: string }[]; at?: number
   );
 };
 // wide lab shot with Doc somewhere
-const Wide: React.FC<{ expr?: DocExpr; pose?: DocPose; x?: number; children?: React.ReactNode; lights?: number }> = ({ expr = "neutral", pose = "present", x = 1290, children, lights }) => {
+export const Wide: React.FC<{ expr?: DocExpr; pose?: DocPose; x?: number; children?: React.ReactNode; lights?: number }> = ({ expr = "neutral", pose = "present", x = 1290, children, lights }) => {
   const f = useCurrentFrame();
   const talk = useTalking("DOC");
   return <LabWide lights={lights}><DocV2 x={x} y={1010} s={0.62} f={f} talk={talk} pose={pose} expr={expr} look={-1} />{children}</LabWide>;
 };
 // heat shimmer lines
-const Heat: React.FC<{ x: number; y: number; f: number; n?: number; c?: string }> = ({ x, y, f, n = 4, c = "#FFB347" }) => (
+export const Heat: React.FC<{ x: number; y: number; f: number; n?: number; c?: string }> = ({ x, y, f, n = 4, c = "#FFB347" }) => (
   <g stroke={c} strokeWidth={6} fill="none" strokeLinecap="round" opacity={0.7}>
     {Array.from({ length: n }, (_, i) => {
       const yy = y - ((f * 3 + i * 40) % 160);
@@ -99,7 +99,7 @@ const Heat: React.FC<{ x: number; y: number; f: number; n?: number; c?: string }
   </g>
 );
 // stylised big thermometer (vertical), t in 0..1
-const Thermo: React.FC<{ x: number; y: number; t: number; s?: number }> = ({ x, y, t, s = 1 }) => (
+export const Thermo: React.FC<{ x: number; y: number; t: number; s?: number }> = ({ x, y, t, s = 1 }) => (
   <g transform={`translate(${x},${y}) scale(${s})`}>
     <rect x={-40} y={-520} width={80} height={520} rx={40} fill="#F4F6FF" />
     <rect x={-22} y={-500 + (1 - t) * 440} width={44} height={60 + t * 440} rx={22} fill="#FF4D3D" />
