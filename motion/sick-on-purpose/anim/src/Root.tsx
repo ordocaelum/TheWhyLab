@@ -15,6 +15,7 @@ import { INTERIOR_NAMES, InteriorPreview } from "./InteriorPreview";
 import { URBAN_NAMES, UrbanPreview } from "./UrbanPreview";
 import { AnatomySheet } from "./AnatomySheet";
 import { MoonSheet } from "./MoonSheet";
+import { MOON_FRAMES, MoonEpisode } from "./MoonEp";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -37,6 +38,7 @@ export const RemotionRoot: React.FC = () => (
     {LANDSCAPE_NAMES.map((n) => <Composition key={n} id={`Land${n}`} component={LandscapePreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
     {INTERIOR_NAMES.map((n) => <Composition key={n} id={`Room${n}`} component={InteriorPreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
     {URBAN_NAMES.map((n) => <Composition key={n} id={`Urban${n}`} component={UrbanPreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
+    <Composition id="MoonEpisode" component={MoonEpisode} durationInFrames={MOON_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="MoonSheet" component={MoonSheet} durationInFrames={90} fps={30} width={1920} height={1080} />
     <Composition id="AnatomySheet" component={AnatomySheet} durationInFrames={90} fps={30} width={2800} height={1400} />
   </>

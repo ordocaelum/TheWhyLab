@@ -4,9 +4,9 @@ The Why Works format (motion/SHOW.md). DOC hosts; CELL = sidekick line label, vo
 
 ## COLD OPEN
 
-DOC: This weekend, go outside just after sunset and look east. [C20]
+DOC: Next full moon, go outside just after sunset and look east. [C20]
   > SCENE: Off screen | dusk skyline (Downtown/Rooftop) | huge orange moon creeping up behind buildings
-DOC: October's full moon, the Hunter's Moon, is going to climb over the horizon looking absolutely enormous. [C20]
+DOC: Like October's Hunter's Moon, it's going to climb over the horizon looking absolutely enormous. [C20]
   > SCENE: Off screen | moon swells, avatars on a rooftop point and take phone photos
 DOC: And here's the thing. It isn't. The moon you see on the horizon is no bigger than the one high in the sky. [C1]
   > SCENE: Foreground: Doc on the rooftop, moon behind him snaps to "same size" overlay
@@ -22,7 +22,7 @@ DOC: The moon is about three hundred and eighty four thousand kilometres away, a
 DOC: And it's slowly leaving. Mirrors left on the moon by the Apollo astronauts let us bounce lasers off it, and they show it drifting away by almost four centimetres a year. [C23]
   > SCENE: LabScreen | laser beam Earth→moon reflector, "+4 cm / year" ticker
 CELL: Honestly? Relatable. Sometimes I need space too. [op]
-DOC: Four centimetres a year is not going to change what you see this weekend. [op]
+DOC: Four centimetres a year is not going to change what you see tonight. [op]
 DOC: From down here, that makes it look tiny. It covers about half a degree of sky, and that number barely changes, whether the moon is rising or right overhead. [C1]
   > SCENE: LabScreen | protractor arc, 0.5° wedge, same wedge at two heights
 DOC: You can test it. Hold something about the size of a pea at arm's length. It covers the rising moon, and hours later, it still covers the high moon. [C17]
@@ -119,7 +119,7 @@ DOC: And after this one comes a run of supermoons: three or four in a row, depen
 
 ## OUTRO
 
-DOC: So this weekend, when that huge orange moon comes up, enjoy it. It really is spectacular. [C20]
+DOC: So next time that huge orange moon comes up, enjoy it. It really is spectacular. [C20]
   > SCENE: Rooftop at dusk, avatars watching, moon rising
 DOC: Then try the pea. Try the photo. Maybe even try the upside-down thing, if nobody's watching. [C17, C15]
   > SCENE: Quick montage of the three tests

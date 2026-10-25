@@ -13,6 +13,9 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | 2026-10-22 | ElevenLabs (MCP) | Robot sidekick 7 lines, LabBot voice (fJrNNr74…), eleven_v4, 1 take, 25.8 s | **334 credits (~$0.07)** | estimated first, then approved; file elevenlabs/CELL_all_lines.mp3 |
 | 2026-10-22 | — | Ep1 full render (Ch1 + Ch2–5 + outro), robot sidekick v1, anatomy v2 | **0** | all local: Remotion + ffmpeg, no API calls |
 
+| 2026-10-25 | ElevenLabs (MCP) | Moon Illusion VO: Doc (Adam - Distinct, Deep) 6 sections + LabBot 7 lines, eleven_v4, 1 take each | **6,352 credits (~$1.40)** | priced first (1,351 for ch1), user approved; user has ~200k credits |
+| 2026-10-25 | ElevenLabs (MCP) | Re-voice cold open, ch1, outro with evergreen wording ("next full moon" instead of "this weekend") | **2,320 credits (~$0.51)** | superseded takes from the first run are unused |
+
 ## Claude plan usage (Pro)
 
 | Date / time | Milestone | 5-hour window | Weekly (all models) | Weekly (Fable) | Session context |
@@ -24,6 +27,7 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | Date | Output | Length | Render time | Size |
 |---|---|---|---|---|
 | 2026-10-22 | out/episode_ch1_v3.mp4 | Ch1 only | — | 66 MB |
+| 2026-10-25 | out/moon_v1.mp4 | Moon Illusion ep, 7:11 (12,961 frames) | ~31 min | 167 MB (720p copy 15 MB) |
 | 2026-10-22 | out/episode_full_v3.mp4 | LabBot voice + v2 visuals, 7:51 (14,188 frames) | ~22 min | 221 MB (720p copy 15 MB) |
 | 2026-10-22 | out/episode_full_v2.mp4 | visual pass (robot arm, hi-fi sick bed, new anatomy/brain), old sidekick voice | ~21 min | 222 MB |
 | 2026-10-22 | out/episode_full_v1.mp4 | full episode, 7:53 (14,247 frames) | ~21 min (local CPU, concurrency 6) | 220 MB (720p copy 15 MB) |

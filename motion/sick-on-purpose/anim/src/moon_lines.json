@@ -2,505 +2,442 @@
  {
   "n": 1,
   "who": "DOC",
-  "text": "This weekend, go outside just after sunset and look east.",
+  "text": "Next full moon, go outside just after sunset and look east.",
   "start": 0.0,
-  "end": 4.15,
-  "placeholder": true
+  "end": 4.44
  },
  {
   "n": 2,
   "who": "DOC",
-  "text": "October's full moon, the Hunter's Moon, is going to climb over the horizon looking absolutely enormous.",
-  "start": 4.45,
-  "end": 10.9,
-  "placeholder": true
+  "text": "Like October's Hunter's Moon, it's going to climb over the horizon looking absolutely enormous.",
+  "start": 4.74,
+  "end": 10.91
  },
  {
   "n": 3,
   "who": "DOC",
   "text": "And here's the thing. It isn't. The moon you see on the horizon is no bigger than the one high in the sky.",
-  "start": 11.2,
-  "end": 20.35,
-  "placeholder": true
+  "start": 11.21,
+  "end": 17.65
  },
  {
   "n": 4,
   "who": "DOC",
   "text": "The giant moon is happening somewhere else entirely. Inside your head.",
-  "start": 20.65,
-  "end": 25.18,
-  "placeholder": true
+  "start": 17.95,
+  "end": 23.33
  },
  {
   "n": 5,
   "who": "DOC",
   "text": "Let's start with what's actually up there.",
-  "start": 26.08,
-  "end": 29.07,
-  "placeholder": true
+  "start": 24.23,
+  "end": 26.44
  },
  {
   "n": 6,
   "who": "DOC",
   "text": "The moon is about three hundred and eighty four thousand kilometres away, and about three and a half thousand kilometres wide.",
-  "start": 29.37,
-  "end": 37.75,
-  "placeholder": true
+  "start": 26.74,
+  "end": 33.72
  },
  {
   "n": 7,
   "who": "DOC",
   "text": "And it's slowly leaving. Mirrors left on the moon by the Apollo astronauts let us bounce lasers off it, and they show it drifting away by almost four centimetres a year.",
-  "start": 38.05,
-  "end": 50.27,
-  "placeholder": true
+  "start": 34.02,
+  "end": 44.63
  },
  {
   "n": 8,
   "who": "CELL",
   "text": "Honestly? Relatable. Sometimes I need space too.",
-  "start": 50.62,
-  "end": 53.61,
-  "placeholder": true
+  "start": 44.98,
+  "end": 49.21
  },
  {
   "n": 9,
   "who": "DOC",
-  "text": "Four centimetres a year is not going to change what you see this weekend.",
-  "start": 54.31,
-  "end": 60.0,
-  "placeholder": true
+  "text": "Four centimetres a year is not going to change what you see tonight.",
+  "start": 49.91,
+  "end": 54.42
  },
  {
   "n": 10,
   "who": "DOC",
   "text": "From down here, that makes it look tiny. It covers about half a degree of sky, and that number barely changes, whether the moon is rising or right overhead.",
-  "start": 60.3,
-  "end": 71.75,
-  "placeholder": true
+  "start": 54.72,
+  "end": 64.31
  },
  {
   "n": 11,
   "who": "DOC",
   "text": "You can test it. Hold something about the size of a pea at arm's length. It covers the rising moon, and hours later, it still covers the high moon.",
-  "start": 72.05,
-  "end": 83.5,
-  "placeholder": true
+  "start": 64.61,
+  "end": 73.77
  },
  {
   "n": 12,
   "who": "CELL",
   "text": "I tried that. Now I have a pea and no friends.",
-  "start": 83.85,
-  "end": 88.38,
-  "placeholder": true
+  "start": 74.12,
+  "end": 77.69
  },
  {
   "n": 13,
   "who": "DOC",
   "text": "Photos agree. Line up pictures taken hours apart, and the moon's disc is the same size.",
-  "start": 89.08,
-  "end": 95.54,
-  "placeholder": true
+  "start": 78.39,
+  "end": 84.425
  },
  {
   "n": 14,
   "who": "DOC",
   "text": "In fact, the rising moon is slightly farther from you. Overhead, you're closer by about half the Earth's width, the distance from the surface to the centre, so on the horizon it's about one and a half percent farther away.",
-  "start": 95.84,
-  "end": 111.52,
-  "placeholder": true
+  "start": 84.725,
+  "end": 98.745
  },
  {
   "n": 15,
   "who": "DOC",
   "text": "And no, the air isn't a magnifying glass. If anything, it squashes the low moon a little flatter.",
-  "start": 111.82,
-  "end": 119.05,
-  "placeholder": true
+  "start": 99.045,
+  "end": 105.585
  },
  {
   "n": 16,
   "who": "DOC",
   "text": "One thing is real, though: the colour. Low moonlight crosses much more air, which scatters away blue light and leaves the orange. Same reason sunsets turn red.",
-  "start": 119.35,
-  "end": 130.03,
-  "placeholder": true
+  "start": 105.885,
+  "end": 116.58
  },
  {
   "n": 17,
   "who": "DOC",
   "text": "So the light is genuinely different. The size is not.",
-  "start": 130.33,
-  "end": 134.48,
-  "placeholder": true
+  "start": 116.88,
+  "end": 121.318
  },
  {
   "n": 18,
   "who": "DOC",
   "text": "People have noticed this for a very long time.",
-  "start": 135.38,
-  "end": 139.14,
-  "placeholder": true
+  "start": 122.218,
+  "end": 125.208
  },
  {
   "n": 19,
   "who": "DOC",
   "text": "Aristotle wrote about it more than two thousand three hundred years ago.",
-  "start": 139.44,
-  "end": 144.35,
-  "placeholder": true
+  "start": 125.508,
+  "end": 129.412
  },
  {
   "n": 20,
   "who": "DOC",
   "text": "In his big astronomy book, Ptolemy blamed the air. He thought the atmosphere was enlarging the moon.",
-  "start": 144.65,
-  "end": 151.49,
-  "placeholder": true
+  "start": 129.712,
+  "end": 136.132
  },
  {
   "n": 21,
   "who": "DOC",
   "text": "A Greek astronomer named Cleomedes, about eighteen hundred years ago, suggested it might also be about distance: hazy air makes the low moon seem farther away.",
-  "start": 151.79,
-  "end": 162.09,
-  "placeholder": true
+  "start": 136.432,
+  "end": 146.652
  },
  {
   "n": 22,
   "who": "CELL",
   "text": "To be fair, I also blame the air. For most things.",
-  "start": 162.44,
-  "end": 166.97,
-  "placeholder": true
+  "start": 147.002,
+  "end": 150.742
  },
  {
   "n": 23,
   "who": "DOC",
   "text": "About a thousand years ago, the scholar Ibn al-Haytham made a sharper argument. He said it's about how far away the moon seems.",
-  "start": 167.67,
-  "end": 176.82,
-  "placeholder": true
+  "start": 151.442,
+  "end": 159.572
  },
  {
   "n": 24,
   "who": "DOC",
   "text": "He wrote huge books on how vision works, and he still kept part of the old air explanation too. Nobody gets everything right on the first try.",
-  "start": 177.12,
-  "end": 187.8,
-  "placeholder": true
+  "start": 159.872,
+  "end": 168.262
  },
  {
   "n": 25,
   "who": "DOC",
   "text": "When the moon is low, you see it beyond fields, trees, hills, houses. All that stuff in between makes the horizon feel far away.",
-  "start": 188.1,
-  "end": 197.63,
-  "placeholder": true
+  "start": 168.562,
+  "end": 177.482
  },
  {
   "n": 26,
   "who": "DOC",
   "text": "Overhead, there's nothing in between. Just empty sky. So your brain treats the sky like a flattened dome: far at the edges, close at the top.",
-  "start": 197.93,
-  "end": 208.23,
-  "placeholder": true
+  "start": 177.782,
+  "end": 188.012
  },
  {
   "n": 27,
   "who": "DOC",
   "text": "And if two things make the same-sized image in your eye, but one seems farther away, your brain decides the far one must be bigger.",
-  "start": 208.53,
-  "end": 218.45,
-  "placeholder": true
+  "start": 188.312,
+  "end": 196.062
  },
  {
   "n": 28,
   "who": "DOC",
   "text": "It's the same trick as this classic illusion. These two bars are exactly the same length.",
-  "start": 218.75,
-  "end": 225.2,
-  "placeholder": true
+  "start": 196.362,
+  "end": 201.953
  },
  {
   "n": 29,
   "who": "DOC",
   "text": "In 1962, two psychologists, Lloyd Kaufman and Irvin Rock, put this to the test.",
-  "start": 226.1,
-  "end": 231.79,
-  "placeholder": true
+  "start": 202.853,
+  "end": 209.082
  },
  {
   "n": 30,
   "who": "DOC",
   "text": "They tried changing the angle of the viewer's eyes. That didn't matter much.",
-  "start": 232.09,
-  "end": 237.39,
-  "placeholder": true
+  "start": 209.383,
+  "end": 213.922
  },
  {
   "n": 31,
   "who": "DOC",
   "text": "But when they blocked the view of the landscape, the giant moon shrank back down.",
-  "start": 237.69,
-  "end": 243.76,
-  "placeholder": true
+  "start": 214.223,
+  "end": 218.853
  },
  {
   "n": 32,
   "who": "DOC",
   "text": "In 2000, Kaufman and his son James built artificial moons that floated in the real sky, using an optical device.",
-  "start": 244.06,
-  "end": 252.05,
-  "placeholder": true
+  "start": 219.153,
+  "end": 226.763
  },
  {
   "n": 33,
   "who": "DOC",
   "text": "People set the horizon moon about four times farther away than the high one.",
-  "start": 252.35,
-  "end": 258.03,
-  "placeholder": true
+  "start": 227.063,
+  "end": 231.483
  },
  {
   "n": 34,
   "who": "DOC",
   "text": "But here's the weird part. Ask people directly, and most say the giant moon looks closer.",
-  "start": 258.33,
-  "end": 264.79,
-  "placeholder": true
+  "start": 231.783,
+  "end": 238.063
  },
  {
   "n": 35,
   "who": "CELL",
   "text": "So my brain thinks it's far, and also near. That explains my driving.",
-  "start": 265.14,
-  "end": 270.44,
-  "placeholder": true
+  "start": 238.413,
+  "end": 243.422
  },
  {
   "n": 36,
   "who": "DOC",
   "text": "Really, man?",
-  "start": 271.14,
-  "end": 272.21,
-  "placeholder": true
+  "start": 244.122,
+  "end": 245.092
  },
  {
   "n": 37,
   "who": "DOC",
   "text": "Scientists call it a paradox. One idea is that your brain first decides \"far away, so big\", and then \"big, so close\". The two judgements fight.",
-  "start": 272.51,
-  "end": 282.81,
-  "placeholder": true
+  "start": 245.392,
+  "end": 256.702
  },
  {
   "n": 38,
   "who": "DOC",
   "text": "There are other suspects too. Some say the moon just looks big next to tiny distant trees and houses.",
-  "start": 283.11,
-  "end": 290.72,
-  "placeholder": true
+  "start": 257.002,
+  "end": 263.362
  },
  {
   "n": 39,
   "who": "DOC",
   "text": "But sailors still see the giant moon rising over an empty ocean, with nothing to compare it to.",
-  "start": 291.02,
-  "end": 298.24,
-  "placeholder": true
+  "start": 263.662,
+  "end": 269.732
  },
  {
   "n": 40,
   "who": "DOC",
   "text": "Other researchers think the way your eyes focus and point plays a part.",
-  "start": 298.54,
-  "end": 303.84,
-  "placeholder": true
+  "start": 270.032,
+  "end": 274.052
  },
  {
   "n": 41,
   "who": "DOC",
   "text": "And here's a fun one. Bend over, look at the rising moon upside down between your legs, and for many people it shrinks.",
-  "start": 304.14,
-  "end": 313.28,
-  "placeholder": true
+  "start": 274.352,
+  "end": 282.042
  },
  {
   "n": 42,
   "who": "CELL",
   "text": "The neighbours are going to love this episode.",
-  "start": 313.63,
-  "end": 317.01,
-  "placeholder": true
+  "start": 282.393,
+  "end": 284.963
  },
  {
   "n": 43,
   "who": "DOC",
   "text": "It isn't just the moon, either. Constellations and the setting sun look bigger near the horizon too.",
-  "start": 317.71,
-  "end": 324.55,
-  "placeholder": true
+  "start": 285.662,
+  "end": 291.503
  },
  {
   "n": 44,
   "who": "DOC",
   "text": "After all these centuries, there's still no single winning explanation. Even a NASA scientist, asked this exact question, says: we don't really know.",
-  "start": 324.85,
-  "end": 334.0,
-  "placeholder": true
+  "start": 291.803,
+  "end": 302.173
  },
  {
   "n": 45,
   "who": "DOC",
   "text": "Now, the moon's size does change a little. Just not when it rises.",
-  "start": 334.9,
-  "end": 340.2,
-  "placeholder": true
+  "start": 303.073,
+  "end": 307.813
  },
  {
   "n": 46,
   "who": "DOC",
   "text": "Its orbit is slightly oval. When a full moon happens at the close end, we call it a supermoon.",
-  "start": 340.5,
-  "end": 348.1,
-  "placeholder": true
+  "start": 308.113,
+  "end": 314.283
  },
  {
   "n": 47,
   "who": "DOC",
   "text": "At its biggest, a full moon can look up to about fourteen percent wider and thirty percent brighter than the smallest full moon of the year.",
-  "start": 348.4,
-  "end": 358.7,
-  "placeholder": true
+  "start": 314.583,
+  "end": 322.713
  },
  {
   "n": 48,
   "who": "DOC",
   "text": "At the far end of the orbit, you get the opposite: a smaller, dimmer full moon some people call a micromoon.",
-  "start": 359.0,
-  "end": 367.38,
-  "placeholder": true
+  "start": 323.013,
+  "end": 329.903
  },
  {
   "n": 49,
   "who": "DOC",
   "text": "Which, honestly, most people can't tell by eye. Your brain's horizon trick adds far more than that, often a third to a half bigger. [C19, C3]",
-  "start": 367.68,
-  "end": 377.98,
-  "placeholder": true
+  "start": 330.203,
+  "end": 339.603
  },
  {
   "n": 50,
   "who": "CELL",
   "text": "So my brain is the real supermoon.",
-  "start": 378.33,
-  "end": 381.32,
-  "placeholder": true
+  "start": 339.953,
+  "end": 342.533
  },
  {
   "n": 51,
   "who": "DOC",
   "text": "\u2026I'm going to let you have that one.",
-  "start": 382.02,
-  "end": 385.4,
-  "placeholder": true
+  "start": 343.233,
+  "end": 344.963
  },
  {
   "n": 52,
   "who": "DOC",
   "text": "The Hunter's Moon has its own trick, though. This time of year, the moon's path meets the evening horizon at a very shallow angle.",
-  "start": 385.7,
-  "end": 395.23,
-  "placeholder": true
+  "start": 345.263,
+  "end": 353.063
  },
  {
   "n": 53,
   "who": "DOC",
   "text": "So for a few nights, where most of us live, it rises only about half an hour later each evening, instead of the usual fifty minutes. Bright moonlight, right after sunset, night after night.",
-  "start": 395.53,
-  "end": 408.91,
-  "placeholder": true
+  "start": 353.363,
+  "end": 366.163
  },
  {
   "n": 54,
   "who": "DOC",
   "text": "Before electric lights, that was a gift. The old story is that hunters used it to stock up before winter. That's where the name comes from.",
-  "start": 409.21,
-  "end": 419.51,
-  "placeholder": true
+  "start": 366.463,
+  "end": 374.793
  },
  {
   "n": 55,
   "who": "DOC",
   "text": "And after this one comes a run of supermoons: three or four in a row, depending on who's counting, starting with November's Beaver Moon.",
-  "start": 419.81,
-  "end": 429.34,
-  "placeholder": true
+  "start": 375.093,
+  "end": 383.403
  },
  {
   "n": 56,
   "who": "DOC",
-  "text": "So this weekend, when that huge orange moon comes up, enjoy it. It really is spectacular.",
-  "start": 430.24,
-  "end": 436.69,
-  "placeholder": true
+  "text": "So next time that huge orange moon comes up, enjoy it. It really is spectacular.",
+  "start": 384.303,
+  "end": 390.253
  },
  {
   "n": 57,
   "who": "DOC",
   "text": "Then try the pea. Try the photo. Maybe even try the upside-down thing, if nobody's watching. [C17, C15]",
-  "start": 436.99,
-  "end": 444.22,
-  "placeholder": true
+  "start": 390.553,
+  "end": 397.223
  },
  {
   "n": 58,
   "who": "DOC",
   "text": "Take a photo when it rises, and another when it's high. Put them side by side. Same moon, every time.",
-  "start": 444.52,
-  "end": 452.51,
-  "placeholder": true
+  "start": 397.523,
+  "end": 404.523
  },
  {
   "n": 59,
   "who": "DOC",
   "text": "And notice how your brain still insists the first one is bigger, even after you've seen the proof. That's how strong this illusion is.",
-  "start": 452.81,
-  "end": 462.34,
-  "placeholder": true
+  "start": 404.823,
+  "end": 413.023
  },
  {
   "n": 60,
   "who": "DOC",
   "text": "Because the most interesting thing in the sky that night won't actually be the moon. It'll be the brain looking at it.",
-  "start": 462.64,
-  "end": 471.4,
-  "placeholder": true
+  "start": 413.323,
+  "end": 420.173
  },
  {
   "n": 61,
   "who": "CELL",
   "text": "Also the moon. The moon's pretty good.",
-  "start": 471.75,
-  "end": 474.74,
-  "placeholder": true
+  "start": 420.523,
+  "end": 423.093
  },
  {
   "n": 62,
   "who": "DOC",
   "text": "Fine. Also the moon.",
-  "start": 475.44,
-  "end": 477.28,
-  "placeholder": true
+  "start": 423.793,
+  "end": 425.378
  },
  {
   "n": 63,
   "who": "DOC",
   "text": "So tell us: does the moon look bigger to you when it's rising, or are you immune?",
-  "start": 477.58,
-  "end": 484.42,
-  "placeholder": true
+  "start": 425.678,
+  "end": 430.548
  }
 ]
