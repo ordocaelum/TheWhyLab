@@ -13,7 +13,7 @@ import { Thing } from "./objects";
 import { Human2, Look } from "./human2";
 import { Robot } from "./robot";
 import { Body, Brain } from "./anatomy";
-import { SickInBed } from "./sickbed";
+import { HeatRise, SickInBed } from "./sickbed";
 import { Bedroom } from "./interiors";
 
 // ---------- shared micro-world backdrop (inside the microscope) ----------
@@ -246,18 +246,13 @@ const S13: React.FC = () => {
 // 14. Shivering under the blanket while the inner furnace roars
 const S14: React.FC = () => {
   const f = useCurrentFrame();
-  const fire = 0.6 + 0.4 * Math.sin(f / 3);
   return (
     <AbsoluteFill>
       <Bedroom night noBed>
         <SickInBed id="s14" x={720} y={870} s={0.6} f={f} shiver blanket="#5A7AD8" />
       </Bedroom>
       <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
-        <g transform={`translate(800,740)`}>
-          <circle r={150 * fire} fill="#FFB347" opacity={0.3} />
-          <path d={`M-40 40 Q -60 -40 0 ${-120 - fire * 30} Q 60 -40 40 40 Z`} fill="#FF7A1F" opacity={0.85} />
-          <path d={`M-20 40 Q -26 -10 0 ${-60 - fire * 20} Q 26 -10 20 40 Z`} fill="#FFE066" />
-        </g>
+        <HeatRise x={830} y={700} f={f} w={460} h={220} />
         {[[600, 300], [1320, 260], [1700, 520]].map(([x, y], i) => (
           <text key={i} x={x} y={y} fontFamily="Arial Black" fontSize={70} fill="#CFD8FF" opacity={0.6 + 0.4 * Math.sin(f / 5 + i)}>❄</text>
         ))}

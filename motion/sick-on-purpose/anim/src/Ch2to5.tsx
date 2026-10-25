@@ -14,7 +14,7 @@ import { Thing } from "./objects";
 import { AVATARS, Human2 } from "./human2";
 import { Ant, Bat, Bee, Lizard, Mouse } from "./critters";
 import { Robot } from "./robot";
-import { SickInBed } from "./sickbed";
+import { HeatRise, SickInBed } from "./sickbed";
 
 // sidekick robot, mouth synced to the sidekick voice track (CELL lines in lines.json)
 const Bot: React.FC<{ x: number; y: number; s?: number; look?: number; mood?: "happy" | "smug" | "alert" | "sad" }> = ({ x, y, s = 0.8, look = 0, mood = "smug" }) => {
@@ -218,12 +218,7 @@ const S27: React.FC = () => {
           const t = ((f + i * 25) % 75) / 75;
           return <text key={i} x={W / 2 - 220 + t * 160} y={620 - t * 220} fontFamily="Arial Black" fontSize={60 + i * 20} fill="#CFD8FF" opacity={1 - t}>Z</text>;
         })}
-        <path d={`M900 640 L ${W / 2 + 400} 380`} stroke="#FFD23F" strokeWidth={8} strokeDasharray="18 12" opacity={lerp(f, 60, 80, 0, 1)} />
-        <g transform={`translate(${W / 2 + 480},330)`} opacity={lerp(f, 70, 90, 0, 1)}>
-          <circle r={90} fill="#FF7A1F" opacity={0.35 + 0.15 * Math.sin(f / 4)} />
-          <path d={`M-40 40 Q -60 -40 0 ${-110 - 10 * Math.sin(f / 3)} Q 60 -40 40 40 Z`} fill="#FF7A1F" />
-          <path d="M-20 40 Q -26 -10 0 -60 Q 26 -10 20 40 Z" fill="#FFE066" />
-        </g>
+        <g opacity={lerp(f, 60, 90, 0, 1)}><HeatRise x={830} y={700} f={f} w={460} h={220} /></g>
         <Big t="SLEEP POWERS THE FEVER" y={170} size={84} c="#FFE2A8" at={90} />
       </Over>
     </AbsoluteFill>

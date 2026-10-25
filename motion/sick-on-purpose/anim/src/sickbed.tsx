@@ -44,3 +44,23 @@ export const SickInBed: React.FC<{ x: number; y: number; s?: number; f: number; 
     </g>
   );
 };
+
+// Fever heat: fire-red wavy lines rising off the body and fading out. (x,y) = base centre, w = spread.
+export const HeatRise: React.FC<{ x: number; y: number; f: number; w?: number; n?: number; h?: number }> = ({ x, y, f, w = 420, n = 6, h = 260 }) => (
+  <g strokeLinecap="round" fill="none" style={{ filter: "drop-shadow(0 0 10px #FF2D1F)" }}>
+    {Array.from({ length: n }, (_, i) => {
+      const t = ((f * 1.6 + i * 37) % 90) / 90; // 0..1 rise cycle, staggered
+      const lx = x - w / 2 + (i + 0.5) * (w / n);
+      const ly = y - t * h * 0.6;
+      const amp = 14 + (i % 3) * 4, ph = f / 5 + i;
+      const d = `M${lx} ${ly}` + Array.from({ length: 4 }, (_, k) => ` q ${(k % 2 ? -1 : 1) * amp * Math.sin(ph)} ${-h / 8} 0 ${-h / 4}`).join("");
+      const o = Math.sin(Math.PI * t);
+      return (
+        <g key={i} opacity={o}>
+          <path d={d} stroke="#FF2D1F" strokeWidth={12} />
+          <path d={d} stroke="#FF8A5A" strokeWidth={4} />
+        </g>
+      );
+    })}
+  </g>
+);

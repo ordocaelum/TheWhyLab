@@ -23,7 +23,7 @@ GAP = 0.30          # between consecutive lines of the same speaker
 BEFORE_CELL = 0.35  # lead-in to a Cell interruption
 AFTER_CELL = 0.70   # beat after a Cell line (room for Doc's deadpan reaction)
 SECTION = 0.90      # between chapters
-PAD_IN, PAD_OUT = 0.06, 0.12
+PAD_IN, PAD_OUT = 0.08, 0.15  # breathing room added after snapping to real silence
 
 
 def parse(script):
@@ -38,6 +38,36 @@ def parse(script):
     return lines
 
 
+HOP = 0.01  # energy envelope resolution (s)
+
+
+def energy(audio):
+    """10 ms RMS envelope plus a silence threshold for one file."""
+    import numpy as np
+    pcm = subprocess.run([b.FF, "-v", "error", "-i", str(audio), "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                         capture_output=True, check=True).stdout
+    x = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
+    n = int(16000 * HOP)
+    rms = np.sqrt(np.mean(x[: len(x) // n * n].reshape(-1, n) ** 2, axis=1))
+    floor = np.percentile(rms, 10)
+    thr = max(floor * 3, rms.max() * 0.02)
+    return rms, thr
+
+
+def snap(env, t, direction, limit, quiet=0.08):
+    """From time t, walk in direction (-1 back / +1 forward) until `quiet` seconds of silence; return that edge."""
+    rms, thr = env
+    k = int(t / HOP)
+    need = int(quiet / HOP)
+    run = 0
+    while 0 <= k < len(rms) and (k * HOP - limit) * direction < 0:
+        run = run + 1 if rms[k] < thr else 0
+        if run >= need:
+            return (k - direction * (need - 1)) * HOP
+        k += direction
+    return limit
+
+
 def time_lines(audio, group):
     """Return [(start, end)] for each line in group within one audio file, cut in the gaps."""
     toks = [t for l in group for t in l["text"].split()]
@@ -49,12 +79,14 @@ def time_lines(audio, group):
         n = len(l["text"].split())
         spans.append([words[k]["start"], words[k + n - 1]["end"]])
         k += n
-    # extend each span halfway into the neighbouring silence, plus padding
+    # Whisper word times are often early/late by 0.1-0.3 s, which clipped first/last syllables.
+    # Snap each edge outward to where the audio is actually silent, never past the midpoint to the neighbour line.
+    env = energy(audio)
     for i, s in enumerate(spans):
         lo = 0 if i == 0 else (spans[i - 1][1] + s[0]) / 2
         hi = total if i == len(spans) - 1 else (s[1] + spans[i + 1][0]) / 2
-        s[0] = max(lo, s[0] - PAD_IN)
-        s[1] = min(hi, s[1] + PAD_OUT)
+        s[0] = max(lo, snap(env, s[0], -1, lo) - PAD_IN)
+        s[1] = min(hi, snap(env, s[1], +1, hi) + PAD_OUT)
     heard_txt = " ".join(w["w"] for w in heard)
     norm = lambda s: re.sub(r"[^a-z0-9' ]", "", s.lower()).split()
     sim = difflib.SequenceMatcher(None, norm(" ".join(toks)), norm(heard_txt), autojunk=False).ratio()
