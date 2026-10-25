@@ -16,6 +16,8 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | 2026-10-25 | ElevenLabs (MCP) | Moon Illusion VO: Doc (Adam - Distinct, Deep) 6 sections + LabBot 7 lines, eleven_v4, 1 take each | **6,352 credits (~$1.40)** | priced first (1,351 for ch1), user approved; user has ~200k credits |
 | 2026-10-25 | ElevenLabs (MCP) | Re-voice cold open, ch1, outro with evergreen wording ("next full moon" instead of "this weekend") | **2,320 credits (~$0.51)** | superseded takes from the first run are unused |
 
+| 2026-10-25 | ElevenLabs (MCP) | Microplastics narration: Doc (Adam), 7 sections, eleven_v4, 1 take each | **6,757 credits (~$1.49)** | narrator-only episode |
+
 ## Claude plan usage (Pro)
 
 | Date / time | Milestone | 5-hour window | Weekly (all models) | Weekly (Fable) | Session context |

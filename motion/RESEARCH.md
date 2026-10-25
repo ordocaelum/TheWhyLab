@@ -23,6 +23,24 @@ Score each candidate from 1 to 5 on each criterion; build only topics scoring �
 
 **Rule:** never remake one of their episodes. Covering a nearby topic with a different angle is fine (e.g. they did "Fever"; we could do "Why Your Body Makes You Feel Sick on Purpose", which is about sickness behaviour, not fever).
 
+
+### 1b. Story rules (added 2026-10-25, from the Infographics Show teardown: ANALYSIS_infographics_show.md)
+Score three more criteria (1–5); build only if each is ≥ 3:
+| **Conflict** | Is there a villain, a cover-up, a fight, a scandal or a scientific dispute? |
+| **Viewer stakes** | Does it threaten the viewer's money, body, safety, kids or privacy? |
+| **Escalation** | Can it get worse 4–5 times, chapter after chapter? |
+
+Science "why" topics are framed through the stakes ("Why the flu keeps beating your vaccine", not "How flu mutates").
+
+**Script rules:**
+- **Cold open:** a contrarian claim + stakes + a promise. Never the answer.
+- **Hook line every 30–40 s (~1 per 90 words):** a one-sentence turn that closes a beat and opens a question ("But was it enough?", "And it doesn't stay in the bottle."). Mark them ⚡ in script.md.
+- **Escalation ladder:** each chapter raises the stakes; a midpoint twist.
+- **Numbers with consequences:** every stat answers "what does it cost me / who gets hurt?"
+- **End on a verdict + a next-video hook.**
+- **Narration:** one confident narrator (Doc's voice) carries it. Sidekick jokes are optional and rare.
+- **Contested science:** present both the alarming result and the critique, frame allegations as allegations with the denial, and never claim causation from correlation.
+
 ## 2. Brief (one paragraph, before any research)
 
 - **Question:** the single question the video answers.

@@ -33,7 +33,7 @@ def parse(script):
             sec += 1
         m = re.match(r"^(DOC|CELL): (.+)$", raw)
         if m:
-            t = re.sub(r"\s*(\[(C\d+|op)\])+", "", m.group(2)).replace("*", "").strip()
+            t = re.sub(r"\s*\[[^\]]*\]", "", m.group(2)).replace("*", "").replace("⚡", "").strip()  # drop claim tags + hook markers
             lines.append({"who": m.group(1), "text": t, "sec": sec})
     return lines
 
