@@ -74,9 +74,9 @@ const Arm: React.FC<{ sx: number; sy: number; a1: number; a2: number; side: 1 | 
   );
 };
 
-export type DocExpr = "neutral" | "happy" | "surprised" | "skeptical" | "unamused" | "serious" | "thinking";
+export type DocExpr = "neutral" | "happy" | "surprised" | "skeptical" | "unamused" | "serious" | "thinking" | "terrified";
 // per-expression face params: brow lift/tilt per side (L = his right, our left), eye open, upper-lid cover, mouth shape
-export const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" | "hmm"; up?: number; side?: number }> = {
+export const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: number; eye: number; lid: number; mouth: "rest" | "smile" | "o" | "smirk" | "flat" | "frown" | "hmm" | "scream"; up?: number; side?: number; pupil?: number }> = {
   neutral:   { bl: 0,  br: 0,  tl: 0,   tr: 0,   eye: 1,    lid: 0,    mouth: "rest" },
   happy:     { bl: 6,  br: 6,  tl: -4,  tr: -4,  eye: 0.8,  lid: 0,    mouth: "smile" },
   surprised: { bl: 18, br: 18, tl: -6,  tr: -6,  eye: 1.3,  lid: 0,    mouth: "o" },
@@ -84,6 +84,7 @@ export const EXPR: Record<DocExpr, { bl: number; br: number; tl: number; tr: num
   unamused:  { bl: -4, br: -4, tl: 0,   tr: 0,   eye: 1,    lid: 0.55, mouth: "flat" },
   serious:   { bl: -6, br: -6, tl: 12,  tr: 12,  eye: 0.95, lid: 0.1,  mouth: "frown" },
   thinking:  { bl: 2,  br: 12, tl: 0,   tr: -6,  eye: 0.95, lid: 0.2,  mouth: "hmm", up: 6, side: 1 },
+  terrified: { bl: 20, br: 20, tl: -16, tr: -16, eye: 1.45, lid: 0,    mouth: "scream", pupil: 0.55 },
 };
 
 export type DocPose = "idle" | "present" | "point" | "chin" | "crossed" | "hips" | "shrug" | "walk";
@@ -232,6 +233,8 @@ export const DocV2: React.FC<{ x: number; y: number; s?: number; f: number; talk
             <path d="M-26 70 L 26 70" stroke="#6A2A30" strokeWidth={7} strokeLinecap="round" />
           ) : E.mouth === "hmm" ? (
             <path d="M4 70 Q 16 64 28 68" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
+          ) : E.mouth === "scream" ? (
+            <><path d="M-30 74 Q 0 60 30 74 L 24 116 Q 0 128 -24 116 Z" fill="#3A0E18" /><path d="M-26 74 Q 0 64 26 74 L 25 80 Q 0 72 -25 80 Z" fill="#FFFFFF" /></>
           ) : (
             <path d="M-26 76 Q 0 62 26 76" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
           )}

@@ -294,6 +294,12 @@ export const Human2: React.FC<{ L: Look; x: number; y: number; s?: number; f: nu
             <path d="M-24 70 L 24 70" stroke="#6A2A30" strokeWidth={7} strokeLinecap="round" />
           ) : E.mouth === "hmm" ? (
             <path d="M4 70 Q 16 64 28 68" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
+          ) : E.mouth === "scream" ? (
+            <>
+              <path d="M-30 74 Q 0 60 30 74 L 24 116 Q 0 128 -24 116 Z" fill="#3A0E18" stroke={lips} strokeWidth={5} strokeLinejoin="round" />
+              <path d="M-26 74 Q 0 64 26 74 L 25 80 Q 0 72 -25 80 Z" fill="#FFFFFF" />
+              <ellipse cx={0} cy={112} rx={14} ry={7} fill="#B84A5A" />
+            </>
           ) : (
             <path d="M-24 76 Q 0 62 24 76" stroke="#6A2A30" strokeWidth={7} fill="none" strokeLinecap="round" />
           )}
@@ -308,8 +314,8 @@ export const Human2: React.FC<{ L: Look; x: number; y: number; s?: number; f: nu
             <g key={ex} transform={`translate(${ex},-14)`}>
               <g transform={`scale(1,${blink * E.eye})`}>
                 <path d={`M${-eyeW} 0 Q 0 ${eyeTop} ${eyeW} 0 Q 0 13 ${-eyeW} 0 Z`} fill="#FFFFFF" />
-                <circle cx={(look + (E.side ?? 0)) * 6} cy={-(E.up ?? 0) + (L.eyes === "monolid" ? 1 : 0)} r={8.5} fill={L.iris ?? "#5A3A22"} />
-                <circle cx={(look + (E.side ?? 0)) * 6} cy={-(E.up ?? 0) + (L.eyes === "monolid" ? 1 : 0)} r={4.5} fill="#1B1240" />
+                <circle cx={(look + (E.side ?? 0)) * 6} cy={-(E.up ?? 0) + (L.eyes === "monolid" ? 1 : 0)} r={8.5 * (E.pupil ?? 1)} fill={L.iris ?? "#5A3A22"} />
+                <circle cx={(look + (E.side ?? 0)) * 6} cy={-(E.up ?? 0) + (L.eyes === "monolid" ? 1 : 0)} r={4.5 * (E.pupil ?? 1)} fill="#1B1240" />
                 <circle cx={(look + (E.side ?? 0)) * 6 - 3} cy={-3 - (E.up ?? 0)} r={2.3} fill="#FFFFFF" />
               </g>
               {E.lid > 0 && <path d={`M${-eyeW - 2} -2 Q 0 ${eyeTop - 4} ${eyeW + 2} -2 L ${eyeW + 2} ${-2 + E.lid * 14} Q 0 ${eyeTop - 2 + E.lid * 20} ${-eyeW - 2} ${-2 + E.lid * 14} Z`} fill={L.skin[1]} />}
