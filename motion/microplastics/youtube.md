@@ -49,7 +49,8 @@ microplastics, microplastics in brain, plastic in human brain, nanoplastics, pla
 - Language: English · Captions: auto, then check the spelling of names (Nihart, Marfella, ExxonMobil)
 - Altered or synthetic content: **Yes**. The narration voice is AI-generated (ElevenLabs), so YouTube's disclosure applies to realistic synthetic voices.
 
-**Recheck before you publish:**
-- The California v. ExxonMobil case is still open.
-- The EPA's CCL 6 is still a draft (final due ~Nov 17).
-- "In October" still reads right.
+**Recheck before you publish** (checked 2026-10-27, all pass):
+- ✅ The California v. ExxonMobil case is still open (sent back to state court on Feb 24, 2025; Exxon is appealing that ruling). "The case isn't over" holds.
+- ✅ The EPA's CCL 6 is still a draft; the final list is expected around Nov 17, 2026. "Proposed adding" holds.
+- ✅ "In October" still reads right (October 2026).
+- After ~Nov 17: if the EPA finalises CCL 6, pin a comment saying microplastics are now on the final list (the video stays accurate about the date it was made).
