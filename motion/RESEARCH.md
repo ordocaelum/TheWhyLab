@@ -6,6 +6,10 @@ Pipeline: **1. Pick → 2. Brief → 3. Research → 4. Outline → 5. Script �
 
 ---
 
+**Channel rule (user, 2026-10-29): we don't lie.** We report what credible sources have reported, attributed to them. Anything we can't trace to a published source gets cut, not guessed.
+
+---
+
 ## 1. Pick the topic
 
 What their catalogue shows works (from the reference grid): every title is either a **provocative question about you** ("Do You Have a Free Will?", "Why Does Fentanyl Feel So Good?"), an **absurd what-if** ("What If It Rains Bananas For A Single Day?"), a **hidden-world reveal** ("There is Life Hiding Inside Earth"), or a **body or brain mechanism** ("Fever Feels Horrible, but is Actually Awesome"). Thumbnails use a 1–3 word noun phrase: `FEVER`, `MEAT`, `DEEP BIOSPHERE`.
