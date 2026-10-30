@@ -30,6 +30,7 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | Date | Output | Length | Render time | Size |
 |---|---|---|---|---|
 | 2026-10-22 | out/episode_ch1_v3.mp4 | Ch1 only | — | 66 MB |
+| 2026-10-30 | out/ai_v3.mp4 | AI Got Out ep + music bed and SFX (tools/score.py), audio remux only | ~2 min | 186 MB (720p 23 MB) |
 | 2026-10-29 | out/ai_v2.mp4 | AI Got Out ep, 7:17 (13,107 frames); v1 + S44 label-overflow patch spliced | ~62 min + 3 min patch | 189 MB (720p 21 MB) |
 | 2026-10-25 | out/micro_v1.mp4 | Microplastics ep, 7:33 (13,588 frames), cinema layer | ~64 min | 221 MB (720p 22 MB) |
 | 2026-10-25 | out/moon_v1.mp4 | Moon Illusion ep, 7:11 (12,961 frames) | ~31 min | 167 MB (720p copy 15 MB) |
