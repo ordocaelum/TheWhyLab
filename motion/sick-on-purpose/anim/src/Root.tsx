@@ -18,6 +18,7 @@ import { MoonSheet } from "./MoonSheet";
 import { MOON_FRAMES, MoonEpisode } from "./MoonEp";
 import { CINE_FRAMES, CinemaTest } from "./CinemaTest";
 import { PlasticSheet } from "./PlasticSheet";
+import { AISheet } from "./AISheet";
 import { MICRO_FRAMES, MicroEpisode } from "./MicroEp";
 import { ThumbMicro } from "./Thumbs";
 
@@ -44,6 +45,7 @@ export const RemotionRoot: React.FC = () => (
     {URBAN_NAMES.map((n) => <Composition key={n} id={`Urban${n}`} component={UrbanPreview} defaultProps={{ name: n }} durationInFrames={90} fps={30} width={W} height={H} />)}
     <Composition id="ThumbMicro" component={ThumbMicro} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="MicroEpisode" component={MicroEpisode} durationInFrames={MICRO_FRAMES} fps={30} width={1920} height={1080} />
+    <Composition id="AISheet" component={AISheet} durationInFrames={90} fps={30} width={1920} height={1080} />
     <Composition id="PlasticSheet" component={PlasticSheet} durationInFrames={90} fps={30} width={1920} height={1080} />
     <Composition id="CinemaTest" component={CinemaTest} durationInFrames={CINE_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="MoonEpisode" component={MoonEpisode} durationInFrames={MOON_FRAMES} fps={30} width={1920} height={1080} />
