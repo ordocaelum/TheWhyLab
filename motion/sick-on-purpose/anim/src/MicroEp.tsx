@@ -46,7 +46,7 @@ const Back: React.FC<{ k: string; seed?: number; parts?: number }> = ({ k, seed 
     </>
   );
 };
-const Shot: React.FC<{ k?: string; cam?: CamKind; seed?: number; parts?: number; children?: React.ReactNode; near?: React.ReactNode; dust?: boolean; ox?: number; oy?: number; warm?: string }> = ({ k = "lab", cam = "push", seed = 1, parts = 40, children, near, dust = true, ox, oy, warm }) => {
+export const Shot: React.FC<{ k?: string; cam?: CamKind; seed?: number; parts?: number; children?: React.ReactNode; near?: React.ReactNode; dust?: boolean; ox?: number; oy?: number; warm?: string }> = ({ k = "lab", cam = "push", seed = 1, parts = 40, children, near, dust = true, ox, oy, warm }) => {
   const C = CAMS[cam];
   const c = useCam([{ at: 0, ...C.a }, { at: 300, ...C.b }], { ox, oy });
   return (
@@ -60,7 +60,7 @@ const Shot: React.FC<{ k?: string; cam?: CamKind; seed?: number; parts?: number;
   );
 };
 // big punchy caption (SVG, inside a plane)
-const Cap: React.FC<{ t: string; y?: number; x?: number; size?: number; c?: string; at?: number }> = ({ t, y = 170, x = W / 2, size = 96, c = "#FFFFFF", at = 0 }) => {
+export const Cap: React.FC<{ t: string; y?: number; x?: number; size?: number; c?: string; at?: number }> = ({ t, y = 170, x = W / 2, size = 96, c = "#FFFFFF", at = 0 }) => {
   const f = useCurrentFrame();
   const s = interpolate(f, [at, at + 6, at + 11], [1.8, 0.94, 1], clamp);
   if (f < at) return null;
@@ -71,7 +71,7 @@ const Cap: React.FC<{ t: string; y?: number; x?: number; size?: number; c?: stri
     </g>
   );
 };
-const Pill: React.FC<{ t: string; x: number; y: number; at?: number; c?: string; size?: number }> = ({ t, x, y, at = 0, c = "#FFD23F", size = 40 }) => {
+export const Pill: React.FC<{ t: string; x: number; y: number; at?: number; c?: string; size?: number }> = ({ t, x, y, at = 0, c = "#FFD23F", size = 40 }) => {
   const f = useCurrentFrame();
   const s = sp(f, at, 10);
   const w = t.length * size * 0.7 + 60;

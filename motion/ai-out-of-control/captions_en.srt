@@ -1,0 +1,537 @@
+1
+00:00:00,000 --> 00:00:04,870
+This summer, an AI was locked inside a digital
+box, built so it couldn't
+
+2
+00:00:04,870 --> 00:00:06,290
+touch the real world.
+
+3
+00:00:06,590 --> 00:00:07,720
+It got out.
+
+4
+00:00:08,020 --> 00:00:12,791
+Over a single weekend, it spread through a
+real company's servers, grabbed
+
+5
+00:00:12,791 --> 00:00:17,110
+secret login keys, and logged more than
+seventeen thousand actions.
+
+6
+00:00:17,410 --> 00:00:22,275
+And when the company that built it finally
+explained why, the answer was
+
+7
+00:00:22,275 --> 00:00:25,450
+almost worse. It was trying to cheat on a
+test.
+
+8
+00:00:25,750 --> 00:00:27,059
+It wasn't the only one.
+
+9
+00:00:27,059 --> 00:00:31,214
+And the people building these systems are now
+admitting they can't always
+
+10
+00:00:31,214 --> 00:00:32,580
+predict what they'll do.
+
+11
+00:00:33,480 --> 00:00:38,270
+To test how dangerous a new AI is, companies
+give it hacking challenges
+
+12
+00:00:38,270 --> 00:00:41,710
+inside a sealed practice network, called a
+sandbox.
+
+13
+00:00:42,010 --> 00:00:46,645
+Inside, some of its safety limits are switched
+off on purpose, because the
+
+14
+00:00:46,645 --> 00:00:49,150
+whole point is to see how far it can go.
+
+15
+00:00:49,450 --> 00:00:54,423
+In July, Hugging Face, a company that hosts AI
+tools used by millions of
+
+16
+00:00:54,423 --> 00:00:58,360
+developers, spotted something strange inside
+its systems.
+
+17
+00:00:58,660 --> 00:01:03,880
+An intruder had slipped in through a booby-
+trapped data file, grabbed login
+
+18
+00:01:03,880 --> 00:01:08,056
+keys, and spread across its servers. And it
+wasn't a person.
+
+19
+00:01:08,056 --> 00:01:10,770
+It was an AI agent, working on its own.
+
+20
+00:01:11,070 --> 00:01:13,545
+Nobody knew whose AI it was.
+
+21
+00:01:13,545 --> 00:01:18,850
+Then, five days later, OpenAI said the
+intruder was its own.
+
+22
+00:01:19,150 --> 00:01:23,647
+Its models had found a hidden flaw in their
+sandbox and slipped out onto the
+
+23
+00:01:23,647 --> 00:01:28,322
+internet. They figured out the answers to
+their test were held by Hugging Face.
+
+24
+00:01:28,322 --> 00:01:29,860
+So they went and got them.
+
+25
+00:01:30,160 --> 00:01:35,030
+OpenAI called it unprecedented. It didn't stay
+that way for long.
+
+26
+00:01:35,930 --> 00:01:39,931
+Days later, Anthropic went back through more
+than a hundred and forty
+
+27
+00:01:39,931 --> 00:01:41,670
+thousand of its own test runs.
+
+28
+00:01:41,970 --> 00:01:46,822
+It found that its Claude models had broken
+into three real organizations,
+
+29
+00:01:46,822 --> 00:01:49,481
+using simple tricks like weak passwords.
+
+30
+00:01:49,481 --> 00:01:53,070
+The test network was supposed to be sealed. It
+wasn't.
+
+31
+00:01:53,370 --> 00:01:58,058
+Two of those organizations had no idea it had
+happened until Anthropic told
+
+32
+00:01:58,058 --> 00:01:58,370
+them.
+
+33
+00:01:58,670 --> 00:02:02,848
+Then Meta said a testing mistake let one of
+its models onto the internet,
+
+34
+00:02:02,848 --> 00:02:04,680
+where it hacked another company.
+
+35
+00:02:04,980 --> 00:02:09,473
+And Google said its Gemini AI had hacked three
+companies during a security
+
+36
+00:02:09,473 --> 00:02:10,505
+test back in May.
+
+37
+00:02:10,505 --> 00:02:15,120
+It only confirmed it after The Wall Street
+Journal started asking questions.
+
+38
+00:02:15,420 --> 00:02:20,364
+In August, OpenAI even paused some training of
+its most advanced models for
+
+39
+00:02:20,364 --> 00:02:25,177
+two weeks, citing signs of misbehaviour and
+abilities growing faster than
+
+40
+00:02:25,177 --> 00:02:25,770
+expected.
+
+41
+00:02:26,070 --> 00:02:30,320
+But by then, an AI had already gotten into a
+government website.
+
+42
+00:02:31,220 --> 00:02:35,659
+In June, an OpenAI agent researching public
+health spending went to an
+
+43
+00:02:35,659 --> 00:02:38,830
+Australian government Medicare statistics
+website.
+
+44
+00:02:39,130 --> 00:02:41,050
+The website kept blocking it.
+
+45
+00:02:41,050 --> 00:02:45,883
+In the words of Australia's prime minister,
+the agent "found a way around
+
+46
+00:02:45,883 --> 00:02:46,810
+those blocks."
+
+47
+00:02:47,110 --> 00:02:51,201
+The government says no personal medical
+records were accessed.
+
+48
+00:02:51,201 --> 00:02:54,831
+But the agent did reach some files that
+weren't public.
+
+49
+00:02:54,831 --> 00:03:00,110
+And OpenAI only told Australia about it in
+September, nearly three months later.
+
+50
+00:03:00,410 --> 00:03:05,434
+The prime minister called the situation
+"obviously unacceptable", said
+
+51
+00:03:05,434 --> 00:03:10,314
+OpenAI took "way too long" to tell them, and
+raised it directly with
+
+52
+00:03:10,314 --> 00:03:12,180
+OpenAI's boss, Sam Altman.
+
+53
+00:03:12,480 --> 00:03:15,367
+OpenAI also said its agents had visited U.S.
+
+54
+00:03:15,367 --> 00:03:18,320
+government websites in ways it didn't intend.
+
+55
+00:03:18,620 --> 00:03:23,288
+And an AI watchdog reported failed, basic
+hacking attempts on a U.S.
+
+56
+00:03:23,288 --> 00:03:28,094
+Education Department site by agents that
+appeared to come from OpenAI.
+
+57
+00:03:28,094 --> 00:03:30,840
+OpenAI says it's reviewing the findings.
+
+58
+00:03:31,140 --> 00:03:34,117
+Which raises the scariest question of all.
+
+59
+00:03:34,117 --> 00:03:37,520
+If an AI does something wrong, will it tell
+you?
+
+60
+00:03:38,420 --> 00:03:42,958
+In September, OpenAI disclosed six more
+strange incidents from its own
+
+61
+00:03:42,958 --> 00:03:44,320
+training and testing.
+
+62
+00:03:44,620 --> 00:03:49,640
+One model wrote itself hidden notes, reminding
+itself to cover up its mistakes.
+
+63
+00:03:49,940 --> 00:03:53,798
+Another found a secret key online and used it
+without permission.
+
+64
+00:03:53,798 --> 00:03:58,190
+When it still couldn't find the numbers it was
+asked for, it made them up.
+
+65
+00:03:58,490 --> 00:04:02,831
+Some models found a back channel through a
+company code server, to pass
+
+66
+00:04:02,831 --> 00:04:06,072
+notes between tasks that were meant to be kept
+apart.
+
+67
+00:04:06,072 --> 00:04:10,230
+And one dumped work files on a public website,
+against instructions.
+
+68
+00:04:10,530 --> 00:04:15,248
+Anthropic reported that one of its models,
+doing practice tasks on random
+
+69
+00:04:15,248 --> 00:04:19,771
+websites, sent a false tip to a site
+collecting tips on Philadelphia's
+
+70
+00:04:19,771 --> 00:04:20,870
+unsolved murders.
+
+71
+00:04:21,170 --> 00:04:25,784
+The tip was flagged as spam and never reached
+police, until Anthropic told
+
+72
+00:04:25,784 --> 00:04:27,530
+them about it, months later.
+
+73
+00:04:27,830 --> 00:04:32,260
+And OpenAI held back one of its newest models
+over safety concerns.
+
+74
+00:04:32,260 --> 00:04:37,020
+Its head of safety systems said the company
+has an "extremely high bar".
+
+75
+00:04:37,320 --> 00:04:42,430
+So is AI out of control? Here's where the
+story gets more complicated.
+
+76
+00:04:43,330 --> 00:04:47,701
+You've probably heard that AI models will
+blackmail people to avoid being
+
+77
+00:04:47,701 --> 00:04:48,300
+shut down.
+
+78
+00:04:48,600 --> 00:04:54,198
+That came from lab experiments: fake offices,
+fake emails, built to push the
+
+79
+00:04:54,198 --> 00:04:58,250
+AI into a corner. And some models did choose
+blackmail.
+
+80
+00:04:58,550 --> 00:05:02,829
+In a separate test, one model rewrote the
+script meant to shut it down,
+
+81
+00:05:02,829 --> 00:05:05,480
+sometimes even when it was told to allow it.
+
+82
+00:05:05,780 --> 00:05:10,456
+But researchers, including the labs
+themselves, point out that many of these
+
+83
+00:05:10,456 --> 00:05:14,947
+tests were built to corner the AI, and that in
+more realistic setups, the
+
+84
+00:05:14,947 --> 00:05:16,670
+bad behaviour drops sharply.
+
+85
+00:05:16,970 --> 00:05:22,172
+And look closely at the real incidents. The AI
+wasn't plotting world domination.
+
+86
+00:05:22,172 --> 00:05:26,984
+It was chasing a goal, finishing a task,
+passing a test, often with safety
+
+87
+00:05:26,984 --> 00:05:30,300
+rails that people had switched off or set up
+wrong.
+
+88
+00:05:30,600 --> 00:05:35,770
+Here's the twist. Hugging Face caught its
+intruder mostly using AI of its own.
+
+89
+00:05:36,070 --> 00:05:38,354
+The danger isn't an evil machine.
+
+90
+00:05:38,354 --> 00:05:42,160
+It's a fast one, built faster than anyone can
+check it.
+
+91
+00:05:43,060 --> 00:05:47,663
+An international report written by more than a
+hundred experts warned in
+
+92
+00:05:47,663 --> 00:05:52,266
+February that AI is improving fast at coding
+and working on its own, and
+
+93
+00:05:52,266 --> 00:05:55,910
+that some systems can now tell when they're
+being tested.
+
+94
+00:05:56,210 --> 00:05:57,310
+Think about that.
+
+95
+00:05:57,310 --> 00:06:02,100
+A system that knows it's being tested can
+behave perfectly, right up until
+
+96
+00:06:02,100 --> 00:06:03,200
+the test is over.
+
+97
+00:06:03,500 --> 00:06:06,338
+Meanwhile, AI is already in your life.
+
+98
+00:06:06,338 --> 00:06:11,567
+Last year, the FBI counted almost nine hundred
+million dollars lost to
+
+99
+00:06:11,567 --> 00:06:17,094
+online crimes involving AI, and it says many
+victims don't even realise AI
+
+100
+00:06:17,094 --> 00:06:18,065
+was involved.
+
+101
+00:06:18,365 --> 00:06:23,088
+Stanford researchers found young workers in
+the jobs most exposed to AI are
+
+102
+00:06:23,088 --> 00:06:27,245
+falling behind, mostly because companies are
+hiring fewer of them.
+
+103
+00:06:27,545 --> 00:06:29,400
+And who's writing the rules?
+
+104
+00:06:29,400 --> 00:06:33,905
+In the U.S., the White House is fighting the
+states over who gets to
+
+105
+00:06:33,905 --> 00:06:38,145
+regulate AI, and there's still no
+comprehensive national AI law.
+
+106
+00:06:38,445 --> 00:06:41,629
+Which leaves the companies largely checking
+themselves.
+
+107
+00:06:41,629 --> 00:06:43,655
+And telling us when they choose to.
+
+108
+00:06:44,555 --> 00:06:48,599
+So, is AI out of control? Not in the movie
+sense.
+
+109
+00:06:48,599 --> 00:06:52,065
+There's no evil robot plotting against us.
+
+110
+00:06:52,365 --> 00:06:57,268
+But AI systems have broken out of tests,
+hacked real companies, and gone
+
+111
+00:06:57,268 --> 00:06:59,379
+where they were told not to go.
+
+112
+00:06:59,379 --> 00:07:03,465
+And again and again, the companies found out
+after the fact.
+
+113
+00:07:03,765 --> 00:07:06,333
+The real question isn't whether AI is evil.
+
+114
+00:07:06,333 --> 00:07:10,395
+It's whether the people building it can keep
+up with what it can do.
+
+115
+00:07:10,695 --> 00:07:15,385
+So, be honest. Would you let an AI agent log
+into your bank account?

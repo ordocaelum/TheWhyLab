@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { Agent, Building, CaseFile, Counter, Gate, KeyGlyph, Ladder, Lock, Rack, SandboxCube, ScreenWall, ServerWall, Sticky, Switches, TugOfWar, Vault, Vent, WebForm, PaperPlane, AI } from "./ai";
+import { Agent, Building, CaseFile, Counter, Gate, KeyGlyph, Ladder, Lock, SandboxCube, ScreenWall, ServerWall, Sticky, Switches, TugOfWar, Vault, Vent, WebForm, PaperPlane, AI } from "./ai";
 
 const P: React.FC<{ i: number; bg?: string; children: React.ReactNode }> = ({ i, bg = "#0B1033", children }) => (
   <div style={{ position: "absolute", left: (i % 3) * 640, top: Math.floor(i / 3) * 360, width: 1920, height: 1080, transform: "scale(0.3333)", transformOrigin: "0 0", overflow: "hidden", background: bg }}>

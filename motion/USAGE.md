@@ -17,6 +17,7 @@ Rule: confirm with the user before any paid call (ElevenLabs, Higgsfield).
 | 2026-10-25 | ElevenLabs (MCP) | Re-voice cold open, ch1, outro with evergreen wording ("next full moon" instead of "this weekend") | **2,320 credits (~$0.51)** | superseded takes from the first run are unused |
 
 | 2026-10-25 | ElevenLabs (MCP) | Microplastics narration: Doc (Adam), 7 sections, eleven_v4, 1 take each | **6,757 credits (~$1.49)** | narrator-only episode |
+| 2026-10-30 | ElevenLabs (MCP) | AI Got Out narration: Doc (Adam), 8 sections, eleven_v4, 1 take each, ~7:12 total | **6,477 credits (~$1.43)** | user approved |
 
 ## Claude plan usage (Pro)
 

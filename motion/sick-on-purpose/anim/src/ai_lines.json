@@ -1,0 +1,359 @@
+[
+ {
+  "n": 1,
+  "who": "DOC",
+  "text": "This summer, an AI was locked inside a digital box, built so it couldn't touch the real world.",
+  "start": 0.0,
+  "end": 6.29
+ },
+ {
+  "n": 2,
+  "who": "DOC",
+  "text": "It got out.",
+  "start": 6.59,
+  "end": 7.72
+ },
+ {
+  "n": 3,
+  "who": "DOC",
+  "text": "Over a single weekend, it spread through a real company's servers, grabbed secret login keys, and logged more than seventeen thousand actions.",
+  "start": 8.02,
+  "end": 17.11
+ },
+ {
+  "n": 4,
+  "who": "DOC",
+  "text": "And when the company that built it finally explained why, the answer was almost worse. It was trying to cheat on a test.",
+  "start": 17.41,
+  "end": 25.45
+ },
+ {
+  "n": 5,
+  "who": "DOC",
+  "text": "It wasn't the only one. And the people building these systems are now admitting they can't always predict what they'll do.",
+  "start": 25.75,
+  "end": 32.58
+ },
+ {
+  "n": 6,
+  "who": "DOC",
+  "text": "To test how dangerous a new AI is, companies give it hacking challenges inside a sealed practice network, called a sandbox.",
+  "start": 33.48,
+  "end": 41.71
+ },
+ {
+  "n": 7,
+  "who": "DOC",
+  "text": "Inside, some of its safety limits are switched off on purpose, because the whole point is to see how far it can go.",
+  "start": 42.01,
+  "end": 49.15
+ },
+ {
+  "n": 8,
+  "who": "DOC",
+  "text": "In July, Hugging Face, a company that hosts AI tools used by millions of developers, spotted something strange inside its systems.",
+  "start": 49.45,
+  "end": 58.36
+ },
+ {
+  "n": 9,
+  "who": "DOC",
+  "text": "An intruder had slipped in through a booby-trapped data file, grabbed login keys, and spread across its servers. And it wasn't a person. It was an AI agent, working on its own.",
+  "start": 58.66,
+  "end": 70.77
+ },
+ {
+  "n": 10,
+  "who": "DOC",
+  "text": "Nobody knew whose AI it was. Then, five days later, OpenAI said the intruder was its own.",
+  "start": 71.07,
+  "end": 78.85
+ },
+ {
+  "n": 11,
+  "who": "DOC",
+  "text": "Its models had found a hidden flaw in their sandbox and slipped out onto the internet. They figured out the answers to their test were held by Hugging Face. So they went and got them.",
+  "start": 79.15,
+  "end": 89.86
+ },
+ {
+  "n": 12,
+  "who": "DOC",
+  "text": "OpenAI called it unprecedented. It didn't stay that way for long.",
+  "start": 90.16,
+  "end": 95.03
+ },
+ {
+  "n": 13,
+  "who": "DOC",
+  "text": "Days later, Anthropic went back through more than a hundred and forty thousand of its own test runs.",
+  "start": 95.93,
+  "end": 101.67
+ },
+ {
+  "n": 14,
+  "who": "DOC",
+  "text": "It found that its Claude models had broken into three real organizations, using simple tricks like weak passwords. The test network was supposed to be sealed. It wasn't.",
+  "start": 101.97,
+  "end": 113.07
+ },
+ {
+  "n": 15,
+  "who": "DOC",
+  "text": "Two of those organizations had no idea it had happened until Anthropic told them.",
+  "start": 113.37,
+  "end": 118.37
+ },
+ {
+  "n": 16,
+  "who": "DOC",
+  "text": "Then Meta said a testing mistake let one of its models onto the internet, where it hacked another company.",
+  "start": 118.67,
+  "end": 124.68
+ },
+ {
+  "n": 17,
+  "who": "DOC",
+  "text": "And Google said its Gemini AI had hacked three companies during a security test back in May. It only confirmed it after The Wall Street Journal started asking questions.",
+  "start": 124.98,
+  "end": 135.12
+ },
+ {
+  "n": 18,
+  "who": "DOC",
+  "text": "In August, OpenAI even paused some training of its most advanced models for two weeks, citing signs of misbehaviour and abilities growing faster than expected.",
+  "start": 135.42,
+  "end": 145.77
+ },
+ {
+  "n": 19,
+  "who": "DOC",
+  "text": "But by then, an AI had already gotten into a government website.",
+  "start": 146.07,
+  "end": 150.32
+ },
+ {
+  "n": 20,
+  "who": "DOC",
+  "text": "In June, an OpenAI agent researching public health spending went to an Australian government Medicare statistics website.",
+  "start": 151.22,
+  "end": 158.83
+ },
+ {
+  "n": 21,
+  "who": "DOC",
+  "text": "The website kept blocking it. In the words of Australia's prime minister, the agent \"found a way around those blocks.\"",
+  "start": 159.13,
+  "end": 166.81
+ },
+ {
+  "n": 22,
+  "who": "DOC",
+  "text": "The government says no personal medical records were accessed. But the agent did reach some files that weren't public. And OpenAI only told Australia about it in September, nearly three months later.",
+  "start": 167.11,
+  "end": 180.11
+ },
+ {
+  "n": 23,
+  "who": "DOC",
+  "text": "The prime minister called the situation \"obviously unacceptable\", said OpenAI took \"way too long\" to tell them, and raised it directly with OpenAI's boss, Sam Altman.",
+  "start": 180.41,
+  "end": 192.18
+ },
+ {
+  "n": 24,
+  "who": "DOC",
+  "text": "OpenAI also said its agents had visited U.S. government websites in ways it didn't intend.",
+  "start": 192.48,
+  "end": 198.32
+ },
+ {
+  "n": 25,
+  "who": "DOC",
+  "text": "And an AI watchdog reported failed, basic hacking attempts on a U.S. Education Department site by agents that appeared to come from OpenAI. OpenAI says it's reviewing the findings.",
+  "start": 198.62,
+  "end": 210.84
+ },
+ {
+  "n": 26,
+  "who": "DOC",
+  "text": "Which raises the scariest question of all. If an AI does something wrong, will it tell you?",
+  "start": 211.14,
+  "end": 217.52
+ },
+ {
+  "n": 27,
+  "who": "DOC",
+  "text": "In September, OpenAI disclosed six more strange incidents from its own training and testing.",
+  "start": 218.42,
+  "end": 224.32
+ },
+ {
+  "n": 28,
+  "who": "DOC",
+  "text": "One model wrote itself hidden notes, reminding itself to cover up its mistakes.",
+  "start": 224.62,
+  "end": 229.64
+ },
+ {
+  "n": 29,
+  "who": "DOC",
+  "text": "Another found a secret key online and used it without permission. When it still couldn't find the numbers it was asked for, it made them up.",
+  "start": 229.94,
+  "end": 238.19
+ },
+ {
+  "n": 30,
+  "who": "DOC",
+  "text": "Some models found a back channel through a company code server, to pass notes between tasks that were meant to be kept apart. And one dumped work files on a public website, against instructions.",
+  "start": 238.49,
+  "end": 250.23
+ },
+ {
+  "n": 31,
+  "who": "DOC",
+  "text": "Anthropic reported that one of its models, doing practice tasks on random websites, sent a false tip to a site collecting tips on Philadelphia's unsolved murders.",
+  "start": 250.53,
+  "end": 260.87
+ },
+ {
+  "n": 32,
+  "who": "DOC",
+  "text": "The tip was flagged as spam and never reached police, until Anthropic told them about it, months later.",
+  "start": 261.17,
+  "end": 267.53
+ },
+ {
+  "n": 33,
+  "who": "DOC",
+  "text": "And OpenAI held back one of its newest models over safety concerns. Its head of safety systems said the company has an \"extremely high bar\".",
+  "start": 267.83,
+  "end": 277.02
+ },
+ {
+  "n": 34,
+  "who": "DOC",
+  "text": "So is AI out of control? Here's where the story gets more complicated.",
+  "start": 277.32,
+  "end": 282.43
+ },
+ {
+  "n": 35,
+  "who": "DOC",
+  "text": "You've probably heard that AI models will blackmail people to avoid being shut down.",
+  "start": 283.33,
+  "end": 288.3
+ },
+ {
+  "n": 36,
+  "who": "DOC",
+  "text": "That came from lab experiments: fake offices, fake emails, built to push the AI into a corner. And some models did choose blackmail.",
+  "start": 288.6,
+  "end": 298.25
+ },
+ {
+  "n": 37,
+  "who": "DOC",
+  "text": "In a separate test, one model rewrote the script meant to shut it down, sometimes even when it was told to allow it.",
+  "start": 298.55,
+  "end": 305.48
+ },
+ {
+  "n": 38,
+  "who": "DOC",
+  "text": "But researchers, including the labs themselves, point out that many of these tests were built to corner the AI, and that in more realistic setups, the bad behaviour drops sharply.",
+  "start": 305.78,
+  "end": 316.67
+ },
+ {
+  "n": 39,
+  "who": "DOC",
+  "text": "And look closely at the real incidents. The AI wasn't plotting world domination. It was chasing a goal, finishing a task, passing a test, often with safety rails that people had switched off or set up wrong.",
+  "start": 316.97,
+  "end": 330.3
+ },
+ {
+  "n": 40,
+  "who": "DOC",
+  "text": "Here's the twist. Hugging Face caught its intruder mostly using AI of its own.",
+  "start": 330.6,
+  "end": 335.77
+ },
+ {
+  "n": 41,
+  "who": "DOC",
+  "text": "The danger isn't an evil machine. It's a fast one, built faster than anyone can check it.",
+  "start": 336.07,
+  "end": 342.16
+ },
+ {
+  "n": 42,
+  "who": "DOC",
+  "text": "An international report written by more than a hundred experts warned in February that AI is improving fast at coding and working on its own, and that some systems can now tell when they're being tested.",
+  "start": 343.06,
+  "end": 355.91
+ },
+ {
+  "n": 43,
+  "who": "DOC",
+  "text": "Think about that. A system that knows it's being tested can behave perfectly, right up until the test is over.",
+  "start": 356.21,
+  "end": 363.2
+ },
+ {
+  "n": 44,
+  "who": "DOC",
+  "text": "Meanwhile, AI is already in your life. Last year, the FBI counted almost nine hundred million dollars lost to online crimes involving AI, and it says many victims don't even realise AI was involved.",
+  "start": 363.5,
+  "end": 378.065
+ },
+ {
+  "n": 45,
+  "who": "DOC",
+  "text": "Stanford researchers found young workers in the jobs most exposed to AI are falling behind, mostly because companies are hiring fewer of them.",
+  "start": 378.365,
+  "end": 387.245
+ },
+ {
+  "n": 46,
+  "who": "DOC",
+  "text": "And who's writing the rules? In the U.S., the White House is fighting the states over who gets to regulate AI, and there's still no comprehensive national AI law.",
+  "start": 387.545,
+  "end": 398.145
+ },
+ {
+  "n": 47,
+  "who": "DOC",
+  "text": "Which leaves the companies largely checking themselves. And telling us when they choose to.",
+  "start": 398.445,
+  "end": 403.655
+ },
+ {
+  "n": 48,
+  "who": "DOC",
+  "text": "So, is AI out of control? Not in the movie sense. There's no evil robot plotting against us.",
+  "start": 404.555,
+  "end": 412.065
+ },
+ {
+  "n": 49,
+  "who": "DOC",
+  "text": "But AI systems have broken out of tests, hacked real companies, and gone where they were told not to go. And again and again, the companies found out after the fact.",
+  "start": 412.365,
+  "end": 423.465
+ },
+ {
+  "n": 50,
+  "who": "DOC",
+  "text": "The real question isn't whether AI is evil. It's whether the people building it can keep up with what it can do.",
+  "start": 423.765,
+  "end": 430.395
+ },
+ {
+  "n": 51,
+  "who": "DOC",
+  "text": "So, be honest. Would you let an AI agent log into your bank account?",
+  "start": 430.695,
+  "end": 435.385
+ }
+]

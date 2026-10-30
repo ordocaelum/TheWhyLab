@@ -5,6 +5,7 @@ import { AVATARS, Human2 } from "./human2";
 import { Brain } from "./anatomy";
 import { Particle, PLASTIC } from "./plastic";
 import { rng } from "./gen";
+import { Agent, SandboxCube } from "./ai";
 
 const TW = 1280, TH = 720;
 const Outline: React.FC<{ t: string; x: number; y: number; size: number; fill: string; glow?: string; anchor?: "start" | "middle" | "end"; rot?: number }> = ({ t, x, y, size, fill, glow, anchor = "middle", rot = 0 }) => (
@@ -52,6 +53,31 @@ export const ThumbMicro: React.FC = () => {
         <Outline t="IT'S IN YOU" x={TW / 2 + 30} y={130} size={128} fill="#FFFFFF" glow="#FF2D3D" rot={-2} />
         {/* warning badge */}
         <g transform="translate(1170,610)"><path d="M0 -70 L 66 50 L -66 50 Z" fill="#FFD23F" stroke="#0A0A14" strokeWidth={10} strokeLinejoin="round" /><rect x={-7} y={-34} width={14} height={48} rx={7} fill="#0A0A14" /><circle cy={32} r={8} fill="#0A0A14" /></g>
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
+// AI Got Out: terrified face + "IT GOT OUT" + a red AI eye bursting out of a cracked glass box
+export const ThumbAI: React.FC = () => {
+  const L = AVATARS.find((a) => a.name === "Ethan")!.L;
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <svg width={TW} height={TH}>
+        <defs>
+          <radialGradient id="abg" cx="0.72" cy="0.55" r="0.8"><stop offset="0" stopColor="#FF3B4E" /><stop offset="0.4" stopColor="#7A0A1A" /><stop offset="1" stopColor="#0A0210" /></radialGradient>
+        </defs>
+        <rect width={TW} height={TH} fill="url(#abg)" />
+        {Array.from({ length: 12 }, (_, i) => { const a = (i / 12) * Math.PI * 2; return <path key={i} d={`M930 420 L ${930 + Math.cos(a - 0.08) * 1200} ${420 + Math.sin(a - 0.08) * 1200} L ${930 + Math.cos(a + 0.08) * 1200} ${420 + Math.sin(a + 0.08) * 1200} Z`} fill="#FFFFFF" opacity={0.05} />; })}
+        <SandboxCube x={820} y={470} s={0.85} crack={1} breach={1} />
+        <circle cx={1120} cy={420} r={190} fill="#FF3B4E" opacity={0.25} />
+        <Agent x={1110} y={410} s={1.25} look={-1} tendrils={1} />
+        {[[1180, 260], [1220, 520], [700, 230]].map(([x, y], i) => <path key={i} d={`M${x} ${y} l 30 -14 l 8 26 l -28 10 Z`} fill="#BFF6FF" opacity={0.8} transform={`rotate(${i * 40},${x},${y})`} />)}
+        <g transform="translate(300,1250) scale(1.25)">
+          <Human2 L={L} x={0} y={0} s={1} f={0} expr="terrified" look={1} />
+        </g>
+        <path d="M470 230 q 14 26 0 40 q -14 -14 0 -40 Z" fill="#BFF6FF" />
+        <Outline t="IT GOT OUT" x={TW / 2 + 20} y={130} size={130} fill="#FFFFFF" glow="#FF2D3D" rot={-2} />
       </svg>
     </AbsoluteFill>
   );
