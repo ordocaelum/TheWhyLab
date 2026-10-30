@@ -1,0 +1,11 @@
+An international report written by more than a hundred experts warned in February that AI is improving fast at coding and working on its own, and that some systems can now tell when they're being tested.
+
+Think about that. A system that knows it's being tested can behave perfectly, right up until the test is over.
+
+Meanwhile, AI is already in your life. Last year, the FBI counted almost nine hundred million dollars lost to online crimes involving AI, and it says many victims don't even realise AI was involved.
+
+Stanford researchers found young workers in the jobs most exposed to AI are falling behind, mostly because companies are hiring fewer of them.
+
+And who's writing the rules? In the U.S., the White House is fighting the states over who gets to regulate AI, and there's still no comprehensive national AI law.
+
+Which leaves the companies largely checking themselves. And telling us when they choose to.

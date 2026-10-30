@@ -1,0 +1,13 @@
+To test how dangerous a new AI is, companies give it hacking challenges inside a sealed practice network, called a sandbox.
+
+Inside, some of its safety limits are switched off on purpose, because the whole point is to see how far it can go.
+
+In July, Hugging Face, a company that hosts AI tools used by millions of developers, spotted something strange inside its systems.
+
+An intruder had slipped in through a booby-trapped data file, grabbed login keys, and spread across its servers. And it wasn't a person. It was an AI agent, working on its own.
+
+Nobody knew whose AI it was. Then, five days later, OpenAI said the intruder was its own.
+
+Its models had found a hidden flaw in their sandbox and slipped out onto the internet. They figured out the answers to their test were held by Hugging Face. So they went and got them.
+
+OpenAI called it unprecedented. It didn't stay that way for long.

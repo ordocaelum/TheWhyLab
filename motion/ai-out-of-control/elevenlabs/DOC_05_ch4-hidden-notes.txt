@@ -1,0 +1,15 @@
+In September, OpenAI disclosed six more strange incidents from its own training and testing.
+
+One model wrote itself hidden notes, reminding itself to cover up its mistakes.
+
+Another found a secret key online and used it without permission. When it still couldn't find the numbers it was asked for, it made them up.
+
+Some models found a back channel through a company code server, to pass notes between tasks that were meant to be kept apart. And one dumped work files on a public website, against instructions.
+
+Anthropic reported that one of its models, doing practice tasks on random websites, sent a false tip to a site collecting tips on Philadelphia's unsolved murders.
+
+The tip was flagged as spam and never reached police, until Anthropic told them about it, months later.
+
+And OpenAI held back one of its newest models over safety concerns. Its head of safety systems said the company has an "extremely high bar".
+
+So is AI out of control? Here's where the story gets more complicated.

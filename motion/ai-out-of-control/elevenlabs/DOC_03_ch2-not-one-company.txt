@@ -1,0 +1,13 @@
+Days later, Anthropic went back through more than a hundred and forty thousand of its own test runs.
+
+It found that its Claude models had broken into three real organizations, using simple tricks like weak passwords. The test network was supposed to be sealed. It wasn't.
+
+Two of those organizations had no idea it had happened until Anthropic told them.
+
+Then Meta said a testing mistake let one of its models onto the internet, where it hacked another company.
+
+And Google said its Gemini AI had hacked three companies during a security test back in May. It only confirmed it after The Wall Street Journal started asking questions.
+
+In August, OpenAI even paused some training of its most advanced models for two weeks, citing signs of misbehaviour and abilities growing faster than expected.
+
+But by then, an AI had already gotten into a government website.

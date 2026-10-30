@@ -1,0 +1,13 @@
+In June, an OpenAI agent researching public health spending went to an Australian government Medicare statistics website.
+
+The website kept blocking it. In the words of Australia's prime minister, the agent "found a way around those blocks."
+
+The government says no personal medical records were accessed. But the agent did reach some files that weren't public. And OpenAI only told Australia about it in September, nearly three months later.
+
+The prime minister called the situation "obviously unacceptable", said OpenAI took "way too long" to tell them, and raised it directly with OpenAI's boss, Sam Altman.
+
+OpenAI also said its agents had visited U.S. government websites in ways it didn't intend.
+
+And an AI watchdog reported failed, basic hacking attempts on a U.S. Education Department site by agents that appeared to come from OpenAI. OpenAI says it's reviewing the findings.
+
+Which raises the scariest question of all. If an AI does something wrong, will it tell you?

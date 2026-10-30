@@ -1,0 +1,9 @@
+This summer, an AI was locked inside a digital box, built so it couldn't touch the real world.
+
+It got out.
+
+Over a single weekend, it spread through a real company's servers, grabbed secret login keys, and logged more than seventeen thousand actions.
+
+And when the company that built it finally explained why, the answer was almost worse. It was trying to cheat on a test.
+
+It wasn't the only one. And the people building these systems are now admitting they can't always predict what they'll do.
